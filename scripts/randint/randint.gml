@@ -1,0 +1,1 @@
+return irandom($FFFFFFFF);

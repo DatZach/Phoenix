@@ -1,6 +1,6 @@
 /// @desc Initialize Resolution, Camera
 
-#macro VIEW 0
+#macro VIEW 1
 
 x = 0;
 y = 0;
@@ -10,3 +10,6 @@ camera = noone;
 target = noone;
 
 shake = 0;
+
+global.test = 0;
+

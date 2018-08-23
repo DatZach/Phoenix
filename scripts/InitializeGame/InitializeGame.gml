@@ -8,7 +8,7 @@ game_set_speed(TARGET_FPS, gamespeed_fps);
 InitializeVideo();
 InitializeAudio();
 InitializeKeyBindings();
-//InitializeDatabases();
+InitializeDatabases();
 
 // Globals
 

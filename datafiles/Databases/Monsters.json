@@ -1,0 +1,33 @@
+[{
+	"name": "Chimaera",
+	"stats": {
+		"hp": 20,
+		"strength": 8,
+		"protection": 3,
+		"speed": 7,
+		"accuracy": 90,
+		"critical": 0,
+		"dodge": 15,
+		"bleedResist": 60,
+		"poisonResist": 30,
+		"stunResist": 50,
+		"moveResist": 60,
+		"deathBlowResist": 67
+	}
+}, {
+	"name": "Nix",
+	"stats": {
+		"hp": 20,
+		"strength": 5,
+		"protection": 6,
+		"speed": 4,
+		"accuracy": 60,
+		"critical": 0,
+		"dodge": 10,
+		"bleedResist": 30,
+		"poisonResist": 60,
+		"stunResist": 80,
+		"moveResist": 10,
+		"deathBlowResist": 67
+	}
+}]
