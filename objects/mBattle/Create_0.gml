@@ -16,5 +16,3 @@ state_create("BeginRound", battle_state_round);
 state_create("Round", battle_state_round);
 state_create("Turn", battle_state_turn);
 state_switch("Init");
-
-trace(GUI_WIDTH, "x", GUI_HEIGHT);

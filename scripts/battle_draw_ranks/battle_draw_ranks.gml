@@ -15,8 +15,8 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	var hp = rank[@ k_mon.hp];
 	var maxHp = mon_get_stat(rank, k_stats.hp);
 	var xx = fieldId == FIELD_SELF
-		? PADDING + FIELD_RANKS*RANK_WIDTH - i*RANK_WIDTH
-		: GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + i*RANK_WIDTH;
+		? floor(PADDING + FIELD_RANKS*RANK_WIDTH - i*RANK_WIDTH)
+		: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + i*RANK_WIDTH);
 	var yy = FIELD_BOTTOM - 64;
 	
 	// Portrait
@@ -30,7 +30,8 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	draw_set_color(c_black);
 	draw_rectangle(xx - 64 + 12, yy + 24, xx + 64 - 12, yy + 24 + 12, false);
 	draw_set_color(c_red);
-	draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx + (64 - 13) * (hp / maxHp)), yy + 24 + 11, false);
+	if (hp > 0)
+		draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx - 64 + 13 + (128 - 26) * (hp / maxHp)), yy + 24 + 11, false);
 	
 	// Active
 	if (stTurn_monster == rank) {
