@@ -9,6 +9,9 @@ enum Ability {
 	Name,
 	RankMask,
 	TargetMask,
+	
+	FnUse,
+	
 	size
 }
 

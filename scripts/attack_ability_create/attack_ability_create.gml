@@ -14,6 +14,7 @@ enum AttackAbility {
 var value = array_create(AttackAbility.size);
 value[@ Ability.Type] = ABILITY_ATTACK;
 value[@ Ability.Name] = "undefined";
+value[@ Ability.FnUse] = AttackAbility_use;
 value[@ Ability.RankMask] = 0x0F;
 value[@ Ability.TargetMask] = 0x0F;
 value[@ AttackAbility.Accuracy] = 0;

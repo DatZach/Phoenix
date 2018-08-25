@@ -16,6 +16,14 @@ var cpu = cpu_trainer_create();
 	var nix = mon_create();
 	mon_set_seed(nix, 1, randint());
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
+	
+	var abilities = nix[@ k_mon.abilities];
+	var aSlash = attack_ability_create();
+		aSlash[@ Ability.Name] = "Slash";
+		aSlash[@ Ability.RankMask] = 0x03;
+		aSlash[@ Ability.TargetMask] = 0x01;
+		aSlash[@ AttackAbility.Accuracy] = 60;
+	abilities[@ 0] = aSlash;
 ds_list_add(cpu[k_trainer.party], nix);
 
 var battle = battle_create([player, cpu]);

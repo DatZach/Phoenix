@@ -15,7 +15,10 @@ enum k_stats {
 	stun_resist,
 	move_resist,
 	death_blow_resist,
-	_size
+	_size,
+	
+	min_damage,
+	max_damage
 }
 
 return array_create(k_stats._size, 0);

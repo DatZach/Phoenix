@@ -12,10 +12,14 @@ for (var i = 0, ilen = array_length_1d(field); i < ilen; ++i) {
 		if (rank == noone || array_in(stRound_finished, rank))
 			continue;
 		
-		if (stTurn_monster == noone)
+		if (stTurn_monster == noone) {
 			stTurn_monster = rank;
-		else if (mon_get_stat(rank, k_stats.speed) > mon_get_stat(stTurn_monster, k_stats.speed))
+			stTurn_who = i;
+		}
+		else if (mon_get_stat(rank, k_stats.speed) > mon_get_stat(stTurn_monster, k_stats.speed)) {
 			stTurn_monster = rank;
+			stTurn_who = i;
+		}
 	}
 }
 

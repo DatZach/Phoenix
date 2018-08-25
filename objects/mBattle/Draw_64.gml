@@ -36,7 +36,7 @@ if (stTurn_monster != noone) {
 	draw_text(left + 104 - 8, top + 40 + lineHeight*6, "DODGE");
 	draw_set_halign(fa_left);
 	draw_text(left + 104 + 8, top + 40 + lineHeight*0, concat(stTurn_monster[@ k_mon.hp], " / ", mon_get_stat(stTurn_monster, k_stats.hp)));
-	draw_text(left + 104 + 8, top + 40 + lineHeight*1, string(mon_get_stat(stTurn_monster, k_stats.strength)));
+	draw_text(left + 104 + 8, top + 40 + lineHeight*1, concat(mon_get_stat(stTurn_monster, k_stats.min_damage), " - ", mon_get_stat(stTurn_monster, k_stats.max_damage)));
 	draw_text(left + 104 + 8, top + 40 + lineHeight*2, string(mon_get_stat(stTurn_monster, k_stats.protection)));
 	draw_text(left + 104 + 8, top + 40 + lineHeight*3, string(mon_get_stat(stTurn_monster, k_stats.speed)));
 	draw_text(left + 104 + 8, top + 40 + lineHeight*4, string(mon_get_stat(stTurn_monster, k_stats.accuracy)));
@@ -45,7 +45,6 @@ if (stTurn_monster != noone) {
 	
 	// Abilities
 	var abilities = stTurn_monster[@ k_mon.abilities];
-	var stTurn_selectedAbility = 0;
 	
 	left = left + 196;
 	var stride = ((right - left)/6);
@@ -65,7 +64,7 @@ if (stTurn_monster != noone) {
 			draw_text(left + i*stride + stride/2, top, name);
 			draw_set_halign(fa_left);
 			
-			if (i == stTurn_selectedAbility) {
+			if (i == stTurn_selectedAbility && ability != noone) {
 				var rankMask = ability[@ Ability.RankMask];
 				for (var j = 0; j < 4; ++j) {
 					draw_set_color((rankMask & (1<<j)) == 0 ? c_gray : c_white);
@@ -107,6 +106,18 @@ if (stTurn_monster != noone) {
 	}
 	
 	draw_line(left - 16, top + lineHeight + 8, left - 16, bottom);
+}
+
+// Pick Target
+if (state == battle_state_pick_target) {
+	var RANK_WIDTH = sprite_get_width(sMonsterPortrait);
+	var xx = stTurn_targetField == FIELD_SELF
+		? floor(PADDING + FIELD_RANKS*RANK_WIDTH - stTurn_targetRank*RANK_WIDTH)
+		: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + stTurn_targetRank*RANK_WIDTH);
+	var yy = FIELD_BOTTOM - 64;
+	
+	draw_set_color(c_red);
+	draw_rectangle(xx - 64 + 12, yy + 8, xx + 64 - 12, yy + 8 + 8, false);
 }
 
 // Debug

@@ -3,3 +3,4 @@
 
 // TODO Tick status effects
 
+state_switch("PickMove");

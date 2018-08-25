@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "01d35858-547d-4250-b156-24a66ebba38a",
+            "Value": {
+                "id": "ce68ab47-f639-4ab9-886a-0e7e38dfa656",
+                "resourcePath": "scripts\\battle_state_use_ability\\battle_state_use_ability.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0259a85c-4c61-4282-82a1-299f15fce608",
             "Value": {
                 "id": "51fe5f0c-bca5-40e9-bc55-a876ae97419a",
@@ -339,6 +347,14 @@
             "Value": {
                 "id": "a4284c69-9fe0-4e23-84f2-ef3f4b19aabc",
                 "resourcePath": "scripts\\console_execute\\console_execute.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "51009c4c-8460-422e-81e7-5cfffb8f5226",
+            "Value": {
+                "id": "1eb00c73-9290-4f07-a0e5-da5d528720b3",
+                "resourcePath": "scripts\\randchance\\randchance.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -743,6 +759,14 @@
             }
         },
         {
+            "Key": "bda734c3-2420-4ea0-a038-0035d7259db2",
+            "Value": {
+                "id": "619c4c05-226e-4b39-be20-897087545fcf",
+                "resourcePath": "scripts\\AttackAbility_use\\AttackAbility_use.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bdb445b1-e6df-479f-a9d3-41701bee2de2",
             "Value": {
                 "id": "a8bd7f80-5099-4e16-be6f-50eeab816a72",
@@ -935,6 +959,14 @@
             }
         },
         {
+            "Key": "ecc73f37-2fef-41ad-ae0f-9afe767168b8",
+            "Value": {
+                "id": "dae7ea19-c374-4051-9dc4-f44c6362e7d2",
+                "resourcePath": "scripts\\battle_state_pick_target\\battle_state_pick_target.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ed87acf9-eaa2-4b07-9c54-72ddfbab77b4",
             "Value": {
                 "id": "b0bfec3e-3295-4e3c-ab72-553bf258fa24",
@@ -999,6 +1031,14 @@
             }
         },
         {
+            "Key": "fc32dda1-1f29-40af-982b-5e315b4d7624",
+            "Value": {
+                "id": "490fc779-45c0-4c4a-9dbf-0cf045739d9c",
+                "resourcePath": "scripts\\battle_state_pick_move\\battle_state_pick_move.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ff41483d-7a6f-4c3c-9b8c-58943f221357",
             "Value": {
                 "id": "d4ff15ed-5ce6-4d50-aa88-67424a054d55",
@@ -1057,10 +1097,14 @@
         "b36d6818-014e-4465-b64e-468940aa4126",
         "1ac10fdc-5615-40f4-b7d3-147e6aaedf30",
         "b31ca32b-169b-44f7-a174-e3dc0ef25b9d",
+        "bda734c3-2420-4ea0-a038-0035d7259db2",
         "e7c4a5b6-b64c-4330-ad1c-b7964af3601d",
         "e1d49ab0-d958-4bb9-82b8-bd0685d09103",
         "6daafdbd-21b7-4a9d-b878-900081b76a7b",
         "f57949dc-f5d3-4f60-8187-2c72ffae1e66",
+        "fc32dda1-1f29-40af-982b-5e315b4d7624",
+        "ecc73f37-2fef-41ad-ae0f-9afe767168b8",
+        "01d35858-547d-4250-b156-24a66ebba38a",
         "24d84296-eb29-4613-8b6b-e8fac87257fe",
         "ad6c81aa-85b0-4b3f-93e5-a7df71c16f80",
         "1c4bc4eb-a505-495a-a7ff-ca3ed673e0d2",
@@ -1075,6 +1119,7 @@
         "7920b17b-22a7-4f05-ac29-709cececdacc",
         "1479cd8c-5f12-498d-80dc-6493b5c894de",
         "34c2db6d-373e-4328-9d6c-7ca08f9892ee",
+        "51009c4c-8460-422e-81e7-5cfffb8f5226",
         "3786d084-9fe1-4f0f-b3a3-df9213535d0a",
         "556249c9-83f0-49a2-9dbf-9a33b2b3c421",
         "dfbf4d20-b2f7-4378-8516-f44730f1a43d",
