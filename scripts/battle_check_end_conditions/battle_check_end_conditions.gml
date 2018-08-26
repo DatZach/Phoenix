@@ -6,10 +6,14 @@ var isLose = true;
 var isWin = true;
 
 // Win Condition
-var ranks = field[FIELD_FOE];
+var ranks = field[@ FIELD_FOE];
 for (var i = 0; i < FIELD_RANKS; ++i) {
 	var rank = ranks[@ i];
-	if (rank != noone && rank[@ k_mon.dead])
+	if (rank == noone)
+		continue;
+	
+	var dead = rank[@ k_mon.dead];
+	if (dead)
 		continue;
 		
 	isWin = false;
@@ -23,10 +27,14 @@ if (isWin) {
 }
 
 // Lose Condition
-var ranks = field[FIELD_SELF];
+var ranks = field[@ FIELD_SELF];
 for (var i = 0; i < FIELD_RANKS; ++i) {
 	var rank = ranks[@ i];
-	if (rank != noone && !rank[@ k_mon.dead])
+	if (rank == noone)
+		continue;
+	
+	var dead = rank[@ k_mon.dead];
+	if (dead)
 		continue;
 		
 	isLose = false;

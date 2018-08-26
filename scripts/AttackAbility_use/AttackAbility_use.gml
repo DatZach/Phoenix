@@ -33,14 +33,14 @@ if (isHit) {
 	if (stTurn_who == FIELD_SELF) {
 		// Player attacks Foe
 		target[@ k_mon.hp] -= dmg;
-		if (target[@ k_mon.hp] < 0) {
+		if (target[@ k_mon.hp] <= 0) {
 			target[@ k_mon.dead] = true;
 			target[@ k_mon.dead_cooldown] = 15;
 		}
 	}
 	else {
 		// Foe attacks Player
-		if (target[@ k_mon.hp] == 0) {
+		if (target[@ k_mon.hp] <= 0) {
 			if (randchance(100 - mon_get_stat(target, k_stats.death_blow_resist))) {
 				target[@ k_mon.dead] = true;
 				var ranks = field[@ stTurn_targetField];

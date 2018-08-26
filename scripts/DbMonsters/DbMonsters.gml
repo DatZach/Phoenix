@@ -35,11 +35,11 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 			dbStats[k_stats.accuracy] = jsonStats[? "accuracy"];
 			dbStats[k_stats.critical] = jsonStats[? "critical"];
 			dbStats[k_stats.dodge] = jsonStats[? "dodge"];
-			dbStats[k_stats.bleed_resist] = jsonStats[? "bleed_resist"];
-			dbStats[k_stats.poison_resist] = jsonStats[? "poison_resist"];
-			dbStats[k_stats.stun_resist] = jsonStats[? "stun_resist"];
-			dbStats[k_stats.move_resist] = jsonStats[? "move_resist"];
-			dbStats[k_stats.death_blow_resist] = jsonStats[? "death_blow_resist"];
+			dbStats[k_stats.bleed_resist] = jsonStats[? "bleedResist"];
+			dbStats[k_stats.poison_resist] = jsonStats[? "poisonResist"];
+			dbStats[k_stats.stun_resist] = jsonStats[? "stunResist"];
+			dbStats[k_stats.move_resist] = jsonStats[? "moveResist"];
+			dbStats[k_stats.death_blow_resist] = jsonStats[? "deathBlowResist"];
 		dbMonster[k_db_mon.stats] = dbStats;
 	ds_list_add(global.dbMonsters, dbMonster);
 }

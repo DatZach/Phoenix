@@ -7,8 +7,8 @@
 var mon = argument0;
 var stat = argument1;
 
-var baseStats = mon[k_mon.base_stats];
-var ivStats = mon[k_mon.iv_stats];
+var baseStats = mon[@ k_mon.base_stats];
+var ivStats = mon[@ k_mon.iv_stats];
 var modifier = 0; // TODO Implement
 
 switch(stat) {
