@@ -3,6 +3,7 @@
 // GM Engine
 gml_release_mode(RELEASE_MODE);
 game_set_speed(TARGET_FPS, gamespeed_fps);
+randomize();
 
 // Engine
 InitializeVideo();

@@ -1,6 +1,7 @@
 var player = player_trainer_create();
 	var chimaera = mon_create();
 	mon_set_seed(chimaera, 0, randint());
+	chimaera[@ k_mon.level] = 1;
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
 	
 	var abilities = chimaera[@ k_mon.abilities];
@@ -15,6 +16,7 @@ ds_list_add(player[k_trainer.party], chimaera);
 var cpu = cpu_trainer_create();
 	var nix = mon_create();
 	mon_set_seed(nix, 1, randint());
+	nix[@ k_mon.level] = 1;
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
 	
 	var abilities = nix[@ k_mon.abilities];

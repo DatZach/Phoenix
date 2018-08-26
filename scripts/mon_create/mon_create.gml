@@ -11,6 +11,8 @@ enum k_mon {
 	status_effects,
 	level,
 	hp,
+	dead,
+	dead_cooldown,
 	_size
 }
 
@@ -23,4 +25,6 @@ var mon = array_create(k_mon._size);
 	mon[k_mon.status_effects] = ds_list_create();
 	mon[k_mon.level] = 0;
 	mon[k_mon.hp] = 0;
+	mon[k_mon.dead] = false;
+	mon[k_mon.dead_cooldown] = 0;
 return mon;

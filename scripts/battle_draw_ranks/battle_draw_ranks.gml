@@ -21,17 +21,27 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	
 	// Portrait
 	draw_sprite_ext(
-		sMonsterPortrait, rank[@ k_mon.class],
+		rank[@ k_mon.dead] ? sCorpsePortrait : sMonsterPortrait, rank[@ k_mon.class],
 		xx, yy,
-		fieldId == FIELD_SELF ? 1 : -1, 1, 0, c_white, 1
+		fieldId == FIELD_SELF ? 1 : -1, 1, 0,
+		rank[@ k_mon.hp] <= 0 && ((get_timer() / 100000 % 1000) > 500) ? c_gray : c_white, 1
 	);
 	
 	// Health Bar
-	draw_set_color(c_black);
-	draw_rectangle(xx - 64 + 12, yy + 24, xx + 64 - 12, yy + 24 + 12, false);
-	draw_set_color(c_red);
-	if (hp > 0)
-		draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx - 64 + 13 + (128 - 26) * (hp / maxHp)), yy + 24 + 11, false);
+	if (!rank[@ k_mon.dead]) {
+		draw_set_color(c_black);
+		draw_rectangle(xx - 64 + 12, yy + 24, xx + 64 - 12, yy + 24 + 12, false);
+		draw_set_color(c_red);
+		if (hp > 0)
+			draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx - 64 + 13 + (128 - 26) * (hp / maxHp)), yy + 24 + 11, false);
+	}
+	else {
+		draw_set_color(c_black);
+		draw_rectangle(xx - 64 + 12, yy + 24, xx + 64 - 12, yy + 24 + 12, false);
+		draw_set_color(c_ltgray);
+		if (rank[@ k_mon.dead_cooldown] > 0)
+			draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx - 64 + 13 + (128 - 26) * (rank[@ k_mon.dead_cooldown] / 15)), yy + 24 + 11, false);
+	}
 	
 	// Active
 	if (stTurn_monster == rank) {

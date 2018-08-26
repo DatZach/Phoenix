@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "5369c368-f024-4916-9614-b8317b0f837c",
+            "Value": {
+                "id": "a4a8a801-70aa-4851-a687-9aa7bf8e5bbc",
+                "resourcePath": "sprites\\sCorpsePortrait\\sCorpsePortrait.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "54044b66-67ed-407c-b44a-47e684a1ebd5",
             "Value": {
                 "id": "68a2651a-4603-440d-929e-47b58655ef0b",
@@ -587,6 +595,14 @@
             "Value": {
                 "id": "b56c1ee1-6022-497b-92c8-7518b83ebc01",
                 "resourcePath": "scripts\\InitializeAudio\\InitializeAudio.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9001b157-e50b-4bb1-94bb-735bbede23ea",
+            "Value": {
+                "id": "cf675d07-f482-4404-a7e3-cf6b4904ca6f",
+                "resourcePath": "scripts\\DCC_SetRngSeed\\DCC_SetRngSeed.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -823,6 +839,14 @@
             }
         },
         {
+            "Key": "cd20e893-7f31-45bc-ac51-3dce9ccd0c2e",
+            "Value": {
+                "id": "caf325e4-399a-42d6-8d5e-08b2f6cd8bbb",
+                "resourcePath": "scripts\\battle_on_end\\battle_on_end.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ceb26915-bf60-4cc3-bd55-56738b5fa5b3",
             "Value": {
                 "id": "93034d4f-1d1e-4249-9ebd-925eb8c44851",
@@ -923,6 +947,14 @@
             "Value": {
                 "id": "b1debf11-c200-42ea-988b-e780169f8c3b",
                 "resourcePath": "scripts\\console_get_unseen_history_count\\console_get_unseen_history_count.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e3912fbc-6edd-47c5-b652-74f00d66cd94",
+            "Value": {
+                "id": "b3ff8737-606b-4556-8e60-4563712f1aa3",
+                "resourcePath": "scripts\\battle_check_end_conditions\\battle_check_end_conditions.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1079,6 +1111,7 @@
         "17e643b7-9474-4cf2-b1bc-9632689ad424",
         "93a0cefc-15e4-4b01-89b9-3c95ead46288",
         "72dd2d10-c0ce-4b1b-acde-586425cc95c1",
+        "9001b157-e50b-4bb1-94bb-735bbede23ea",
         "f6f2a476-5e56-4bc8-9f96-36897e47c3e1",
         "bdb445b1-e6df-479f-a9d3-41701bee2de2",
         "0a653c20-69b6-4ccf-9ac3-3f612676ffb7",
@@ -1107,6 +1140,8 @@
         "01d35858-547d-4250-b156-24a66ebba38a",
         "24d84296-eb29-4613-8b6b-e8fac87257fe",
         "ad6c81aa-85b0-4b3f-93e5-a7df71c16f80",
+        "e3912fbc-6edd-47c5-b652-74f00d66cd94",
+        "cd20e893-7f31-45bc-ac51-3dce9ccd0c2e",
         "1c4bc4eb-a505-495a-a7ff-ca3ed673e0d2",
         "5edf0816-5ea2-4111-afc6-25e1b904a718",
         "7496bcb5-0388-4093-9996-337a99b7e8f5",

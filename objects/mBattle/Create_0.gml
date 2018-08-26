@@ -17,7 +17,7 @@ stTurn_targetRank = noone;
 
 state_machine_init();
 state_create("Init", battle_state_init);
-state_create("BeginRound", battle_state_round);
+state_create("BeginRound", battle_state_begin_round);
 state_create("Round", battle_state_round);
 state_create("Turn", battle_state_turn);
 state_create("PickMove", battle_state_pick_move);
