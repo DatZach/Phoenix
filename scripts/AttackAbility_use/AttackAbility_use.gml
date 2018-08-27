@@ -34,8 +34,14 @@ if (isHit) {
 		// Player attacks Foe
 		target[@ k_mon.hp] -= dmg;
 		if (target[@ k_mon.hp] <= 0) {
-			target[@ k_mon.dead] = true;
-			target[@ k_mon.dead_cooldown] = 15;
+			if (target[@ k_mon.dead]) {
+				var ranks = field[@ stTurn_targetField];
+				ranks[@ stTurn_targetRank] = noone;
+			}
+			else {
+				target[@ k_mon.dead] = true;
+				target[@ k_mon.hp] = mon_get_max_hp(target);
+			}
 		}
 	}
 	else {

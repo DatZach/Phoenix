@@ -991,6 +991,14 @@
             }
         },
         {
+            "Key": "ec649623-90ae-46d3-9812-521e97ae8820",
+            "Value": {
+                "id": "01e63860-1ef1-451e-8211-cddf4c849f5b",
+                "resourcePath": "sprites\\sIconStatusEffect\\sIconStatusEffect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ecc73f37-2fef-41ad-ae0f-9afe767168b8",
             "Value": {
                 "id": "dae7ea19-c374-4051-9dc4-f44c6362e7d2",
