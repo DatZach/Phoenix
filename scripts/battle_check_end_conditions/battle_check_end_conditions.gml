@@ -21,8 +21,8 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 }
 
 if (isWin) {
-	battle_on_end(1);
-	instance_destroy();
+	endStatus = 1;
+	state_switch("End");
 	return;
 }
 
@@ -42,7 +42,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 }
 
 if (isLose) {
-	battle_on_end(0);
-	instance_destroy();
+	endStatus = 0;
+	state_switch("End");
 	return;
 }

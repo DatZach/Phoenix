@@ -1,8 +1,8 @@
 {
-    "id": "cd20e893-7f31-45bc-ac51-3dce9ccd0c2e",
+    "id": "a2ed6dbe-ab83-4252-9294-6ecb24dfe193",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "battle_on_end",
+    "name": "mon_level_up",
     "IsCompatibility": false,
     "IsDnD": false
 }

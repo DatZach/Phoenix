@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "4106f991-f16d-4177-804e-076c08bbcd86",
+            "Value": {
+                "id": "3fccb367-13e0-4ed9-b85b-f4063b63c127",
+                "resourcePath": "scripts\\battle_state_end\\battle_state_end.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "43107256-7001-43d2-822e-7e8304881790",
             "Value": {
                 "id": "9e5f58d5-abd5-4092-b806-48cdc5ab4310",
@@ -655,6 +663,14 @@
             }
         },
         {
+            "Key": "a2ed6dbe-ab83-4252-9294-6ecb24dfe193",
+            "Value": {
+                "id": "fa454db9-b589-4346-8930-40f7770f04b8",
+                "resourcePath": "scripts\\mon_level_up\\mon_level_up.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a30ee0c0-4c7e-4218-b72d-ffa41837cdff",
             "Value": {
                 "id": "06897e5e-c849-45e5-ae19-a167543a626b",
@@ -836,14 +852,6 @@
                 "id": "a0042969-20ba-4c15-aea3-8d40568e9e05",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
-            }
-        },
-        {
-            "Key": "cd20e893-7f31-45bc-ac51-3dce9ccd0c2e",
-            "Value": {
-                "id": "caf325e4-399a-42d6-8d5e-08b2f6cd8bbb",
-                "resourcePath": "scripts\\battle_on_end\\battle_on_end.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -1136,6 +1144,7 @@
         "d66b8cb9-7666-42d8-bb63-a86dd6906548",
         "e9cec8f0-aa9d-407d-92ff-48b38cccb170",
         "b36d6818-014e-4465-b64e-468940aa4126",
+        "a2ed6dbe-ab83-4252-9294-6ecb24dfe193",
         "1ac10fdc-5615-40f4-b7d3-147e6aaedf30",
         "b31ca32b-169b-44f7-a174-e3dc0ef25b9d",
         "bda734c3-2420-4ea0-a038-0035d7259db2",
@@ -1146,10 +1155,10 @@
         "fc32dda1-1f29-40af-982b-5e315b4d7624",
         "ecc73f37-2fef-41ad-ae0f-9afe767168b8",
         "01d35858-547d-4250-b156-24a66ebba38a",
+        "4106f991-f16d-4177-804e-076c08bbcd86",
         "24d84296-eb29-4613-8b6b-e8fac87257fe",
         "ad6c81aa-85b0-4b3f-93e5-a7df71c16f80",
         "e3912fbc-6edd-47c5-b652-74f00d66cd94",
-        "cd20e893-7f31-45bc-ac51-3dce9ccd0c2e",
         "1c4bc4eb-a505-495a-a7ff-ca3ed673e0d2",
         "5edf0816-5ea2-4111-afc6-25e1b904a718",
         "7496bcb5-0388-4093-9996-337a99b7e8f5",

@@ -6,6 +6,7 @@
 trainers = [];
 field = [array_create(FIELD_RANKS, noone), array_create(FIELD_RANKS, noone)];
 currentRound = 0;
+endStatus = noone;
 
 stRound_finished = [];
 
@@ -23,4 +24,5 @@ state_create("Turn", battle_state_turn);
 state_create("PickMove", battle_state_pick_move);
 state_create("PickTarget", battle_state_pick_target);
 state_create("UseAbility", battle_state_use_ability);
+state_create("End", battle_state_end);
 state_switch("Init");
