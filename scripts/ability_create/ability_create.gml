@@ -10,7 +10,7 @@ enum Ability {
 	RankMask,
 	TargetMask,
 	
-	FnUse,
+	FN_Use,
 	
 	size
 }

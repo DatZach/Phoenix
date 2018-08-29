@@ -10,5 +10,4 @@ var ability = abilities[@ stTurn_selectedAbility];
 var ranks = field[@ stTurn_targetField];
 var target = ranks[@ stTurn_targetRank];
 
-var fnUse = ability[@ Ability.FnUse];
-script_execute(fnUse, ability, stTurn_monster, target);
+ability_use(ability, stTurn_monster, target);

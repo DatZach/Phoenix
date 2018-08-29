@@ -35,10 +35,15 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 		draw_rectangle(xx - 64 + 13, yy + 24 + 1, floor(xx - 64 + 13 + (128 - 26) * (hp / maxHp)), yy + 24 + 11, false);
 
 	// Status Effects
-	if (rank[@ k_mon.hp] <= 0) {
-		// TODO Enum for status effects
-		draw_sprite(sIconStatusEffect, 4, xx - 64 + 15 + 4*(12 + 10), yy + 24 + 11 + 8);
+	var statusEffects = rank[@ k_mon.status_effects];
+	for (var i = 0, len = ds_list_size(statusEffects); i < len; ++i) {
+		var statusEffect = statusEffects[| i];
+		var seType = statusEffect[@ StatusEffect.Type];
+		draw_sprite(sIconStatusEffect, seType, xx - 64 + 15 + seType*(12 + 10), yy + 24 + 11 + 8);
 	}
+	
+	if (rank[@ k_mon.hp] <= 0)
+		draw_sprite(sIconStatusEffect, 4, xx - 64 + 15 + 4*(12 + 10), yy + 24 + 11 + 8);
 
 	// Active
 	if (stTurn_monster == rank) {

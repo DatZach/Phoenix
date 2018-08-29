@@ -25,7 +25,7 @@ for (var i = 0, ilen = array_length_1d(field); i < ilen; ++i) {
 
 if (stTurn_monster != noone) {
 	array_add(stRound_finished, stTurn_monster);
-	state_switch("Turn");
+	state_switch("BeginTurn");
 }
 else
 	state_switch("BeginRound");
