@@ -1,32 +1,26 @@
-/// @func AttackAbility_use(source, target);
+/// @func AttackAbility_use(ability, source, target);
 /// @context mBattle
-/// @this AttackAbility
+/// @param ability AttackAbility
+/// @param source Monster
+/// @param target Monster
 
 var this = argument0;
 var source = argument1;
 var target = argument2;
 
 // roll_is_hit()
-var modifier = 0; // TODO
-var chance = this[@ AttackAbility.Accuracy] + mon_get_stat(source, k_stats.accuracy)
-		   - mon_get_stat(target, k_stats.dodge) + modifier + 5;
-if (chance >= 95) chance = 100;
+var chance = attack_ability_get_hit_chance(this, source, target);
 var isHit = randchance(chance);
 
 // roll_move_damage
 var dmg;
-var modifier = 1 * this[@ AttackAbility.DamageModifier]; // TODO
-var isCrit = randchance(mon_get_stat(source, k_stats.critical) + this[@ AttackAbility.CriticalModifier]);
+var isCrit = randchance(attack_ability_get_critical_chance(this, source));
 if (isCrit)
 	dmg = mon_get_stat(source, k_stats.max_damage) * 1.5 * modifier;
 else {
-	dmg = (
-		randint(mon_get_stat(source, k_stats.min_damage), mon_get_stat(source, k_stats.max_damage)) -
-		mon_get_stat(target, k_stats.protection)
-	) * modifier;
+	dmgRange = attack_ability_get_damage_range(this, source, target);
+	dmg = randint(dmgRange[0], dmgRange[1]);
 }
-
-dmg = max(1, floor(dmg));
 
 // use
 if (isHit) {

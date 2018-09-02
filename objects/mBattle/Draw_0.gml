@@ -174,17 +174,14 @@ if (state == battle_state_pick_target && stTurn_targetRank != noone) {
 		draw_text(left + 104 - 8, top + 40 + lineHeight*2, "CRIT CHANCE");
 		draw_text(left + 104 - 8, top + 40 + lineHeight*3, "DAMAGE");
 		draw_set_halign(fa_left);
-		// TODO Abstract behind functions
-		var modifier = 0; // TODO
-		var chance = ability[@ AttackAbility.Accuracy] + mon_get_stat(source, k_stats.accuracy)
-				   - mon_get_stat(target, k_stats.dodge) + modifier + 5;
-		draw_text(left + 104 + 8, top + 40 + lineHeight*1, concat(chance, "%"));
-		var chance = mon_get_stat(source, k_stats.critical) + ability[@ AttackAbility.CriticalModifier]; // TODO abstract
-		draw_text(left + 104 + 8, top + 40 + lineHeight*2, concat(chance, "%"));
-		var modifier = 1 * ability[@ AttackAbility.DamageModifier]; // TODO
-		var minDmg = (mon_get_stat(source, k_stats.min_damage) - mon_get_stat(target, k_stats.protection)) * modifier;
-		var maxDmg = (mon_get_stat(source, k_stats.max_damage) - mon_get_stat(target, k_stats.protection)) * modifier;
-		draw_text(left + 104 + 8, top + 40 + lineHeight*3, concat(minDmg, " - ", maxDmg));
+		
+		var hitChance = attack_ability_get_hit_chance(ability, source, target);
+		if (hitChance == 100) hitChance = 95;
+		draw_text(left + 104 + 8, top + 40 + lineHeight*1, concat(hitChance, "%"));
+		var critChance = attack_ability_get_critical_chance(ability, source);
+		draw_text(left + 104 + 8, top + 40 + lineHeight*2, concat(critChance, "%"));
+		var dmgRange = attack_ability_get_damage_range(ability, source, target);
+		draw_text(left + 104 + 8, top + 40 + lineHeight*3, concat(dmgRange[0], " - ", dmgRange[1]));
 	}
 }
 

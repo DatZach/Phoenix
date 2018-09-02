@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "37a928c4-a7b3-436a-8db4-2d7e8a86d881",
+            "Value": {
+                "id": "b181ba1a-8122-4e40-89ee-083c2b030c2f",
+                "resourcePath": "scripts\\attack_ability_get_hit_chance\\attack_ability_get_hit_chance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "37c5b2eb-64a6-4f57-a128-d8916dc486d9",
             "Value": {
                 "id": "9561a9da-fe9d-4e43-b32f-3d868463971b",
@@ -651,6 +659,14 @@
             "Value": {
                 "id": "a74d2322-6858-41fa-bcfc-3c56f6d783a3",
                 "resourcePath": "scripts\\screen_reset\\screen_reset.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "88aee517-b91e-4ba0-a518-ba65023ff2a2",
+            "Value": {
+                "id": "d3fd2190-9e8d-494c-ae4f-4eda21cb9c7d",
+                "resourcePath": "scripts\\attack_ability_get_damage_range\\attack_ability_get_damage_range.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1247,6 +1263,14 @@
             }
         },
         {
+            "Key": "f990a9b3-0e98-4165-87d2-df2e91f64eb5",
+            "Value": {
+                "id": "a1f4489a-6efc-403b-a68d-56a8f7ad46a3",
+                "resourcePath": "scripts\\attack_ability_get_critical_chance\\attack_ability_get_critical_chance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb2e980d-401b-4d5b-b845-9e71c6ee8258",
             "Value": {
                 "id": "2c64fc74-2024-4d8e-b591-3f93827d8037",
@@ -1324,6 +1348,9 @@
         "511b82c2-5b27-41f8-a46a-25ab024a298c",
         "b31ca32b-169b-44f7-a174-e3dc0ef25b9d",
         "bda734c3-2420-4ea0-a038-0035d7259db2",
+        "37a928c4-a7b3-436a-8db4-2d7e8a86d881",
+        "f990a9b3-0e98-4165-87d2-df2e91f64eb5",
+        "88aee517-b91e-4ba0-a518-ba65023ff2a2",
         "1ac10fdc-5615-40f4-b7d3-147e6aaedf30",
         "bddb89b9-12de-48d4-9fdb-4ca516be1a7f",
         "9cafd866-e92b-485f-a758-16ca429159bd",
