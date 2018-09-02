@@ -32,7 +32,11 @@ dmg = max(1, floor(dmg));
 if (isHit) {
 	battle_monster_harm(target, dmg);
 
-	if (randchance(50)) {
+	// TODO Specified random chance
+	// TODO Specified effect
+	// TODO Determine how many turns to apply for
+	var r = randchance2(50, mon_get_stat(target, k_stats.bleed_resist));
+	if (r == 1) {
 		var statusEffect = bleed_status_effect_create(2, max(1, floor(dmg * 0.1)));
 		var existingEffect = mon_find_status_effect(target, statusEffect[@ StatusEffect.Type]);
 		if (existingEffect != noone)
@@ -41,5 +45,9 @@ if (isHit) {
 			var statusEffects = target[@ k_mon.status_effects];
 			ds_list_add(statusEffects, statusEffect);
 		}
+		
+		fx_battle_indicator(target, IndType.Bleed);
 	}
+	else if (r == 2)
+		fx_battle_indicator(target, IndType.Bleed | IndType.Resist);
 }

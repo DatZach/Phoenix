@@ -22,6 +22,8 @@ if (stTurn_who == FIELD_SELF) {
 			target[@ k_mon.hp] = mon_get_max_hp(target);
 		}
 	}
+	
+	fx_battle_indicator(target, IndType.Damage, dmg);
 }
 else {
 	// Foe attacks Player
@@ -31,11 +33,15 @@ else {
 			var ranks = field[@ stTurn_targetField];
 			ranks[@ stTurn_targetRank] = noone;
 		}
+		else
+			fx_battle_indicator(target, IndType.DeathsDoor, dmg);
 	}
 	else {
 		target[@ k_mon.hp] -= dmg;
 		if (target[@ k_mon.hp] < 0)
 			target[@ k_mon.hp] = 0;
+			
+		fx_battle_indicator(target, IndType.Damage, dmg);
 	}
 }
 

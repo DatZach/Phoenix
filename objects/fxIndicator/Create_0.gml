@@ -1,0 +1,3 @@
+LIFETIME = 120;
+
+alarm[0] = LIFETIME;

@@ -1,4 +1,4 @@
-/// @desc camera_shake(intensity)
+/// @func camera_shake(intensity)
 /// Shakes the camera
 
 #macro cs_tiny 2

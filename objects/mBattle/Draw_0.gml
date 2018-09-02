@@ -55,9 +55,12 @@ if (stTurn_monster != noone) {
 			
 			if (ability == noone) {
 				name = "-";
+				draw_set_color(c_gray);
 			}
 			else {
 				name = ability[@ Ability.Name];
+				var rankMask = ability[@ Ability.RankMask];
+				draw_set_color((rankMask & (1<<i)) == 0 ? c_gray : c_white);
 			}
 			
 			draw_set_halign(fa_center);
@@ -91,11 +94,13 @@ if (stTurn_monster != noone) {
 			}
 		}
 		else if (i == 4) {
+			draw_set_color(c_white);
 			draw_set_halign(fa_center);
 			draw_text(left + i*stride + stride/2,  top, "Move");
 			draw_set_halign(fa_left);
 		}
 		else if (i == 5) {
+			draw_set_color(c_white);
 			draw_set_halign(fa_center);
 			draw_text(left + i*stride + stride/2,  top, "Skip");
 			draw_set_halign(fa_left);
@@ -109,7 +114,7 @@ if (stTurn_monster != noone) {
 }
 
 // Pick Target
-if (state == battle_state_pick_target) {
+if (state == battle_state_pick_target && stTurn_targetRank != noone) {
 	var RANK_WIDTH = sprite_get_width(sMonsterPortrait);
 	var xx = stTurn_targetField == FIELD_SELF
 		? floor(PADDING + FIELD_RANKS*RANK_WIDTH - stTurn_targetRank*RANK_WIDTH)

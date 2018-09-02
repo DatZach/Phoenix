@@ -12,6 +12,7 @@ stRound_finished = [];
 
 stTurn_who = noone;
 stTurn_monster = noone;
+stTurn_rank = noone;
 stTurn_selectedAbility = 0
 stTurn_targetField = noone;
 stTurn_targetRank = noone;
