@@ -1,4 +1,14 @@
-/// @func state_create(Name <string>,Script)
+/// @func state_create(name, stepCallback)
+/// Adds an entry to the State Machine
+/// @param name string
+/// @param stepCallback script
 
-ds_map_replace(state_map,argument[0],argument[1]);
-ds_map_replace(state_keys,argument[1],argument[0]);
+var key = argument[0];
+var stepCallback = argument_count > 1 ? argument[1] : noone;
+var drawCallback = argument_count > 2 ? argument[2] : noone;
+
+if (stepCallback != noone)
+	ds_map_replace(_stateStepMap, key, stepCallback);
+
+if (drawCallback != noone)
+	ds_map_replace(_stateDrawMap, key, drawCallback);

@@ -1,8 +1,8 @@
 {
-    "id": "bfe7a9f0-055b-4d63-abf0-589b1a0f8afc",
+    "id": "40c3e420-9ba9-4fef-88a8-ef3bdcb6f2e6",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "state_execute",
+    "name": "battle_state_draw_pick_target",
     "IsCompatibility": false,
     "IsDnD": false
 }

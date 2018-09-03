@@ -1,8 +1,8 @@
 {
-    "id": "646a99a4-068b-4105-bb84-b879a97362e1",
+    "id": "e9ad6c88-766e-4c34-b270-e0a3763db30c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "state_switch_previous",
+    "name": "state_get_key",
     "IsCompatibility": false,
     "IsDnD": false
 }

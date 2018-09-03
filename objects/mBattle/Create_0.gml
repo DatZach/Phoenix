@@ -23,7 +23,7 @@ state_create("BeginRound", battle_state_begin_round);
 state_create("Round", battle_state_round);
 state_create("BeginTurn", battle_state_begin_turn);
 state_create("PickMove", battle_state_pick_move);
-state_create("PickTarget", battle_state_pick_target);
+state_create("PickTarget", battle_state_pick_target, battle_state_draw_pick_target);
 state_create("UseAbility", battle_state_use_ability);
 state_create("End", battle_state_end);
 state_switch("Init");
