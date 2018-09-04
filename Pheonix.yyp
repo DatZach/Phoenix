@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0c8e187f-e768-45a7-b0d3-46ebcf38669d",
+            "Value": {
+                "id": "8131e1af-f981-4031-9e86-9265b7a4eba6",
+                "resourcePath": "scripts\\heal_ability_get_heal_range\\heal_ability_get_heal_range.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1479cd8c-5f12-498d-80dc-6493b5c894de",
             "Value": {
                 "id": "2a2374ec-93a6-4506-ad8c-702be8bf34d9",
@@ -735,6 +743,22 @@
             }
         },
         {
+            "Key": "922cc276-a0f2-464d-86a4-e6dabfd81751",
+            "Value": {
+                "id": "8ab93e7c-8a25-4326-a149-df7cdcafd391",
+                "resourcePath": "views\\922cc276-a0f2-464d-86a4-e6dabfd81751.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "93409b46-aa18-46ae-a4fa-223bbe21ae49",
+            "Value": {
+                "id": "856caa54-7053-42ee-93a3-960a880d564d",
+                "resourcePath": "scripts\\attack_ability_get_modifier\\attack_ability_get_modifier.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "93a0cefc-15e4-4b01-89b9-3c95ead46288",
             "Value": {
                 "id": "6d0914db-466f-4b3d-bec1-71e2c788230a",
@@ -1007,6 +1031,14 @@
             }
         },
         {
+            "Key": "cab867d7-5325-42f3-920a-4f1e36b1f3ed",
+            "Value": {
+                "id": "11656e20-621c-4d8e-9da6-bc0a39aa5024",
+                "resourcePath": "scripts\\heal_ability_create\\heal_ability_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cb34ba97-d24f-43eb-8a63-ff2f9c5e98aa",
             "Value": {
                 "id": "8dd0070c-40aa-4758-b2eb-ac6fb38e6a19",
@@ -1231,6 +1263,14 @@
             }
         },
         {
+            "Key": "ee967e1a-f575-4472-b940-e7563445e037",
+            "Value": {
+                "id": "75aa07ac-e196-466d-b012-7641a002d532",
+                "resourcePath": "scripts\\HealAbility_use\\HealAbility_use.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f21d2ecd-137d-492d-bffe-fa8493f868b7",
             "Value": {
                 "id": "bd9e4644-9247-45a8-b221-028941dc0727",
@@ -1375,6 +1415,10 @@
         "37a928c4-a7b3-436a-8db4-2d7e8a86d881",
         "f990a9b3-0e98-4165-87d2-df2e91f64eb5",
         "88aee517-b91e-4ba0-a518-ba65023ff2a2",
+        "93409b46-aa18-46ae-a4fa-223bbe21ae49",
+        "cab867d7-5325-42f3-920a-4f1e36b1f3ed",
+        "ee967e1a-f575-4472-b940-e7563445e037",
+        "0c8e187f-e768-45a7-b0d3-46ebcf38669d",
         "1ac10fdc-5615-40f4-b7d3-147e6aaedf30",
         "bddb89b9-12de-48d4-9fdb-4ca516be1a7f",
         "9cafd866-e92b-485f-a758-16ca429159bd",

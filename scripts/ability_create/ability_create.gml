@@ -8,6 +8,7 @@ enum Ability {
 	Type,
 	Name,
 	RankMask,
+	TargetField,
 	TargetMask,
 	
 	FN_Use,

@@ -1,6 +1,6 @@
 /// @func battle_draw_ranks(rankId);
 /// Draws ranks
-/// @param rankId real FIELD_SELF, FIELD_FOE
+/// @param rankId real FIELD_ALLY, FIELD_FOE
 
 var RANK_WIDTH = sprite_get_width(sMonsterPortrait);
 
@@ -14,7 +14,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	
 	var hp = rank[@ k_mon.hp];
 	var maxHp = mon_get_stat(rank, k_stats.hp);
-	var xx = fieldId == FIELD_SELF
+	var xx = fieldId == FIELD_ALLY
 		? floor(PADDING + FIELD_RANKS*RANK_WIDTH - i*RANK_WIDTH)
 		: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + i*RANK_WIDTH);
 	var yy = FIELD_BOTTOM - 64;
@@ -23,7 +23,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	draw_sprite_ext(
 		rank[@ k_mon.dead] ? sCorpsePortrait : sMonsterPortrait, rank[@ k_mon.class],
 		xx, yy,
-		fieldId == FIELD_SELF ? 1 : -1, 1, 0,
+		fieldId == FIELD_ALLY ? 1 : -1, 1, 0,
 		rank[@ k_mon.hp] <= 0 && ((get_timer() / 1000 % 1500) > 1250) ? c_red : c_white, 1
 	);
 	

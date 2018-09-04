@@ -9,7 +9,7 @@ var dmg = floor(argument1);
 
 // HACK? stTurn_who might not actually be a safe variable to check to answer the
 //		question "Am I harming a friend or foe?"
-if (stTurn_who == FIELD_SELF) {
+if (stTurn_who == FIELD_ALLY) {
 	// Player attacks Foe
 	target[@ k_mon.hp] -= dmg;
 	if (target[@ k_mon.hp] <= 0) {

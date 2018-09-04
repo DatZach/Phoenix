@@ -5,7 +5,7 @@
 #macro ABILITY_ATTACK 1
 
 enum AttackAbility {
-	Accuracy = 5,//Ability.size, // TODO Find a way to uncomment this
+	Accuracy = 6,//Ability.size, // TODO Find a way to uncomment this
 	DamageModifier,
 	CriticalModifier,
 	size

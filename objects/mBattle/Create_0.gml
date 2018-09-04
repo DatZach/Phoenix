@@ -1,4 +1,4 @@
-#macro FIELD_SELF 0
+#macro FIELD_ALLY 0
 #macro FIELD_FOE 1
 #macro FIELD_RANKS 4
 

@@ -27,7 +27,7 @@ if (isWin) {
 }
 
 // Lose Condition
-var ranks = field[@ FIELD_SELF];
+var ranks = field[@ FIELD_ALLY];
 for (var i = 0; i < FIELD_RANKS; ++i) {
 	var rank = ranks[@ i];
 	if (rank == noone)

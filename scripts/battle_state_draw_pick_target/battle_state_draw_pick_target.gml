@@ -13,11 +13,15 @@ var right = GUI_WIDTH - PADDING*3;
 var source = stTurn_monster;
 var ranks = field[@ stTurn_targetField];
 var target = ranks[@ stTurn_targetRank];
+
+if (source == noone ||  target == noone)
+	return;
+
 var abilities = stTurn_monster[@ k_mon.abilities];
 var ability = abilities[@ stTurn_selectedAbility];
 var targetMask = ability[@ Ability.TargetMask];
 	
-var xx = stTurn_targetField == FIELD_SELF
+var xx = stTurn_targetField == FIELD_ALLY
 	? floor(PADDING + FIELD_RANKS*RANK_WIDTH - stTurn_targetRank*RANK_WIDTH)
 	: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + stTurn_targetRank*RANK_WIDTH);
 var yy = FIELD_BOTTOM - 64;

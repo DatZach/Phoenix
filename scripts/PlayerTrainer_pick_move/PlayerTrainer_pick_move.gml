@@ -38,7 +38,7 @@ if (keyboard_check_pressed(global.k_action)) {
 		if ((rankMask & (1<<stTurn_rank)) == 0)
 			return;
 		
-		stTurn_targetField = ability[@ Ability.Type] == ABILITY_ATTACK ? FIELD_FOE : FIELD_FOE;
+		stTurn_targetField = ability[@ Ability.TargetField];
 		stTurn_targetRank = noone;
 	
 		state_switch("PickTarget");

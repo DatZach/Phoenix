@@ -1,4 +1,20 @@
 [{
+	"name": "Trainer",
+	"stats": {
+		"hp": 50,
+		"strength": 1,
+		"protection": 1,
+		"speed": 1,
+		"accuracy": 95,
+		"critical": 20,
+		"dodge": 20,
+		"bleedResist": 80,
+		"poisonResist": 80,
+		"stunResist": 80,
+		"moveResist": 20,
+		"deathBlowResist": 80
+	}
+}, {
 	"name": "Chimaera",
 	"stats": {
 		"hp": 20,

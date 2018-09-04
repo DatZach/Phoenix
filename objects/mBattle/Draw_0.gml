@@ -7,7 +7,7 @@ lineHeight = string_height("W");
 // Field
 draw_sprite(bgBattleEnvironment, 0, GUI_WIDTH * 0.5, FIELD_BOTTOM);
 
-battle_draw_ranks(FIELD_SELF);
+battle_draw_ranks(FIELD_ALLY);
 battle_draw_ranks(FIELD_FOE);
 
 // Monster Specs

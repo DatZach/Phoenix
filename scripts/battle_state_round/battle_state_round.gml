@@ -3,6 +3,20 @@
 
 stTurn_monster = noone;
 
+// Collapse ranks after monster deaths
+for (var i = 0, ilen = array_length_1d(field); i < ilen; ++i) {
+	var ranks = field[@ i];
+	var ranksLength = array_length_1d(ranks);
+	var newRanks = array_create(ranksLength, noone);
+	for (var j = 0, k = 0; j < ranksLength; ++j) {
+		if (ranks[@ j] != noone)
+			newRanks[@ k++] = ranks[@ j];
+	}
+	
+	field[@ i] = newRanks;
+}
+
+// Determine order
 var queue = [];
 var queueIdx = 0;
 for (var i = 0, ilen = array_length_1d(field); i < ilen; ++i) {

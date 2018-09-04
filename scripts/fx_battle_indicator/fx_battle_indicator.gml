@@ -42,7 +42,7 @@ for (var i = 0; i < 2; ++i) {
 if (fieldIdx == noone || rankIdx == noone)
 	return;
 
-var xx = fieldIdx == FIELD_SELF
+var xx = fieldIdx == FIELD_ALLY
 	? floor(PADDING + FIELD_RANKS*RANK_WIDTH - rankIdx*RANK_WIDTH)
 	: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + rankIdx*RANK_WIDTH);
 var yy = FIELD_BOTTOM - 64 - RANK_HEIGHT*0.75;

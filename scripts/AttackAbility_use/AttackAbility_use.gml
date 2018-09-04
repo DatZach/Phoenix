@@ -16,7 +16,7 @@ var isHit = randchance(chance);
 var dmg;
 var isCrit = randchance(attack_ability_get_critical_chance(this, source));
 if (isCrit)
-	dmg = mon_get_stat(source, k_stats.max_damage) * 1.5 * modifier;
+	dmg = mon_get_stat(source, k_stats.max_damage) * attack_ability_get_modifier(this, source, target) * 1.5;
 else {
 	dmgRange = attack_ability_get_damage_range(this, source, target);
 	dmg = randint(dmgRange[0], dmgRange[1]);
