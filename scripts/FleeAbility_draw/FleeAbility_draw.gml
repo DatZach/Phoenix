@@ -1,0 +1,12 @@
+/// @func FleeAbility_draw(ability, left, top, right, bottom)
+/// DRAW FleeAbility
+/// @context mBattle
+
+var ability = argument0;
+var left = argument1;
+var top = argument2;
+var right = argument3;
+var bottom = argument4;
+
+draw_set_color(c_white);
+draw_text(left + 8, top + 40 + LINE_HEIGHT*0, "Attempt to escape from battle.");

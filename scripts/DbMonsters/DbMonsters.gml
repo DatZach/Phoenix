@@ -4,6 +4,7 @@
 enum k_db_mon {
 	name,
 	stats,
+	abilities,
 	_size
 }
 
@@ -41,5 +42,47 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 			dbStats[k_stats.move_resist] = jsonStats[? "moveResist"];
 			dbStats[k_stats.death_blow_resist] = jsonStats[? "deathBlowResist"];
 		dbMonster[k_db_mon.stats] = dbStats;
+		var jsonAbilities = jsonMonster[? "abilities"];
+		var dbAbilities = ds_map_create();
+			var key = ds_map_find_first(jsonAbilities);
+			for (var j = 0, jlen = ds_map_size(jsonAbilities); j < jlen; ++j) {
+				var jsonAbility = jsonAbilities[? key];
+				var dbAbility;
+				switch(jsonAbility[? "type"]) {
+					case "Attack":
+						dbAbility = attack_ability_create();
+						dbAbility[@ AttackAbility.Accuracy] = ds_map_default_value(jsonAbility, "accuracy", dbAbility[@ AttackAbility.Accuracy]);
+						dbAbility[@ AttackAbility.DamageModifier] = ds_map_default_value(jsonAbility, "damageModifier", dbAbility[@ AttackAbility.DamageModifier]);
+						dbAbility[@ AttackAbility.CriticalModifier] = ds_map_default_value(jsonAbility, "criticalModifier", dbAbility[@ AttackAbility.CriticalModifier]);
+						break;
+					case "Heal":
+						dbAbility = heal_ability_create();
+						dbAbility[@ HealAbility.Magnitude] = ds_map_default_value(jsonAbility, "magnitude", dbAbility[@ HealAbility.Magnitude]);
+						break;
+					case "Flee":
+						dbAbility = flee_ability_create();
+						break;
+					case "Capture":
+						dbAbility = capture_ability_create();
+						break;
+					default:
+						error(true, "Unknown ability type '", jsonAbility[? "type"], "'");
+						break;
+				}
+				
+				if (ds_map_exists(jsonAbility, "dependencies"))
+					dbAbility[@ Ability.Dependencies] = ds_list_to_array(jsonAbility[? "dependencies"]);
+					
+				dbAbility[@ Ability.RankMask] = ds_map_default_value(jsonAbility, "rankMask", dbAbility[@ Ability.RankMask]);
+				dbAbility[@ Ability.TargetField] = ds_map_default_value(jsonAbility, "targetField", dbAbility[@ Ability.TargetField]);
+				dbAbility[@ Ability.TargetMask] = ds_map_default_value(jsonAbility, "targetMask", dbAbility[@ Ability.TargetMask]);
+				dbAbility[@ Ability.Name] = key; // TODO Nix
+				
+				ds_map_add(dbAbilities, key, dbAbility);
+				
+				key = ds_map_find_next(jsonAbilities, key);
+			}
+			
+		dbMonster[k_db_mon.abilities] = dbAbilities;
 	ds_list_add(global.dbMonsters, dbMonster);
 }

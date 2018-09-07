@@ -7,7 +7,12 @@ state_switch("Round");
 
 var abilities = stTurn_monster[@ k_mon.abilities];
 var ability = abilities[@ stTurn_selectedAbility];
-var ranks = field[@ stTurn_targetField];
-var target = ranks[@ stTurn_targetRank];
+var target;
+if (stTurn_targetField != FIELD_NONE) {
+	var ranks = field[@ stTurn_targetField];
+	target = ranks[@ stTurn_targetRank];
+}
+else
+	target = noone;
 
 ability_use(ability, stTurn_monster, target);

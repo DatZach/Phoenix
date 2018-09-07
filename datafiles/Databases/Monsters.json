@@ -13,6 +13,49 @@
 		"stunResist": 80,
 		"moveResist": 20,
 		"deathBlowResist": 80
+	},
+	"abilities": {
+		"Shank": {
+			"type": "Attack",
+			"dependences": [],
+			"rankMask": 15,
+			"targetMask": 15,
+			"accuracy": 90,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"Heal1": {
+			"type": "Heal",
+			"dependences": [],
+			"rankMask": 15,
+			"targetMask": 15,
+			"magnitude": 0.15
+		},
+		"Heal2": {
+			"type": "Heal",
+			"dependences": ["Heal1"],
+			"rankMask": 15,
+			"targetMask": 95,
+			"magnitude": 0.25
+		},
+		"Heal3": {
+			"type": "Heal",
+			"dependences": ["Heal2"],
+			"rankMask": 15,
+			"targetMask": 127,
+			"magnitude": 0.33
+		},
+		"Capture": {
+			"type": "Capture",
+			"dependences": [],
+			"rankMask": 15,
+			"targetMask": 1
+		},
+		"Flee": {
+			"type": "Flee",
+			"dependences": [],
+			"rankMask": 15
+		}
 	}
 }, {
 	"name": "Chimaera",
@@ -22,13 +65,31 @@
 		"protection": 3,
 		"speed": 7,
 		"accuracy": 90,
-		"critical": 0,
+		"critical": 15,
 		"dodge": 15,
 		"bleedResist": 60,
 		"poisonResist": 30,
 		"stunResist": 50,
 		"moveResist": 60,
 		"deathBlowResist": 67
+	},
+	"abilities": {
+		"Bite": {
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 1,
+			"accuracy": 90,
+			"damageModifier": 1,
+			"criticalModifier": 5
+		},
+		"Rush": {
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 19,
+			"accuracy": 90,
+			"damageModifier": 1.5,
+			"criticalModifier": 0
+		}
 	}
 }, {
 	"name": "Nix",
@@ -38,12 +99,22 @@
 		"protection": 6,
 		"speed": 4,
 		"accuracy": 60,
-		"critical": 0,
+		"critical": 5,
 		"dodge": 10,
 		"bleedResist": 30,
 		"poisonResist": 60,
 		"stunResist": 80,
 		"moveResist": 10,
 		"deathBlowResist": 67
+	},
+	"abilities": {
+		"Scratch": {
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 1,
+			"accuracy": 60,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		}
 	}
 }]

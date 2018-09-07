@@ -39,7 +39,6 @@ if (keyboard_check_pressed(global.k_action)) {
 			return;
 		
 		stTurn_targetField = ability[@ Ability.TargetField];
-		stTurn_targetRank = noone;
 	
 		state_switch("PickTarget");
 	}

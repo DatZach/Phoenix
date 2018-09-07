@@ -7,13 +7,17 @@
 enum Ability {
 	Type,
 	Name,
+	Dependencies,
 	RankMask,
 	TargetField,
 	TargetMask,
 	
 	FN_Use,
+	FN_Draw,
 	
 	size
 }
+
+#macro ABILITY_SIZE 8
 
 show_error("Abstract class Ability cannot be created.", true);
