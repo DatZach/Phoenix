@@ -45,5 +45,25 @@ var nix = mon_create();
 	var abilities = nix[@ k_mon.abilities];
 		abilities[@ 0] = dbAbilities[? "Scratch"];
 ds_list_add(cpu[k_trainer.party], nix);
+var nix = mon_create();
+	mon_set_seed(nix, 2, randint());
+	repeat (1) mon_level_up(nix);
+	nix[@ k_mon.hp] = mon_get_max_hp(nix);
+	
+	var dbMonster = global.dbMonsters[| 2];
+	var dbAbilities = dbMonster[@ k_db_mon.abilities];
+	var abilities = nix[@ k_mon.abilities];
+		abilities[@ 0] = dbAbilities[? "Scratch"];
+ds_list_add(cpu[k_trainer.party], nix);
+var nix = mon_create();
+	mon_set_seed(nix, 2, randint());
+	repeat (1) mon_level_up(nix);
+	nix[@ k_mon.hp] = mon_get_max_hp(nix);
+	
+	var dbMonster = global.dbMonsters[| 2];
+	var dbAbilities = dbMonster[@ k_db_mon.abilities];
+	var abilities = nix[@ k_mon.abilities];
+		abilities[@ 0] = dbAbilities[? "Scratch"];
+ds_list_add(cpu[k_trainer.party], nix);
 
 var battle = battle_create([player, cpu]);

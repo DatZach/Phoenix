@@ -11,9 +11,9 @@ var left = GUI_WIDTH * 0.5 + PADDING;
 var right = GUI_WIDTH - PADDING*3;
 
 var source = stTurn_monster;
-var target;
+var target, ranks;
 if (stTurn_targetField != noone) {
-	var ranks = field[@ stTurn_targetField];
+	ranks = field[@ stTurn_targetField];
 	target = ranks[@ stTurn_targetRank];
 }
 else
@@ -26,13 +26,30 @@ var abilities = stTurn_monster[@ k_mon.abilities];
 var ability = abilities[@ stTurn_selectedAbility];
 var targetMask = ability[@ Ability.TargetMask];
 
-var xx = stTurn_targetField == FIELD_ALLY
-	? floor(PADDING + FIELD_RANKS*RANK_WIDTH - stTurn_targetRank*RANK_WIDTH)
-	: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + stTurn_targetRank*RANK_WIDTH);
-var yy = FIELD_BOTTOM - 64;
+for (var i = 0; i < FIELD_RANKS; ++i) {
+	var l = floor(min(i, stTurn_targetRank));
+	var h = floor(max(i, stTurn_targetRank)) - 1;
+	var mask = ((2 << (h-l)) - 1) << l << 4;
 
-draw_set_color(ability[@ Ability.Type] == ABILITY_HEAL ? c_green : c_red);
-draw_rectangle(xx - 64 + 12, yy + 8, xx + 64 - 12, yy + 8 + 8, false);
+	if (mask != 0 && (targetMask & mask) != mask && i != stTurn_targetRank)
+		continue;
+	
+	if (ranks[@ i] == noone)
+		break;
+	
+	var xx = stTurn_targetField == FIELD_ALLY
+		? floor(PADDING + FIELD_RANKS*RANK_WIDTH - i*RANK_WIDTH)
+		: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + i*RANK_WIDTH);
+	var yy = FIELD_BOTTOM - 64;
+	
+	draw_set_color(ability[@ Ability.Type] == ABILITY_HEAL ? c_green : c_red);
+	draw_rectangle(xx - 64 + 12, yy + 8, xx + 64 - 12, yy + 8 + 8, false);
+	
+	if ((targetMask & 0xF0) != 0 && i == stTurn_targetRank) {
+		draw_set_color(c_white);
+		draw_rectangle(xx - 64 + 12, yy + 8, xx + 64 - 12, yy + 8 + 8, false);
+	}
+}
 
 if (ability[@ Ability.Type] == ABILITY_ATTACK) {
 	// Name & Level

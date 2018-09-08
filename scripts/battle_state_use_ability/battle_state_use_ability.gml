@@ -7,12 +7,24 @@ state_switch("Round");
 
 var abilities = stTurn_monster[@ k_mon.abilities];
 var ability = abilities[@ stTurn_selectedAbility];
-var target;
+var targetMask = ability[@ Ability.TargetMask];
+
 if (stTurn_targetField != FIELD_NONE) {
 	var ranks = field[@ stTurn_targetField];
-	target = ranks[@ stTurn_targetRank];
+	for (var i = 0; i < FIELD_RANKS; ++i) {
+		var l = floor(min(i, stTurn_targetRank));
+		var h = floor(max(i, stTurn_targetRank)) - 1;
+		var mask = ((2 << (h-l)) - 1) << l << 4;
+
+		if (mask != 0 && (targetMask & mask) != mask && i != stTurn_targetRank)
+			continue;
+	
+		var target = ranks[@ i];
+		if (target == noone)
+			break;
+		
+		ability_use(ability, stTurn_monster, target);
+	}
 }
 else
-	target = noone;
-
-ability_use(ability, stTurn_monster, target);
+	ability_use(ability, stTurn_monster, noone);

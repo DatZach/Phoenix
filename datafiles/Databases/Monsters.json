@@ -85,7 +85,7 @@
 		"Rush": {
 			"type": "Attack",
 			"rankMask": 3,
-			"targetMask": 19,
+			"targetMask": 95,
 			"accuracy": 90,
 			"damageModifier": 1.5,
 			"criticalModifier": 0
