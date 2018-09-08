@@ -12,6 +12,8 @@ if (stTurn_targetRank == noone) {
 	dir = 1;
 }
 
+var targetField = ability[@ Ability.TargetField];
+var ranks = field[@ targetField];
 for (var i = 0; i < FIELD_RANKS; ++i) {
 	stTurn_targetRank += dir;
 	
@@ -20,7 +22,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	else if (stTurn_targetRank > FIELD_RANKS - 1)
 		stTurn_targetRank = 0;
 	
-	if ((targetMask & (1<<stTurn_targetRank)) != 0)
+	if (ranks[@ stTurn_targetRank] != noone)
 		break;
 }
 
