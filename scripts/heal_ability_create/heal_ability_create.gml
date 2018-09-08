@@ -18,6 +18,6 @@ var value = array_create(AttackAbility.size);
 	value[@ HealAbility.Magnitude] = 0;
 
 	value[@ Ability.FN_Use] = HealAbility_use;
-	value[@ Ability.FN_Draw] = HealAbility_draw;
+	value[@ Ability.FN_DrawDescription] = HealAbility_draw_description;
 
 return value;

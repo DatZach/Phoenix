@@ -1,4 +1,4 @@
-/// @func HealAbility_draw(ability, left, top, right, bottom)
+/// @func Healability_draw_description(ability, left, top, right, bottom)
 /// DRAW HealAbility
 /// @context mBattle
 
@@ -34,6 +34,7 @@ draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_text(right - 16, top + 40 + LINE_HEIGHT*0 - 2, "HEAL");
 draw_set_halign(fa_right);
-draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*1, "MAGNITUDE");
+draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*1, "HEAL");
 draw_set_halign(fa_left);
-draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*1, concat(ability[@ HealAbility.Magnitude] * 100, "%"));
+var healRange = heal_ability_get_heal_range(ability, stTurn_monster, noone);
+draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*1, concat(healRange[0], " - ", healRange[1]));

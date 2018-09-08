@@ -15,6 +15,9 @@ switch (type & ~IndType.Resist) {
 	case IndType.Damage:
 		draw_set_color(c_maroon);
 		break;
+	case IndType.Heal:
+		draw_set_color(c_green);
+		break;
 	case IndType.Bleed:
 		iconIdx = 0;
 		draw_set_color(c_red);

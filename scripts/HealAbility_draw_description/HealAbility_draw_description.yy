@@ -1,8 +1,8 @@
 {
-    "id": "28b1f31a-559d-4f8b-b4b7-f950cbacd808",
+    "id": "f68fdc3f-35c1-4a23-bee9-90a4cddf9313",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "AttackAbility_draw",
+    "name": "HealAbility_draw_description",
     "IsCompatibility": false,
     "IsDnD": false
 }

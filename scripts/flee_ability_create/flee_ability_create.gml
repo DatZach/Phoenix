@@ -16,6 +16,6 @@ var value = array_create(AttackAbility.size);
 	value[@ Ability.TargetMask] = 0x00;
 
 	value[@ Ability.FN_Use] = FleeAbility_use;
-	value[@ Ability.FN_Draw] = FleeAbility_draw;
+	value[@ Ability.FN_DrawDescription] = FleeAbility_draw_description;
 
 return value;

@@ -1,4 +1,4 @@
-/// @func FleeAbility_draw(ability, left, top, right, bottom)
+/// @func Fleeability_draw_description(ability, left, top, right, bottom)
 /// DRAW FleeAbility
 /// @context mBattle
 

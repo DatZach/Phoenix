@@ -5,8 +5,11 @@
 /// @param type IndType
 /// @param message var
 
+// TODO Rename to fx_move_toast
+
 enum IndType {
 	Damage,
+	Heal,
 	Bleed,
 	Poisoned,
 	Stunned,

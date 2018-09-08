@@ -250,7 +250,7 @@
             "Key": "28b1f31a-559d-4f8b-b4b7-f950cbacd808",
             "Value": {
                 "id": "f3a8edab-b536-45d1-b89b-7ea26440480e",
-                "resourcePath": "scripts\\AttackAbility_draw\\AttackAbility_draw.yy",
+                "resourcePath": "scripts\\AttackAbility_draw_description\\AttackAbility_draw_description.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -362,7 +362,7 @@
             "Key": "40035c75-f72c-4ec0-8428-169adec809bd",
             "Value": {
                 "id": "b47b1a03-0386-4dc5-a75e-75e5fdcbd0d0",
-                "resourcePath": "scripts\\ability_draw\\ability_draw.yy",
+                "resourcePath": "scripts\\ability_draw_description\\ability_draw_description.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -962,7 +962,7 @@
             "Key": "b23ee662-4150-4d68-ae32-948086464440",
             "Value": {
                 "id": "1fd04d2f-536c-488a-aa2f-7d6e2a6a5c2e",
-                "resourcePath": "scripts\\FleeAbility_draw\\FleeAbility_draw.yy",
+                "resourcePath": "scripts\\FleeAbility_draw_description\\FleeAbility_draw_description.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1178,7 +1178,7 @@
             "Key": "d2eed3b4-992f-4bf4-b5f4-e476a8c0caee",
             "Value": {
                 "id": "8aad0dfc-7a52-41c1-9f11-af7c0e7d5a0e",
-                "resourcePath": "scripts\\CaptureAbility_draw\\CaptureAbility_draw.yy",
+                "resourcePath": "scripts\\CaptureAbility_draw_description\\CaptureAbility_draw_description.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1426,7 +1426,7 @@
             "Key": "f68fdc3f-35c1-4a23-bee9-90a4cddf9313",
             "Value": {
                 "id": "b2fbedd4-8436-4bda-8347-77796c30a1c2",
-                "resourcePath": "scripts\\HealAbility_draw\\HealAbility_draw.yy",
+                "resourcePath": "scripts\\HealAbility_draw_description\\HealAbility_draw_description.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -22,6 +22,6 @@ var value = array_create(AttackAbility.size);
 	value[@ AttackAbility.CriticalModifier] = 0;
 
 	value[@ Ability.FN_Use] = AttackAbility_use;
-	value[@ Ability.FN_Draw] = AttackAbility_draw;
+	value[@ Ability.FN_DrawDescription] = AttackAbility_draw_description;
 
 return value;

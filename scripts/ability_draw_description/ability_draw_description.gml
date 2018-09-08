@@ -1,4 +1,4 @@
-/// @func ability_draw(ability, left, top, right, bottom)
+/// @func ability_draw_description(ability, left, top, right, bottom)
 /// Draws an ability's HUD
 /// @param ability Ability
 
@@ -10,4 +10,4 @@ var top = argument2;
 var right = argument3;
 var bottom = argument4;
 
-return script_execute(ability[@ Ability.FN_Draw], ability, left, top, right, bottom);
+return script_execute(ability[@ Ability.FN_DrawDescription], ability, left, top, right, bottom);

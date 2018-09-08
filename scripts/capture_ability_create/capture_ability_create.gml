@@ -16,6 +16,6 @@ var value = array_create(AttackAbility.size);
 	value[@ Ability.TargetMask] = 0x01;
 
 	value[@ Ability.FN_Use] = CaptureAbility_use;
-	value[@ Ability.FN_Draw] = CaptureAbility_draw;
+	value[@ Ability.FN_DrawDescription] = CaptureAbility_draw_description;
 
 return value;

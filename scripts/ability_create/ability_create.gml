@@ -13,7 +13,7 @@ enum Ability {
 	TargetMask,
 	
 	FN_Use,
-	FN_Draw,
+	FN_DrawDescription,
 	
 	size
 }

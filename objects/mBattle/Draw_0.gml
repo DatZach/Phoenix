@@ -69,7 +69,7 @@ if (stTurn_monster != noone) {
 			draw_set_halign(fa_left);
 			
 			if (i == stTurn_selectedAbility && ability != noone)
-				ability_draw(ability, left, top, right, bottom);
+				ability_draw_description(ability, left, top, right, bottom);
 		}
 		else if (i == 4) {
 			draw_set_color(c_white);

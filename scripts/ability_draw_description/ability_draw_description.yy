@@ -1,8 +1,8 @@
 {
-    "id": "d2eed3b4-992f-4bf4-b5f4-e476a8c0caee",
+    "id": "40035c75-f72c-4ec0-8428-169adec809bd",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "CaptureAbility_draw",
+    "name": "ability_draw_description",
     "IsCompatibility": false,
     "IsDnD": false
 }

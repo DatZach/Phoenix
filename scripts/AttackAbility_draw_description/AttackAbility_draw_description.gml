@@ -1,5 +1,5 @@
-/// @func CaptureAbility_draw(ability, left, top, right, bottom)
-/// DRAW CaptureAbility
+/// @func Attackability_draw_description(ability, left, top, right, bottom)
+/// DRAW AttackAbility
 /// @context mBattle
 
 var ability = argument0;
@@ -31,4 +31,13 @@ for (var i = 0; i < 4; ++i) {
 }
 
 draw_set_color(c_white);
-draw_text(left + 8, top + 40 + LINE_HEIGHT*1, "Attempt to capture Foe.");
+draw_set_halign(fa_right);
+draw_text(right - 16, top + 40 + LINE_HEIGHT*0 - 2, "ATTACK");
+draw_set_halign(fa_right);
+draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*1, "ACCURACY");
+draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*2, "DAMAGE");
+draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*3, "CRITICAL");
+draw_set_halign(fa_left);
+draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*1, string(ability[@ AttackAbility.Accuracy]));
+draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*2, concat("+", (ability[@ AttackAbility.DamageModifier] - 1) * 100, "%"));
+draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*3, concat("+", ability[@ AttackAbility.CriticalModifier], "%"));
