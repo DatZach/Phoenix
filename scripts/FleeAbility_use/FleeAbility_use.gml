@@ -8,7 +8,12 @@ var ability = argument0;
 var source = argument1;
 var target = argument2;
 
-// TODO Never escape from Trainer battles
+var foeField = stTurn_who == FIELD_ALLY ? FIELD_FOE : FIELD_ALLY;
+var trainer = trainers[@ foeField];
+if (trainer[@ k_trainer.trainer] != noone) {
+	show_message("Cannot flee from trainers!");
+	return;
+}
 
 var totalLevel = 0, allyLevel = 0;
 for (var i = 0; i < array_length_1d(field); ++i) {
@@ -19,7 +24,7 @@ for (var i = 0; i < array_length_1d(field); ++i) {
 			continue;
 			
 		totalLevel += rank[@ k_mon.level];
-		if (i == FIELD_ALLY)
+		if (i == stTurn_who)
 			allyLevel += rank[@ k_mon.level];
 	}
 }
