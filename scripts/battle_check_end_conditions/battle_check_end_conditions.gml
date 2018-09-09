@@ -20,6 +20,11 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	break;
 }
 
+var trainer = trainers[@ FIELD_FOE];
+var monTrainer = trainer[@ k_trainer.trainer];
+if (monTrainer != noone && monTrainer[@ k_mon.dead])
+	isWin = true;
+
 if (isWin) {
 	endStatus = 1;
 	state_switch("End");
@@ -40,6 +45,11 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	isLose = false;
 	break;
 }
+
+var trainer = trainers[@ FIELD_ALLY];
+var monTrainer = trainer[@ k_trainer.trainer];
+if (monTrainer != noone && monTrainer[@ k_mon.dead])
+	isLose = true;
 
 if (isLose) {
 	endStatus = 0;

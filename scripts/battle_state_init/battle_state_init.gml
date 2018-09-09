@@ -1,14 +1,21 @@
-var lt = trainers[@ 0];
-var ltp = lt[@ k_trainer.party];
-var rt = trainers[@ 1];
-var rtp = rt[@ k_trainer.party];
-var l = field[@ 0];
-var r = field[@ 1];
-l[@ 0] = ltp[| 1];
-l[@ 1] = ltp[| 0];
-r[@ 0] = rtp[| 0];
-r[@ 1] = rtp[| 1];
-r[@ 2] = rtp[| 2];
-r[@ 3] = rtp[| 3];
+/// @func battle_state_init();
+/// STATE Initialize Match
+
+for (var i = 0; i < 2; ++i) {
+	var fld = field[@ i];
+	var trainer = trainers[@ i];
+	var party = trainer[@ k_trainer.party];
+	
+	var jsize = min(FIELD_RANKS - 1, ds_list_size(party));
+	
+	var monTrainer = trainer[@ k_trainer.trainer];
+	if (monTrainer != noone)
+		fld[@ jsize] = monTrainer;
+	
+	for (var j = 0; j < jsize; ++j) {
+		var mon = party[| j];
+		fld[@ j] = mon;
+	}
+}
 
 state_switch("Round");
