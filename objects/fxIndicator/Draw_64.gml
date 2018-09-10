@@ -43,6 +43,11 @@ switch (type & ~IndType.Resist) {
 		draw_set_color(c_white);
 		message = "Death's Door";
 		break;
+	case IndType.DeathBlow:
+		iconIdx = 4;
+		draw_set_color(c_yellow);
+		message = "Death Blow!";
+		break;
 	case IndType.Dodge:
 		draw_set_color(c_ltgray);
 		message = "Dodge!";

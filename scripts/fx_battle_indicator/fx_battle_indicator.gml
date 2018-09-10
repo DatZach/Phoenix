@@ -15,6 +15,7 @@ enum IndType {
 	Stunned,
 	Moved,
 	DeathsDoor,
+	DeathBlow,
 	Dodge,
 	
 	Resist = $8000

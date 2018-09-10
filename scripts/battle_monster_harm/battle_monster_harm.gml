@@ -32,6 +32,7 @@ else {
 			target[@ k_mon.dead] = true;
 			var ranks = field[@ stTurn_targetField];
 			ranks[@ stTurn_targetRank] = noone;
+			fx_battle_indicator(target, IndType.DeathBlow);
 		}
 		else
 			fx_battle_indicator(target, IndType.DeathsDoor, dmg);

@@ -25,6 +25,10 @@ else {
 // use
 if (isHit) {
 	battle_monster_harm(target, dmg);
+	if (isCrit && target[@ k_mon.dead]) {
+		var ranks = field[@ stTurn_targetField];
+		ranks[@ stTurn_targetRank] = noone;
+	}
 
 	// TODO Specified random chance
 	// TODO Specified effect
