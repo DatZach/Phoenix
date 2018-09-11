@@ -11,7 +11,7 @@ for (var i = 0, len = ds_list_size(statusEffects); i < len; ++i) {
 	shouldSkipTurn = status_effect_tick(statusEffect, stTurn_monster) || shouldSkipTurn;
 }
 
-// Remove corpse if killed by status effect
+// STATUS EFFECTS - Remove corpse if killed by status effect
 if (stTurn_monster[@ k_mon.hp] <= 0) {
 	var ranks = field[@ stTurn_targetField];
 	if (stTurn_who == FIELD_ALLY)

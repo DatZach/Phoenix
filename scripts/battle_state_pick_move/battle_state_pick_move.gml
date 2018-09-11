@@ -4,6 +4,10 @@
 // Initialize state
 if (state_get_timer() == 0) {
 	stTurn_selectedAbility = 0;
+	
+	var abilities = stTurn_monster[@ k_mon.abilities];
+	abilities[@ 4] = move_ability_create(); // TODO Populate Distance property
+	abilities[@ 5] = skip_ability_create();
 }
 
 var trainer = trainers[@ stTurn_who];

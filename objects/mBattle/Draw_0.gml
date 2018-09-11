@@ -48,46 +48,33 @@ if (stTurn_monster != noone) {
 	var abilities = stTurn_monster[@ k_mon.abilities];
 	
 	left = left + 196;
-	var stride = ((right - left)/6);
-	for (var i = 0; i < 6; ++i) {
-		if (i < 4) {
-			var name;
-			var ability = i < 4 ? abilities[@ i] : noone;
+	var stride = ((right - left)/ABILITY_SLOTS);
+	for (var i = 0; i < ABILITY_SLOTS; ++i) {
+		var name;
+		var ability = abilities[@ i];
 			
-			if (ability == noone) {
-				name = "-";
-				draw_set_color(c_gray);
-			}
-			else {
-				name = ability[@ Ability.Name];
-				var rankMask = ability[@ Ability.RankMask];
-				draw_set_color((rankMask & (1<<i)) == 0 ? c_gray : c_white);
-			}
+		if (ability == noone) {
+			name = "-";
+			draw_set_color(c_gray);
+		}
+		else {
+			name = ability[@ Ability.Name];
+			var rankMask = ability[@ Ability.RankMask];
+			draw_set_color((rankMask & (1<<stTurn_rank)) == 0 ? c_gray : c_white);
+		}
 			
-			draw_set_halign(fa_center);
-			draw_text(left + i*stride + stride/2, top, name);
-			draw_set_halign(fa_left);
+		draw_set_halign(fa_center);
+		draw_text(left + i*stride + stride/2, top, name);
+		draw_set_halign(fa_left);
 			
-			if (i == stTurn_selectedAbility && ability != noone)
-				ability_draw_description(ability, left, top, right, bottom);
-		}
-		else if (i == 4) {
-			draw_set_color(c_white);
-			draw_set_halign(fa_center);
-			draw_text(left + i*stride + stride/2,  top, "Move");
-			draw_set_halign(fa_left);
-		}
-		else if (i == 5) {
-			draw_set_color(c_white);
-			draw_set_halign(fa_center);
-			draw_text(left + i*stride + stride/2,  top, "Skip");
-			draw_set_halign(fa_left);
-		}
+		if (i == stTurn_selectedAbility && ability != noone)
+			ability_draw_description(ability, left, top, right, bottom);
 		
 		if (i == stTurn_selectedAbility)
 			draw_line(left + i*stride, top + LINE_HEIGHT - 1, left + (i+1)*stride, top + LINE_HEIGHT - 1);
 	}
 	
+	draw_set_color(c_white);
 	draw_line(left - 16, top + LINE_HEIGHT + 8, left - 16, bottom);
 }
 

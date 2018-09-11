@@ -76,8 +76,8 @@
 	"abilities": {
 		"Bite": {
 			"type": "Attack",
-			"rankMask": 3,
-			"targetMask": 1,
+			"rankMask": 2,
+			"targetMask": 2,
 			"accuracy": 90,
 			"damageModifier": 1,
 			"criticalModifier": 5
