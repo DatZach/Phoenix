@@ -8,6 +8,9 @@ var this = argument0;
 var source = argument1;
 var target = argument2;
 
+assert(source != noone, "Source cannot be noone");
+assert(target != noone, "Target cannot be noone");
+
 // roll_is_hit()
 var chance = attack_ability_get_hit_chance(this, source, target);
 var isHit = randchance(chance);

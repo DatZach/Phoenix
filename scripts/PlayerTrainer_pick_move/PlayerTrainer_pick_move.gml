@@ -10,8 +10,8 @@ for (var i = 0; i < ABILITY_SLOTS; ++i) {
 	stTurn_selectedAbility += dir;
 	
 	if (stTurn_selectedAbility < 0)
-		stTurn_selectedAbility = ABILITY_SLOTS;
-	else if (stTurn_selectedAbility > ABILITY_SLOTS)
+		stTurn_selectedAbility = ABILITY_SLOTS - 1;
+	else if (stTurn_selectedAbility > ABILITY_SLOTS - 1)
 		stTurn_selectedAbility = 0;
 
 	ability = abilities[@ stTurn_selectedAbility];

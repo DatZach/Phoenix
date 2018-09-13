@@ -23,6 +23,28 @@ var chimaera = mon_create();
 		abilities[@ 0] = dbAbilities[? "Bite"];
 		abilities[@ 1] = dbAbilities[? "Rush"];
 ds_list_add(player[k_trainer.party], chimaera);
+var chimaera = mon_create();
+	mon_set_seed(chimaera, 2, randint());
+	repeat (3) mon_level_up(chimaera);
+	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
+	
+	var dbMonster = global.dbMonsters[| 1];
+	var dbAbilities = dbMonster[@ k_db_mon.abilities];
+	var abilities = chimaera[@ k_mon.abilities];
+		abilities[@ 0] = dbAbilities[? "Bite"];
+		abilities[@ 1] = dbAbilities[? "Rush"];
+ds_list_add(player[k_trainer.party], chimaera);
+var chimaera = mon_create();
+	mon_set_seed(chimaera, 1, randint());
+	repeat (3) mon_level_up(chimaera);
+	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
+	
+	var dbMonster = global.dbMonsters[| 1];
+	var dbAbilities = dbMonster[@ k_db_mon.abilities];
+	var abilities = chimaera[@ k_mon.abilities];
+		abilities[@ 0] = dbAbilities[? "Bite"];
+		abilities[@ 1] = dbAbilities[? "Rush"];
+ds_list_add(player[k_trainer.party], chimaera);
 
 var cpu = cpu_trainer_create();
 var trainer = mon_create();

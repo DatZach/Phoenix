@@ -13,11 +13,11 @@ for (var i = 0, len = ds_list_size(statusEffects); i < len; ++i) {
 
 // STATUS EFFECTS - Remove corpse if killed by status effect
 if (stTurn_monster[@ k_mon.hp] <= 0) {
-	var ranks = field[@ stTurn_targetField];
+	var ranks = field[@ stTurn_who];
 	if (stTurn_who == FIELD_ALLY)
-		fx_battle_indicator(ranks[@ stTurn_targetRank], IndType.DeathBlow);
+		fx_battle_indicator(ranks[@ stTurn_rank], IndType.DeathBlow);
 	
-	ranks[@ stTurn_targetRank] = noone;
+	ranks[@ stTurn_rank] = noone;
 	shouldSkipTurn = true;
 }
 
@@ -25,8 +25,8 @@ if (stTurn_monster[@ k_mon.hp] <= 0) {
 if (stTurn_monster[@ k_mon.dead]) {
 	stTurn_monster[@ k_mon.hp] -= ceil(mon_get_max_hp(stTurn_monster) * 0.33);
 	if (stTurn_monster[@ k_mon.hp] <= 0) {
-		var ranks = field[@ stTurn_targetField];
-		ranks[@ stTurn_targetRank] = noone;
+		var ranks = field[@ stTurn_who];
+		ranks[@ stTurn_rank] = noone;
 	}
 	
 	shouldSkipTurn = true;
