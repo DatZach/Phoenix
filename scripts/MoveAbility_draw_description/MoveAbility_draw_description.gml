@@ -14,6 +14,12 @@ for (var i = 0; i < 4; ++i) {
 	draw_circle(left + 104 - 16 - i*20, top + 40 + LINE_HEIGHT*0 + 8, 8, false);
 }
 
+var rankMask = ability[@ Ability.TargetMask];
+for (var i = 0; i < 4; ++i) {
+	draw_set_color((rankMask & (1<<i)) == 0 ? c_gray : c_white);
+	draw_circle(left + 104 + 16 + 4*20 - i*20, top + 40 + LINE_HEIGHT*0 + 8, 8, false);
+}
+
 draw_set_color(c_white);
 draw_text(left + 8, top + 40 + LINE_HEIGHT*1, "Change position among ranks.");
 draw_set_halign(fa_right);

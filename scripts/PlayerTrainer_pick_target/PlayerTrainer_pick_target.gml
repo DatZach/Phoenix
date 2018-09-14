@@ -7,9 +7,16 @@ var targetMask = ability[@ Ability.TargetMask];
 
 // Navigation
 var dir = keyboard_check_pressed(global.k_right) - keyboard_check_pressed(global.k_left);
+if (stTurn_targetField == FIELD_ALLY) dir *= -1;
 if (stTurn_targetRank == noone) {
-	stTurn_targetRank = -1;
-	dir = 1;
+	if (stTurn_targetField == FIELD_ALLY) {
+		stTurn_targetRank = stTurn_rank;
+		dir = 0;
+	}
+	else {
+		stTurn_targetRank = -1;
+		dir = 1;
+	}
 }
 
 var targetField = ability[@ Ability.TargetField];

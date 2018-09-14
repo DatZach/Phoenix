@@ -26,6 +26,9 @@ if (keyboard_check_pressed(global.k_action)) {
 		return;
 		
 	stTurn_targetField = ability[@ Ability.TargetField];
+	if (stTurn_targetField == FIELD_ALLY) {
+		stTurn_targetRank = stTurn_rank;
+	}
 	
 	state_switch("PickTarget");
 }
