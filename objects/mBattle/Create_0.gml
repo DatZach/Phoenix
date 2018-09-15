@@ -8,6 +8,8 @@ trainers = [];
 field = [array_create(FIELD_RANKS, noone), array_create(FIELD_RANKS, noone)];
 currentRound = 0;
 endStatus = noone;
+awards = ds_map_create();
+expectedRounds = 0;
 
 stRound_finished = [];
 

@@ -4,13 +4,31 @@ PADDING = floor(GUI_WIDTH * 0.01);
 FIELD_BOTTOM = floor(GUI_HEIGHT * 0.66);
 LINE_HEIGHT = string_height("W");
 
-// Field
+// Background
 draw_sprite(bgBattleEnvironment, 0, GUI_WIDTH * 0.5, FIELD_BOTTOM);
 
+// Round Indicator
+draw_set_font(fBattleIndicator);
+var width = string_width(string(currentRound + 1));
+var xx = floor(GUI_WIDTH / 2);
+var yy = floor(PADDING + LINE_HEIGHT / 2);
+draw_set_color(c_white);
+draw_set_valign(fa_center);
+draw_set_halign(fa_middle);
+draw_text_outline(xx, yy, string(currentRound + 1), 2, c_black, 4);
+draw_set_halign(fa_top);
+draw_set_valign(fa_left);
+
+draw_set_color(c_black);
+draw_line_width(xx - width/2 - 8, yy - 1, xx - 128, yy - 1, 3);
+draw_line_width(xx + width/2 + 8, yy - 1, xx + 128, yy - 1, 3);
+
+// Field
 battle_draw_ranks(FIELD_ALLY);
 battle_draw_ranks(FIELD_FOE);
 
 // Monster Specs
+draw_set_font(fBattleHudContent);
 draw_set_color(c_black);
 draw_rectangle(0, FIELD_BOTTOM, GUI_WIDTH, GUI_HEIGHT, false);
 

@@ -303,6 +303,22 @@
             }
         },
         {
+            "Key": "340ae373-996a-4cce-bdbe-c421b53d6397",
+            "Value": {
+                "id": "2fab6478-ff12-472e-b903-350d6251504a",
+                "resourcePath": "views\\340ae373-996a-4cce-bdbe-c421b53d6397.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "34a889dc-be1c-43ef-ab76-86a0f3d1f100",
+            "Value": {
+                "id": "db882900-5dee-4b45-9003-21ff15d1b1fc",
+                "resourcePath": "scripts\\battle_is_trainer_battle\\battle_is_trainer_battle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "34c2db6d-373e-4328-9d6c-7ca08f9892ee",
             "Value": {
                 "id": "05c55e29-f6a6-4bec-81fe-4ec13d427326",
@@ -423,6 +439,14 @@
             }
         },
         {
+            "Key": "45d1e9ac-95fc-4b0c-aa62-da84ccb6ac01",
+            "Value": {
+                "id": "bbda5010-20b3-4676-a150-d760b4e2bf0b",
+                "resourcePath": "scripts\\battle_awards_add\\battle_awards_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "46073493-0064-4054-bb9f-7fdf17dac602",
             "Value": {
                 "id": "54fa5365-bca5-418f-a2f9-f3c2076490d4",
@@ -524,6 +548,14 @@
                 "id": "68a2651a-4603-440d-929e-47b58655ef0b",
                 "resourcePath": "views\\54044b66-67ed-407c-b44a-47e684a1ebd5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "54b3cbb4-792e-4c40-86ea-d11ef12c98f1",
+            "Value": {
+                "id": "454ce946-33c0-44c6-8c5c-16aaa748d7ba",
+                "resourcePath": "scripts\\battle_award_get_experience\\battle_award_get_experience.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -999,6 +1031,14 @@
             }
         },
         {
+            "Key": "ae7fbc75-20aa-4ce6-9797-e397df936a05",
+            "Value": {
+                "id": "8aa0f983-8300-4062-bf99-4df6272cd290",
+                "resourcePath": "scripts\\mon_experience_add\\mon_experience_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "affaefd1-9bdd-401f-b931-ce005b6ae828",
             "Value": {
                 "id": "9b8f4b4f-897a-4b46-9c26-bc4a9d593baa",
@@ -1095,6 +1135,14 @@
             }
         },
         {
+            "Key": "bcce779e-a7b4-41bf-9081-dc78042c75db",
+            "Value": {
+                "id": "127955f2-7326-4432-bb8a-3634fbd47ddd",
+                "resourcePath": "scripts\\battle_awards_distribute_experience\\battle_awards_distribute_experience.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bda734c3-2420-4ea0-a038-0035d7259db2",
             "Value": {
                 "id": "619c4c05-226e-4b39-be20-897087545fcf",
@@ -1115,6 +1163,14 @@
             "Value": {
                 "id": "ab280202-c833-47be-88b3-d7bc918fb20a",
                 "resourcePath": "scripts\\ability_use\\ability_use.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bed0ca3a-6f73-4995-b5ac-dfac1fadf7ef",
+            "Value": {
+                "id": "a0349e5d-d877-48bc-bde4-c04c86739594",
+                "resourcePath": "scripts\\mon_get_next_level_experience\\mon_get_next_level_experience.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1594,6 +1650,8 @@
         "b36d6818-014e-4465-b64e-468940aa4126",
         "a2ed6dbe-ab83-4252-9294-6ecb24dfe193",
         "511b82c2-5b27-41f8-a46a-25ab024a298c",
+        "ae7fbc75-20aa-4ce6-9797-e397df936a05",
+        "bed0ca3a-6f73-4995-b5ac-dfac1fadf7ef",
         "b31ca32b-169b-44f7-a174-e3dc0ef25b9d",
         "bda734c3-2420-4ea0-a038-0035d7259db2",
         "28b1f31a-559d-4f8b-b4b7-f950cbacd808",
@@ -1638,6 +1696,10 @@
         "e3912fbc-6edd-47c5-b652-74f00d66cd94",
         "82996d44-1658-4e19-a168-b083d69d03fa",
         "59825e08-db69-402a-9d65-17ca31b1886f",
+        "34a889dc-be1c-43ef-ab76-86a0f3d1f100",
+        "bcce779e-a7b4-41bf-9081-dc78042c75db",
+        "45d1e9ac-95fc-4b0c-aa62-da84ccb6ac01",
+        "54b3cbb4-792e-4c40-86ea-d11ef12c98f1",
         "37c5b2eb-64a6-4f57-a128-d8916dc486d9",
         "1c4bc4eb-a505-495a-a7ff-ca3ed673e0d2",
         "5edf0816-5ea2-4111-afc6-25e1b904a718",

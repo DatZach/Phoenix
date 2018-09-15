@@ -10,6 +10,11 @@ var target = argument2;
 
 var healRange = heal_ability_get_heal_range(ability, source, target);
 var hp = randint(healRange[0], healRange[1]);
+if (hp <= 0) {
+	// TODO Revive II & III
+	battle_awards_add(source, BattleAward.ReviveI);
+}
+
 target[@ k_mon.hp] += hp;
 if (target[@ k_mon.hp] > mon_get_max_hp(target))
 	target[@ k_mon.hp] = mon_get_max_hp(target);

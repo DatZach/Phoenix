@@ -12,6 +12,7 @@ enum k_mon {
 	abilities,
 	status_effects,
 	level,
+	experience,
 	ap,
 	hp,
 	dead,
@@ -26,6 +27,7 @@ var mon = array_create(k_mon._size);
 	mon[k_mon.abilities] = array_create(ABILITY_SLOTS, noone);
 	mon[k_mon.status_effects] = ds_list_create();
 	mon[k_mon.level] = 0;
+	mon[k_mon.experience] = 0;
 	mon[k_mon.ap] = 0;
 	mon[k_mon.hp] = 0;
 	mon[k_mon.dead] = false;

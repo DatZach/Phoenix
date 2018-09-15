@@ -20,6 +20,24 @@ if (stTurn_who == FIELD_ALLY) {
 		else {
 			target[@ k_mon.dead] = true;
 			target[@ k_mon.hp] = mon_get_max_hp(target);
+			
+			var source = stTurn_monster; // TODO Should this be passed in?
+			if (target == trainers[@ FIELD_FOE]) {
+				if (target[@ k_mon.level] > source[@ k_mon.level]*2)
+					battle_awards_add(source, BattleAward.VanquishTrainerIII);
+				else if (target[@ k_mon.level] > source[@ k_mon.level])
+					battle_awards_add(source, BattleAward.VanquishTrainerII);
+				else
+					battle_awards_add(source, BattleAward.VanquishTrainerI);
+			}
+			else {
+				if (target[@ k_mon.level] > source[@ k_mon.level]*2)
+					battle_awards_add(source, BattleAward.VanquishFoeIII);
+				else if (target[@ k_mon.level] > source[@ k_mon.level])
+					battle_awards_add(source, BattleAward.VanquishFoeII);
+				else
+					battle_awards_add(source, BattleAward.VanquishFoeI);
+			}
 		}
 	}
 	
@@ -39,8 +57,10 @@ else {
 	}
 	else {
 		target[@ k_mon.hp] -= dmg;
-		if (target[@ k_mon.hp] < 0)
+		if (target[@ k_mon.hp] <= 0) {
+			battle_awards_add(target, BattleAward.DeathsDoor);
 			target[@ k_mon.hp] = 0;
+		}
 			
 		fx_battle_indicator(target, IndType.Damage, dmg);
 	}

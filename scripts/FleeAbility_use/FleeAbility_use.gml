@@ -8,9 +8,7 @@ var ability = argument0;
 var source = argument1;
 var target = argument2;
 
-var foeField = stTurn_who == FIELD_ALLY ? FIELD_FOE : FIELD_ALLY;
-var trainer = trainers[@ foeField];
-if (trainer[@ k_trainer.trainer] != noone) {
+if (battle_is_trainer_battle()) {
 	show_message("Cannot flee from trainers!");
 	return;
 }

@@ -15,3 +15,5 @@ stats[@ k_stats.accuracy] += (mon[@ k_mon.seed] & $200) == 0 ? 1 : 1.25;		// Dex
 stats[@ k_stats.dodge] += (mon[@ k_mon.seed] & $100) == 0 ? 1 : 1.25;			// Reflexive
 
 // TODO Prompt unlocking abilities
+
+trace(mon_get_name(mon), " leveled up to ", mon[@ k_mon.level]);
