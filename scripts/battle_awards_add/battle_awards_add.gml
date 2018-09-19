@@ -24,6 +24,9 @@ enum BattleAward {
 var target = argument0;
 var award = argument1;
 
+if (awards == noone)
+	awards = ds_map_create();
+
 var list = awards[? target];
 if (is_undefined(list)) {
 	list = ds_list_create();

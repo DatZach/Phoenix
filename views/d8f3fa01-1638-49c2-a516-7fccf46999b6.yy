@@ -14,7 +14,7 @@
         "a2ed6dbe-ab83-4252-9294-6ecb24dfe193",
         "511b82c2-5b27-41f8-a46a-25ab024a298c",
         "ae7fbc75-20aa-4ce6-9797-e397df936a05",
-        "bed0ca3a-6f73-4995-b5ac-dfac1fadf7ef"
+        "4d613cc2-79d0-46eb-89c4-fb25ea5c5fdb"
     ],
     "filterType": "GMScript",
     "folderName": "Monster",

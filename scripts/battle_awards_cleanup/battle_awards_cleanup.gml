@@ -1,0 +1,13 @@
+/// @func battle_awards_cleanup()
+/// Cleanup Battle Awards structures
+/// @context mBattle
+
+if (awards != noone) {
+	var key = ds_map_find_first(awards);
+	for (var i = 0, size = ds_map_size(awards); i < size; ++i) {
+		ds_list_destroy(awards[? key]);
+		key = ds_map_find_next(awards, key);
+	}
+	
+	awards = noone;
+}

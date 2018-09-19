@@ -1,3 +1,9 @@
+/// @func battle_state_end()
+/// STATE End
+
+if (state_get_timer() != 0)
+	return;
+
 switch(endStatus) {
 	case 0:
 		show_message("Defeat!");
@@ -18,8 +24,7 @@ switch(endStatus) {
 				battle_awards_add(rank, BattleAward.ExpedientI);
 		}
 		
-		battle_awards_distribute_experience();
-		show_message("Victory!");
+		instance_create_layer(0, 0, LAYER_INSTANCES, oBattleVictoryOverlay);
 		break;
 	}
 		
@@ -27,6 +32,3 @@ switch(endStatus) {
 		show_message("Fled!");
 		break;
 }
-
-//instance_destroy();
-game_end();

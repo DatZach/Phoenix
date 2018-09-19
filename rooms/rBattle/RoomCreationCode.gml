@@ -1,6 +1,7 @@
 var player = player_trainer_create();
 var trainer = mon_create();
 	mon_set_seed(trainer, 0, randint());
+	trainer[@ k_mon.experience] = mon_get_level_experience(trainer, 1);
 	repeat (1) mon_level_up(trainer);
 	trainer[@ k_mon.hp] = mon_get_max_hp(trainer);
 	
@@ -14,6 +15,7 @@ var trainer = mon_create();
 player[@ k_trainer.trainer] = trainer;
 var chimaera = mon_create();
 	mon_set_seed(chimaera, 1, randint());
+	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
 	
@@ -25,6 +27,7 @@ var chimaera = mon_create();
 ds_list_add(player[k_trainer.party], chimaera);
 var chimaera = mon_create();
 	mon_set_seed(chimaera, 2, randint());
+	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
 	
@@ -36,6 +39,7 @@ var chimaera = mon_create();
 ds_list_add(player[k_trainer.party], chimaera);
 var chimaera = mon_create();
 	mon_set_seed(chimaera, 1, randint());
+	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
 	
@@ -49,6 +53,7 @@ ds_list_add(player[k_trainer.party], chimaera);
 var cpu = cpu_trainer_create();
 var trainer = mon_create();
 	mon_set_seed(trainer, 0, randint());
+	trainer[@ k_mon.experience] = mon_get_level_experience(trainer, 1);
 	repeat (1) mon_level_up(trainer);
 	trainer[@ k_mon.hp] = mon_get_max_hp(trainer);
 	
@@ -62,6 +67,7 @@ var trainer = mon_create();
 cpu[@ k_trainer.trainer] = trainer;
 var nix = mon_create();
 	mon_set_seed(nix, 2, randint());
+	nix[@ k_mon.experience] = mon_get_level_experience(nix, 1);
 	repeat (1) mon_level_up(nix);
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
 	
@@ -72,6 +78,7 @@ var nix = mon_create();
 ds_list_add(cpu[k_trainer.party], nix);
 var nix = mon_create();
 	mon_set_seed(nix, 2, randint());
+	nix[@ k_mon.experience] = mon_get_level_experience(nix, 1);
 	repeat (1) mon_level_up(nix);
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
 	
@@ -79,9 +86,10 @@ var nix = mon_create();
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
 	var abilities = nix[@ k_mon.abilities];
 		abilities[@ 0] = dbAbilities[? "Scratch"];
-ds_list_add(cpu[k_trainer.party], nix);
+//ds_list_add(cpu[k_trainer.party], nix);
 var nix = mon_create();
 	mon_set_seed(nix, 2, randint());
+	nix[@ k_mon.experience] = mon_get_level_experience(nix, 1);
 	repeat (1) mon_level_up(nix);
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
 	
@@ -89,9 +97,10 @@ var nix = mon_create();
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
 	var abilities = nix[@ k_mon.abilities];
 		abilities[@ 0] = dbAbilities[? "Scratch"];
-ds_list_add(cpu[k_trainer.party], nix);
+//ds_list_add(cpu[k_trainer.party], nix);
 var nix = mon_create();
 	mon_set_seed(nix, 2, randint());
+	nix[@ k_mon.experience] = mon_get_level_experience(nix, 1);
 	repeat (1) mon_level_up(nix);
 	nix[@ k_mon.hp] = mon_get_max_hp(nix);
 	
@@ -99,6 +108,6 @@ var nix = mon_create();
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
 	var abilities = nix[@ k_mon.abilities];
 		abilities[@ 0] = dbAbilities[? "Scratch"];
-ds_list_add(cpu[k_trainer.party], nix);
+//ds_list_add(cpu[k_trainer.party], nix);
 
 var battle = battle_create([player, cpu]);

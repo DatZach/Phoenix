@@ -68,4 +68,22 @@ else
 
 trace("Expected Rounds = ", expectedRounds);
 
-state_switch("Round");
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeI);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 0], BattleAward.DeathsDoor);
+battle_awards_add(ranks[@ 0], BattleAward.DeathsDoor);
+battle_awards_add(ranks[@ 0], BattleAward.VanquishFoeIII);
+battle_awards_add(ranks[@ 1], BattleAward.VanquishFoeI);
+battle_awards_add(ranks[@ 2], BattleAward.VanquishFoeI);
+battle_awards_add(ranks[@ 2], BattleAward.DeathsDoor);
+battle_awards_add(ranks[@ 3], BattleAward.ReviveI);
+endStatus = 1;
+state_switch("End");
+
+//state_switch("Round");

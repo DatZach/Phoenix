@@ -1,6 +1,10 @@
 /// @func battle_awards_distribute_experience()
-/// Distributes experience given award map. Does not clean up awards.
+/// Distributes experience given award map. Cleans up rewards to prevent
+//  accidental redistribution.
 /// @context mBattle
+
+if (awards == noone)
+	return;
 
 var key = ds_map_find_first(awards);
 for (var i = 0, isize = ds_map_size(awards); i < isize; ++i) {
@@ -19,3 +23,5 @@ for (var i = 0, isize = ds_map_size(awards); i < isize; ++i) {
 	
 	key = ds_map_find_next(awards, key);
 }
+
+battle_awards_cleanup();

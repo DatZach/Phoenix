@@ -8,5 +8,5 @@ var value = argument1;
 
 monster[@ k_mon.experience] += value;
 
-while (mon_get_next_level_experience(monster) <= monster[@ k_mon.experience])
+while (mon_get_level_experience(monster, monster[@ k_mon.level] + 1) <= monster[@ k_mon.experience])
 	mon_level_up(monster);
