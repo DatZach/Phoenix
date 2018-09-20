@@ -10,9 +10,13 @@ for (var i = 0, isize = ds_map_size(mBattle.awards); i < isize; ++i) {
 	var idx = ds_list_size(destList);
 	if (idx < ds_list_size(sourceList))
 		ds_list_add(destList, sourceList[| idx]);
+	else
+		++fCount;
 	
 	key = ds_map_find_next(mBattle.awards, key);
 }
 
-//if (fCount <= isize)
+if (fCount < isize)
 	alarm[0] = 6;
+else
+	phase = 1;

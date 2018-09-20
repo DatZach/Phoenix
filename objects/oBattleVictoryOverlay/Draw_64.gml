@@ -1,3 +1,5 @@
+if (instance_exists(oAbilityTreeOverlay)) exit;
+
 draw_set_font(fBattleHudContent);
 
 PADDING = floor(GUI_WIDTH * 0.01);
@@ -79,8 +81,8 @@ for (var i = 0; i < size; ++i) {
 	var level = rank[@ k_mon.level];
 	var expLow, expHigh;
 	while (true) {
-		expLow = floor(4 * power(level, 3) / 5 * 100);
-		expHigh = floor(4 * power(level + 1, 3) / 5 * 100);
+		expLow = mon_get_level_experience(rank, level);
+		expHigh = mon_get_level_experience(rank, level + 1);
 		
 		if (expHigh > totalExperience)
 			break;
@@ -99,6 +101,11 @@ for (var i = 0; i < size; ++i) {
 	draw_rectangle(left, top, right, bottom, true);
 	draw_set_color(c_white);
 	draw_rectangle(left, top, left + progressWidth, bottom, false);
+	
+	// Level
+	draw_set_halign(fa_center);
+	draw_text_outline(xx, yy + PORTRAIT_HEIGHT, concat("Level ", level), 1, c_black, 4);
+	draw_set_halign(fa_left);
 	
 	// Level Up!
 	draw_set_halign(fa_center);
