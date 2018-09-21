@@ -1,1 +1,4 @@
-/// @desc 
+// Configuration
+monster = noone;
+
+// Locals

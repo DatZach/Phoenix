@@ -1,5 +1,7 @@
-/// @func mon_get_name(monster);
+/// @func mon_get_name(monster)
 /// Returns Monster's class name
+/// @param monster Monster
+/// @returns string
 
 var mon = argument0;
 var class = mon[@ k_mon.class];
