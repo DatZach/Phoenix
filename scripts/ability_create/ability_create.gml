@@ -5,15 +5,15 @@
 #macro ABILITY_NONE 0
 
 enum Ability {
-	Type,
-	Name,
-	Dependencies,
-	RankMask,
-	TargetField,
-	TargetMask,
+	Type,					// real
+	Name,					// string
+	Dependencies,			// list<string>
+	RankMask,				// real
+	TargetField,			// real
+	TargetMask,				// real
 	
-	FN_Use,
-	FN_DrawDescription,
+	FN_Use,					// script
+	FN_DrawDescription,		// script
 	
 	size
 }

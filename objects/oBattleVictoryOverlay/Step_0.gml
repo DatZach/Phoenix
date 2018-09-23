@@ -28,6 +28,7 @@ if (keyboard_check_pressed(global.k_action)) {
 				if (expHigh > totalExperience) {
 					var inst = instance_create_layer(0, 0, LAYER_INSTANCES, oAbilityTreeOverlay);
 					inst.monster = rank;
+					with(inst) event_user(EV_INITIALIZE);
 				}
 			}
 			

@@ -2,9 +2,9 @@
 /// Initializes Monsters Database
 
 enum k_db_mon {
-	name,
-	stats,
-	abilities,
+	name,			// string
+	stats,			// Stats
+	abilities,		// Map<string, Ability>
 	_size
 }
 
@@ -71,7 +71,7 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 				}
 				
 				if (ds_map_exists(jsonAbility, "dependencies"))
-					dbAbility[@ Ability.Dependencies] = ds_list_to_array(jsonAbility[? "dependencies"]);
+					dbAbility[@ Ability.Dependencies] = jsonAbility[? "dependencies"];
 					
 				dbAbility[@ Ability.RankMask] = ds_map_default_value(jsonAbility, "rankMask", dbAbility[@ Ability.RankMask]);
 				dbAbility[@ Ability.TargetField] = ds_map_default_value(jsonAbility, "targetField", dbAbility[@ Ability.TargetField]);

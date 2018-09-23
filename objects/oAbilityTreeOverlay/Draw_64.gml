@@ -3,7 +3,6 @@ if (instance_find(object_index, 0) != id) exit;
 draw_set_font(fBattleHudContent);
 
 PADDING = floor(GUI_WIDTH * 0.01);
-LINE_HEIGHT = string_height("W");
 height = floor(GUI_HEIGHT * 0.68);
 
 var left = PADDING;
@@ -55,3 +54,55 @@ draw_text_outline(
 );
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
+
+// Ability Tree
+top = top + 64 + PADDING*2;
+bottom = bottom - LINE_HEIGHT - PADDING*2;
+
+if (!surface_exists(surface))
+	surface = surface_create(right - left, bottom - top);
+	
+surface_set_target(surface);
+for (var i = 0, isize = ds_list_size(nodes); i < isize; ++i) {
+	var node = nodes[| i];
+	var ability = node[@ 0];
+	var xx = node[@ 1];
+	var yy = node[@ 2];
+	
+	draw_set_color(c_dkgray);
+	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, false);
+	draw_set_color(c_yellow);
+	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, true);
+	
+	draw_set_color(c_white);
+	draw_text(xx + PADDING, yy + PADDING, ability[@ Ability.Name]);
+}
+
+surface_reset_target();
+
+draw_surface(surface, left, top);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
