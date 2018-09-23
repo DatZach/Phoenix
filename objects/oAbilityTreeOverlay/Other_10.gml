@@ -17,9 +17,12 @@ for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 }
 
 var key = ds_map_find_first(abilities);
-for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
+for (var i = 1, isize = ds_map_size(abilities); i < isize; ++i) {
 	var ability = abilities[? key];
 	var dependencies = ability[@ Ability.Dependencies];
+	
+	var connection = [i-1,i];
+	ds_list_add(connections, connection);
 	
 	key = ds_map_find_next(abilities, key);
 }

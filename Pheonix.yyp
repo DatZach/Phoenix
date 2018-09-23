@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "32c54477-904d-4c46-8a0a-a7b6ec1fd73e",
+            "Value": {
+                "id": "122d2864-9380-4bbb-9d68-ac06b0a3e8f3",
+                "resourcePath": "scripts\\draw_bezier_cubic\\draw_bezier_cubic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "33a76e3e-fbce-471a-9f60-fc1ddcd7c518",
             "Value": {
                 "id": "1ccaf7d0-a12c-4e4b-a3f9-45a7a1bb4ad6",
@@ -1383,6 +1391,14 @@
             }
         },
         {
+            "Key": "dbf46596-5c39-44c6-8cc9-2e880c04eede",
+            "Value": {
+                "id": "98b76b85-7d6f-43aa-aac3-8319d945c4c7",
+                "resourcePath": "views\\dbf46596-5c39-44c6-8cc9-2e880c04eede.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "dccde389-dc44-41b7-bd25-28bf12c7f56f",
             "Value": {
                 "id": "eba4d836-5e55-4bd8-b700-49f3ebea6680",
@@ -1761,6 +1777,7 @@
         "e9ad6c88-766e-4c34-b270-e0a3763db30c",
         "0a45cc5e-e1e5-4197-968e-bc08027c1eae",
         "75f6566d-53b8-4740-9b85-1652a85ffece",
+        "32c54477-904d-4c46-8a0a-a7b6ec1fd73e",
         "f39bb211-f231-4302-810b-c32e43f58e2d",
         "464e0b4b-ddcd-4ceb-ac13-1733395c8653",
         "79a5a0ca-c842-43b4-9e81-d09b5ec0a8ae",
