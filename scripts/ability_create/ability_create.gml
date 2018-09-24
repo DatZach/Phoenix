@@ -6,6 +6,7 @@
 
 enum Ability {
 	Type,					// real
+	Key,					// string
 	Name,					// string
 	Dependencies,			// list<string>
 	RankMask,				// real
@@ -18,6 +19,6 @@ enum Ability {
 	size
 }
 
-#macro ABILITY_SIZE 8
+#macro ABILITY_SIZE 9
 
 show_error("Abstract class Ability cannot be created.", true);

@@ -18,7 +18,9 @@ var mask = (((1 << (distance+1)) - 1) << position) | (1<<max(0, position-1));
 
 var value = array_create(MoveAbility.size);
 	value[@ Ability.Type] = ABILITY_MOVE;
+	value[@ Ability.Key] = "";
 	value[@ Ability.Name] = "Move";
+	value[@ Ability.Dependencies] = noone;
 	value[@ Ability.RankMask] = 0x0F;
 	value[@ Ability.TargetField] = FIELD_ALLY;
 	value[@ Ability.TargetMask] = mask;

@@ -63,6 +63,8 @@ if (!surface_exists(surface))
 	surface = surface_create(right - left, bottom - top);
 	
 surface_set_target(surface);
+
+// Nodes
 for (var i = 0, isize = ds_list_size(nodes); i < isize; ++i) {
 	var node = nodes[| i];
 	var ability = node[@ 0];
@@ -76,6 +78,25 @@ for (var i = 0, isize = ds_list_size(nodes); i < isize; ++i) {
 	
 	draw_set_color(c_white);
 	draw_text(xx + PADDING, yy + PADDING, ability[@ Ability.Name]);
+}
+
+// Connections
+draw_set_color(c_white);
+for (var i = 0, isize = ds_list_size(connections); i < isize; ++i) {
+	var connection = connections[| i];
+	var node1 = nodes[| connection[@ 0]];
+	var node2 = nodes[| connection[@ 1]];
+	var xx1 = node1[@ 1] + ABILITY_WIDTH;
+	var yy1 = node1[@ 2] + ABILITY_HEIGHT/2;
+	var xx2 = node2[@ 1];
+	var yy2 = node2[@ 2] + ABILITY_HEIGHT/2;
+	var stride = xx2 - xx1;
+	
+	draw_bezier_cubic(
+		xx1, yy1, xx1 + stride, yy1,
+		xx2 - stride, yy2, xx2, yy2,
+		12, 1
+	);
 }
 
 surface_reset_target();

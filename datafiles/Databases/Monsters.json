@@ -17,7 +17,7 @@
 	"abilities": {
 		"Shank": {
 			"type": "Attack",
-			"dependences": [],
+			"dependencies": [],
 			"rankMask": 15,
 			"targetMask": 15,
 			"accuracy": 90,
@@ -26,34 +26,34 @@
 		},
 		"Heal1": {
 			"type": "Heal",
-			"dependences": [],
+			"dependencies": [],
 			"rankMask": 15,
 			"targetMask": 15,
 			"magnitude": 0.15
 		},
 		"Heal2": {
 			"type": "Heal",
-			"dependences": ["Heal1"],
+			"dependencies": ["Heal1"],
 			"rankMask": 15,
 			"targetMask": 95,
 			"magnitude": 0.25
 		},
 		"Heal3": {
 			"type": "Heal",
-			"dependences": ["Heal2"],
+			"dependencies": ["Heal2"],
 			"rankMask": 15,
 			"targetMask": 127,
 			"magnitude": 0.33
 		},
 		"Capture": {
 			"type": "Capture",
-			"dependences": [],
+			"dependencies": [],
 			"rankMask": 15,
 			"targetMask": 1
 		},
 		"Flee": {
 			"type": "Flee",
-			"dependences": [],
+			"dependencies": [],
 			"rankMask": 15
 		}
 	}

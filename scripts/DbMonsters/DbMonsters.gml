@@ -70,9 +70,8 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 						break;
 				}
 				
-				if (ds_map_exists(jsonAbility, "dependencies"))
-					dbAbility[@ Ability.Dependencies] = jsonAbility[? "dependencies"];
-					
+				dbAbility[@ Ability.Key] = key;
+				dbAbility[@ Ability.Dependencies] = ds_map_default_value(jsonAbility, "dependencies", dbAbility[@ Ability.Dependencies]);
 				dbAbility[@ Ability.RankMask] = ds_map_default_value(jsonAbility, "rankMask", dbAbility[@ Ability.RankMask]);
 				dbAbility[@ Ability.TargetField] = ds_map_default_value(jsonAbility, "targetField", dbAbility[@ Ability.TargetField]);
 				dbAbility[@ Ability.TargetMask] = ds_map_default_value(jsonAbility, "targetMask", dbAbility[@ Ability.TargetMask]);

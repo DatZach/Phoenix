@@ -10,7 +10,9 @@ enum CaptureAbility {
 
 var value = array_create(AttackAbility.size);
 	value[@ Ability.Type] = ABILITY_CAPTURE;
+	value[@ Ability.Key] = "";
 	value[@ Ability.Name] = "undefined";
+	value[@ Ability.Dependencies] = noone;
 	value[@ Ability.RankMask] = 0x0F;
 	value[@ Ability.TargetField] = FIELD_ALLY;
 	value[@ Ability.TargetMask] = 0x01;

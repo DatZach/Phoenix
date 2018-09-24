@@ -10,7 +10,9 @@ enum SkipAbility {
 
 var value = array_create(SkipAbility.size);
 	value[@ Ability.Type] = ABILITY_SKIP;
+	value[@ Ability.Key] = "";
 	value[@ Ability.Name] = "Skip";
+	value[@ Ability.Dependencies] = noone;
 	value[@ Ability.RankMask] = 0x0F;
 	value[@ Ability.TargetField] = FIELD_NONE;
 	value[@ Ability.TargetMask] = 0x0F;
