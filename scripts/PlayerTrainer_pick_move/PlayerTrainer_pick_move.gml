@@ -2,7 +2,7 @@
 /// STATE Pick Move
 
 // Navigation
-var dir = keyboard_check_pressed(global.k_right) - keyboard_check_pressed(global.k_left);
+var dir = input_check_pressed(global.k_right) - input_check_pressed(global.k_left);
 var abilities = stTurn_monster[@ k_mon.abilities];
 var ability;
 
@@ -20,7 +20,7 @@ for (var i = 0; i < ABILITY_SLOTS; ++i) {
 }
 
 // Select
-if (keyboard_check_pressed(global.k_action)) {
+if (input_check_pressed(global.k_action)) {
 	var rankMask = ability[@ Ability.RankMask];
 	if ((rankMask & (1<<stTurn_rank)) == 0)
 		return;

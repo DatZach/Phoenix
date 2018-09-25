@@ -3,13 +3,43 @@
 var dbMon = global.dbMonsters[| monster[@ k_mon.class]];
 var abilities = dbMon[@ k_db_mon.abilities];
 
+var columns = array_create(12, 0);
+
 // Nodes
 var key = ds_map_find_first(abilities);
 for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 	var ability = abilities[? key];
 	
-	var xx = PADDING + (PADDING*6+ABILITY_WIDTH)*i;
-	var yy = PADDING + (PADDING*1+ABILITY_HEIGHT)*i;
+	var xx = 0;
+	var yy = 0;
+	
+	var depStack = ds_stack_create();
+	
+	var deps = ability[@ Ability.Dependencies];
+	if (ds_exists(deps, ds_type_list)) {
+		for (var k = 0, ksize = ds_list_size(deps); k < ksize; ++k)
+			ds_stack_push(depStack, deps[| k]);
+		
+		if (ksize > 1)
+			yy += 0.5;
+	}
+	
+	while(!ds_stack_empty(depStack)) {
+		var dkey = ds_stack_pop(depStack);
+		var dependency = abilities[? dkey];
+		
+		deps = dependency[@ Ability.Dependencies];
+		if (ds_exists(deps, ds_type_list)) {
+			for (var k = 0, ksize = ds_list_size(deps); k < ksize; ++k)
+				ds_stack_push(depStack, deps[| k]);
+		}
+		
+		++xx;
+	}
+	
+	yy = (yy + columns[xx]) * (PADDING*2 + ABILITY_HEIGHT) + PADDING;
+	++columns[xx];
+	xx = floor(xx % 6) * (PADDING*2 + ABILITY_WIDTH) + PADDING;
 	
 	var node = [ability, xx, yy];
 	ds_list_add(nodes, node);
@@ -19,8 +49,10 @@ for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 
 // Connections
 var key = ds_map_find_first(abilities);
-for (var i = 1, isize = ds_map_size(abilities); i < isize; ++i) {
+for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 	var ability = abilities[? key];
+	key = ds_map_find_next(abilities, key);
+	
 	var dependencies = ability[@ Ability.Dependencies];
 	if (dependencies == noone)
 		continue;
@@ -28,20 +60,19 @@ for (var i = 1, isize = ds_map_size(abilities); i < isize; ++i) {
 	var nextIdx;
 	for (var j = 0, jsize = ds_list_size(nodes); j < jsize; ++j) {
 		var node = nodes[| j];
-		if (node[@ 0] == ability) {
+		if (node[@ AbilityNode.Ability] == ability) {
 			nextIdx = j;
 			break;
 		}
 	}
 	
 	for (var k = 0, ksize = ds_list_size(dependencies); k < ksize; ++k) {
-		var dependency = dependencies[| k];
+		var dependency = abilities[? dependencies[| k]];
 		
 		var prevIdx;
 		for (var j = 0, jsize = ds_list_size(nodes); j < jsize; ++j) {
 			var node = nodes[| j];
-			var nodeAbility = node[@ 0];
-			if (nodeAbility[@ Ability.Key] == dependency) {
+			if (node[@ AbilityNode.Ability] == dependency) {
 				prevIdx = j;
 				break;
 			}
@@ -50,6 +81,6 @@ for (var i = 1, isize = ds_map_size(abilities); i < isize; ++i) {
 		var connection = [prevIdx,nextIdx];
 		ds_list_add(connections, connection);
 	}
-	
-	key = ds_map_find_next(abilities, key);
 }
+
+selectedNode = nodes[| 0];

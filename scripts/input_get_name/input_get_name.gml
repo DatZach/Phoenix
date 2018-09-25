@@ -1,5 +1,5 @@
-/// @desc GetKeyName(key);
-/// @param key
+/// @func input_get_name(key)
+/// @param key keycode
 /// Returns a human-readable name for a key binding
 
 var key = argument0;

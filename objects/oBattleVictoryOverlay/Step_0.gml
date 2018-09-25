@@ -1,6 +1,6 @@
 /// @desc Input
 
-if (keyboard_check_pressed(global.k_action)) {
+if (input_check_pressed(global.k_action)) {
 	switch(phase) {
 		case 0: // Roll call awards
 			break;

@@ -117,4 +117,124 @@
 			"criticalModifier": 0
 		}
 	}
+}, {
+	"name": "Scorpion",
+	"stats": {
+		"hp": 20,
+		"strength": 7,
+		"protection": 8,
+		"speed": 6,
+		"accuracy": 60,
+		"critical": 5,
+		"dodge": 3,
+		"bleedResist": 30,
+		"poisonResist": 100,
+		"stunResist": 80,
+		"moveResist": 10,
+		"deathBlowResist": 67
+	},
+	"abilities": {
+		"Pinch": {
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 1,
+			"accuracy": 75,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"Shred": {
+			"type": "Attack",
+			"dependencies": ["Pinch"],
+			"rankMask": 3,
+			"targetMask": 1,
+			"accuracy": 40,
+			"damageModifier": 1.5,
+			"criticalModifier": 7.5
+		},
+		"Burrow": {
+			"TODO": "Change Attack to Status",
+			"type": "Attack",
+			"dependencies": ["Shred"],
+			"rankMask": 15,
+			"targetMask": 15,
+			"accuracy": 100,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"Impale": {
+			"type": "Attack",
+			"dependencies": ["Burrow","Sting"],
+			"rankMask": 15,
+			"targetMask": 15,
+			"accuracy": 70,
+			"damageModifier": 1,
+			"criticalModifier": 5
+		},
+		"Needle": {
+			"type": "Attack",
+			"dependencies": ["Impale","SpitBomb"],
+			"rankMask": 3,
+			"targetMask": 1,
+			"accuracy": 75,
+			"damageModifier": 1.25,
+			"criticalModifier": 5
+		},
+		"Sting": {
+			"type": "Attack",
+			"rankMask": 1,
+			"targetMask": 1,
+			"accuracy": 65,
+			"damageModifier": 1.5,
+			"criticalModifier": 6
+		},
+		"Spit": {
+			"TODO": "Change to status",
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 3,
+			"accuracy": 65,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"Spit": {
+			"TODO": "Change to status",
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 3,
+			"accuracy": 65,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"SpitBomb": {
+			"TODO": "Change to status",
+			"type": "Attack",
+			"dependencies": ["Spit"],
+			"rankMask": 3,
+			"targetMask": 3,
+			"accuracy": 65,
+			"damageModifier": 1,
+			"criticalModifier": 0
+		},
+		"PoisonSting": {
+			"type": "Attack",
+			"dependencies": ["Sting","SpitBomb"],
+			"rankMask": 1,
+			"targetMask": 1,
+			"accuracy": 65,
+			"damageModifier": 1.25,
+			"criticalModifier": 5
+		},
+		"Mend": {
+			"type": "Heal",
+			"rankMask": 1,
+			"targetMask": 1,
+			"magnitude": 0.33
+		},
+		"Malt": {
+			"type": "Heal",
+			"rankMask": 1,
+			"targetMask": 1,
+			"magnitude": 0.45
+		}
+	}
 }]

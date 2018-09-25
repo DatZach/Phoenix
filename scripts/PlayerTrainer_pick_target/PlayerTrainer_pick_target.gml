@@ -6,7 +6,7 @@ var ability = abilities[@ stTurn_selectedAbility];
 var targetMask = ability[@ Ability.TargetMask];
 
 // Navigation
-var dir = keyboard_check_pressed(global.k_right) - keyboard_check_pressed(global.k_left);
+var dir = input_check_pressed(global.k_right) - input_check_pressed(global.k_left);
 if (stTurn_targetField == FIELD_ALLY) dir *= -1;
 if (stTurn_targetRank == noone) {
 	if (stTurn_targetField == FIELD_ALLY) {
@@ -34,9 +34,9 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 }
 
 // Select
-if (keyboard_check_pressed(global.k_back))
+if (input_check_pressed(global.k_back))
 	state_switch("PickMove");
-else if (keyboard_check_pressed(global.k_action)) {
+else if (input_check_pressed(global.k_action)) {
 	if ((targetMask & (1<<stTurn_targetRank)) == 0)
 		return;
 	

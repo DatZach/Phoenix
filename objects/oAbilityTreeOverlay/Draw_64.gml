@@ -67,13 +67,20 @@ surface_set_target(surface);
 // Nodes
 for (var i = 0, isize = ds_list_size(nodes); i < isize; ++i) {
 	var node = nodes[| i];
-	var ability = node[@ 0];
-	var xx = node[@ 1];
-	var yy = node[@ 2];
+	var ability = node[@ AbilityNode.Ability];
+	var xx = node[@ AbilityNode.X];
+	var yy = node[@ AbilityNode.Y];
 	
 	draw_set_color(c_dkgray);
 	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, false);
-	draw_set_color(c_yellow);
+	
+	if (node == selectedNode)
+		draw_set_color(c_aqua);
+	else if (false)
+		draw_set_color(c_yellow);
+	else
+		draw_set_color(c_white);
+		
 	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, true);
 	
 	draw_set_color(c_white);
@@ -86,10 +93,10 @@ for (var i = 0, isize = ds_list_size(connections); i < isize; ++i) {
 	var connection = connections[| i];
 	var node1 = nodes[| connection[@ 0]];
 	var node2 = nodes[| connection[@ 1]];
-	var xx1 = node1[@ 1] + ABILITY_WIDTH;
-	var yy1 = node1[@ 2] + ABILITY_HEIGHT/2;
-	var xx2 = node2[@ 1];
-	var yy2 = node2[@ 2] + ABILITY_HEIGHT/2;
+	var xx1 = node1[@ AbilityNode.X] + ABILITY_WIDTH;
+	var yy1 = node1[@ AbilityNode.Y] + ABILITY_HEIGHT/2;
+	var xx2 = node2[@ AbilityNode.X];
+	var yy2 = node2[@ AbilityNode.Y] + ABILITY_HEIGHT/2;
 	var stride = xx2 - xx1;
 	
 	draw_bezier_cubic(
