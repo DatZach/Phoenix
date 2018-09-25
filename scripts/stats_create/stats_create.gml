@@ -1,4 +1,4 @@
-/// @function stats_create();
+/// @func stats_create();
 /// Creates a stats object
 /// @returns Stats
 

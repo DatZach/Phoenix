@@ -18,6 +18,8 @@ var chimaera = mon_create();
 	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Bite");
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Rush");
 	
 	var dbMonster = global.dbMonsters[| 1];
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
@@ -30,6 +32,8 @@ var chimaera = mon_create();
 	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Bite");
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Rush");
 	
 	var dbMonster = global.dbMonsters[| 1];
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
@@ -42,6 +46,8 @@ var chimaera = mon_create();
 	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);
 	repeat (3) mon_level_up(chimaera);
 	chimaera[@ k_mon.hp] = mon_get_max_hp(chimaera);
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Pinch");
+	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Sting");
 	
 	var dbMonster = global.dbMonsters[| 1];
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];

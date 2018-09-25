@@ -71,19 +71,31 @@ for (var i = 0, isize = ds_list_size(nodes); i < isize; ++i) {
 	var xx = node[@ AbilityNode.X];
 	var yy = node[@ AbilityNode.Y];
 	
+	var isUnlocked = true;
+	var dependencies = ability[@ Ability.Dependencies];
+	if (ds_exists(dependencies, ds_type_list)) {
+		for (var j = 0, jsize = ds_list_size(dependencies); j < jsize; ++j) {
+			var dependency = dependencies[| j];
+			if (ds_list_find_index(monster[@ k_mon.unlocked_abilities], dependency) == -1) {
+				isUnlocked = false;
+				break;
+			}
+		}
+	}
+	
 	draw_set_color(c_dkgray);
 	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, false);
 	
 	if (node == selectedNode)
 		draw_set_color(c_aqua);
-	else if (false)
+	else if (ds_list_find_index(monster[@ k_mon.unlocked_abilities], ability[@ Ability.Key]) != -1)
 		draw_set_color(c_yellow);
 	else
-		draw_set_color(c_white);
+		draw_set_color(isUnlocked ? c_white : c_gray);
 		
 	draw_rectangle(xx, yy, xx + ABILITY_WIDTH, yy + ABILITY_HEIGHT, true);
 	
-	draw_set_color(c_white);
+	draw_set_color(isUnlocked ? c_white : c_gray);
 	draw_text(xx + PADDING, yy + PADDING, ability[@ Ability.Name]);
 }
 
