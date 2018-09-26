@@ -3,6 +3,11 @@
 var dbMon = global.dbMonsters[| monster[@ k_mon.class]];
 var abilities = dbMon[@ k_db_mon.abilities];
 
+if (monster[@ k_mon.ap] <= 0) {
+	instance_destroy();
+	io_clear();
+}
+
 var columns = array_create(12, 0);
 
 // Nodes
@@ -20,8 +25,7 @@ for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 		for (var k = 0, ksize = ds_list_size(deps); k < ksize; ++k)
 			ds_stack_push(depStack, deps[| k]);
 		
-		if (ksize > 1)
-			yy += 0.5;
+		xx += 1;
 	}
 	
 	while(!ds_stack_empty(depStack)) {
@@ -32,14 +36,15 @@ for (var i = 0, isize = ds_map_size(abilities); i < isize; ++i) {
 		if (ds_exists(deps, ds_type_list)) {
 			for (var k = 0, ksize = ds_list_size(deps); k < ksize; ++k)
 				ds_stack_push(depStack, deps[| k]);
+				
+			xx += ksize;
+			yy += 0.5;
 		}
-		
-		++xx;
 	}
 	
 	yy = (yy + columns[xx]) * (PADDING*2 + ABILITY_HEIGHT) + PADDING;
 	++columns[xx];
-	xx = floor(xx % 6) * (PADDING*2 + ABILITY_WIDTH) + PADDING;
+	xx = xx * (PADDING*2 + ABILITY_WIDTH) + PADDING;
 	
 	var node = [ability, xx, yy];
 	ds_list_add(nodes, node);

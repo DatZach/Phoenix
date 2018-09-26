@@ -1055,6 +1055,14 @@
             }
         },
         {
+            "Key": "a8e16271-2f10-46cc-ac6a-6b75ab7c54e5",
+            "Value": {
+                "id": "5437ed09-d6f7-4090-ab0a-79bbf13cde8c",
+                "resourcePath": "scripts\\ability_tree_is_ability_unlockable\\ability_tree_is_ability_unlockable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "193a3f66-9f00-449e-880f-cb98b408795c",
@@ -1793,6 +1801,7 @@
         "59825e08-db69-402a-9d65-17ca31b1886f",
         "34a889dc-be1c-43ef-ab76-86a0f3d1f100",
         "7989a692-c171-4281-85e0-33df4a996e69",
+        "a8e16271-2f10-46cc-ac6a-6b75ab7c54e5",
         "37c5b2eb-64a6-4f57-a128-d8916dc486d9",
         "1c4bc4eb-a505-495a-a7ff-ca3ed673e0d2",
         "5edf0816-5ea2-4111-afc6-25e1b904a718",
