@@ -49,7 +49,7 @@ var chimaera = mon_create();
 	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Pinch");
 	ds_list_add(chimaera[@ k_mon.unlocked_abilities], "Sting");
 	
-	var dbMonster = global.dbMonsters[| 1];
+	var dbMonster = global.dbMonsters[| 3];
 	var dbAbilities = dbMonster[@ k_db_mon.abilities];
 	var abilities = chimaera[@ k_mon.abilities];
 		abilities[@ 0] = dbAbilities[? "Pinch"];
