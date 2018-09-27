@@ -33,22 +33,26 @@ if (isHit) {
 		ranks[@ stTurn_targetRank] = noone;
 	}
 
-	// TODO Specified random chance
-	// TODO Specified effect
-	// TODO Determine how many turns to apply for
-	var r = randchance2(50, mon_get_stat(target, k_stats.bleed_resist));
-	if (r == 1) {
-		var statusEffect = bleed_status_effect_create(2, max(1, floor(dmg * 0.1)));
-		var existingEffect = mon_find_status_effect(target, statusEffect[@ StatusEffect.Type]);
-		if (existingEffect != noone)
-			existingEffect[@ StatusEffect.Turns] += statusEffect[@ StatusEffect.Turns];
-		else {
-			var statusEffects = target[@ k_mon.status_effects];
-			ds_list_add(statusEffects, statusEffect);
-		}
+	var dbStatusEffects = this[@ Ability.StatusEffects];
+	for (var i = 0, isize = ds_list_size(dbStatusEffects); i < isize; ++i) {
+		var dbStatusEffect = dbStatusEffects[| i];
 		
-		fx_battle_indicator(target, IndType.Bleed);
+		var statusEffect = status_effect_create_from_db(dbStatusEffect);
+		var indType = IndType.Bleed + statusEffect[@ StatusEffect.Type];
+		
+		var isHit = randchance(dbStatusEffect[? "accuracy"] - status_effect_get_resistence(statusEffect, target));
+		if (isHit) {
+			var existingEffect = mon_find_status_effect(target, statusEffect[@ StatusEffect.Type]);
+			if (existingEffect != noone)
+				existingEffect[@ StatusEffect.Turns] += statusEffect[@ StatusEffect.Turns];
+			else {
+				var statusEffects = target[@ k_mon.status_effects];
+				ds_list_add(statusEffects, statusEffect);
+			}
+			
+			fx_battle_indicator(target, indType);
+		}
+		else
+			fx_battle_indicator(target, indType | IndType.Resist);
 	}
-	else if (r == 2)
-		fx_battle_indicator(target, IndType.Bleed | IndType.Resist);
 }

@@ -14,4 +14,7 @@ if (statusEffect[@ StatusEffect.Turns] <= 0) {
 }
 
 // Derrived tick
-return script_execute(statusEffect[@ StatusEffect.FN_Tick], statusEffect, target);
+if (script_exists(statusEffect[@ StatusEffect.FN_Tick]))
+	return script_execute(statusEffect[@ StatusEffect.FN_Tick], statusEffect, target);
+
+return false;

@@ -12,6 +12,7 @@ enum Ability {
 	RankMask,				// real
 	TargetField,			// real
 	TargetMask,				// real
+	StatusEffects,			// list<AbilityStatusEffect>
 	
 	FN_Use,					// script
 	FN_DrawDescription,		// script

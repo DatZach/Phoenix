@@ -237,4 +237,40 @@
 			"magnitude": 0.45
 		}
 	}
+}, {
+	"name": "Crusaider",
+	"stats": {
+		"hp": 20,
+		"strength": 7,
+		"protection": 8,
+		"speed": 6,
+		"accuracy": 60,
+		"critical": 5,
+		"dodge": 3,
+		"bleedResist": 30,
+		"poisonResist": 100,
+		"stunResist": 80,
+		"moveResist": 10,
+		"deathBlowResist": 67
+	},
+	"abilities": {
+		"Smite": {
+			"type": "Attack",
+			"rankMask": 3,
+			"targetMask": 3,
+			"accuracy": 85,
+			"damageModifier": 1,
+			"criticalModifier": 0,
+			"statusEffects": [{
+				"type": "Stun",
+				"accuracy": 100,
+				"turns": 1
+			}, {
+				"type": "Bleed",
+				"accuracy": 100,
+				"turns": 2,
+				"damage": 2
+			}]
+		}
+	}
 }]

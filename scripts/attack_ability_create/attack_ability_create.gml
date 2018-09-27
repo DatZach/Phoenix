@@ -8,6 +8,7 @@ enum AttackAbility {
 	Accuracy = ABILITY_SIZE,//Ability.size, // TODO Find a way to uncomment this
 	DamageModifier,
 	CriticalModifier,
+	BleedBase,
 	size
 }
 
@@ -22,6 +23,7 @@ var value = array_create(AttackAbility.size);
 	value[@ AttackAbility.Accuracy] = 0;
 	value[@ AttackAbility.DamageModifier] = 1;
 	value[@ AttackAbility.CriticalModifier] = 0;
+	value[@ AttackAbility.BleedBase] = 0;
 
 	value[@ Ability.FN_Use] = AttackAbility_use;
 	value[@ Ability.FN_DrawDescription] = AttackAbility_draw_description;
