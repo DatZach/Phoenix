@@ -20,6 +20,6 @@ enum Ability {
 	size
 }
 
-#macro ABILITY_SIZE 9
+#macro ABILITY_SIZE 10
 
 show_error("Abstract class Ability cannot be created.", true);

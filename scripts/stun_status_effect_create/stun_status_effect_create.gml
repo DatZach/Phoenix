@@ -14,5 +14,5 @@ var statusEffect = array_create(StunStatusEffect.size);
 	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_STUN;
 	statusEffect[@ StatusEffect.Turns] = turns;
 	
-	statusEffect[@ StatusEffect.FN_Tick] = noone;
+	statusEffect[@ StatusEffect.FN_Tick] = StunStatus_tick;
 return statusEffect;

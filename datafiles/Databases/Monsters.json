@@ -76,11 +76,21 @@
 	"abilities": {
 		"Bite": {
 			"type": "Attack",
-			"rankMask": 2,
-			"targetMask": 2,
+			"rankMask": 15,
+			"targetMask": 15,
 			"accuracy": 90,
 			"damageModifier": 1,
-			"criticalModifier": 5
+			"criticalModifier": 5,
+			"statusEffects": [{
+				"type": "Stun",
+				"accuracy": 200,
+				"turns": 1
+			}, {
+				"type": "Bleed",
+				"accuracy": 100,
+				"turns": 2,
+				"strength": 2
+			}]
 		},
 		"Rush": {
 			"type": "Attack",

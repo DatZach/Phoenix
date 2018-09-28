@@ -1,8 +1,8 @@
 {
-    "id": "54226a24-3feb-48ea-88c0-7cedde3aa4fe",
+    "id": "73eb1f29-6e63-4ded-bec3-ebc6ce027ead",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ability_status_effect_create",
+    "name": "StunStatus_tick",
     "IsCompatibility": false,
     "IsDnD": false
 }

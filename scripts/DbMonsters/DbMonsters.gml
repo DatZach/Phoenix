@@ -77,7 +77,7 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 				dbAbility[@ Ability.TargetMask] = ds_map_default_value(jsonAbility, "targetMask", dbAbility[@ Ability.TargetMask]);
 				dbAbility[@ Ability.Name] = key; // TODO Nix
 				
-				var jsonStatusEffects = jsonMonster[? "statusEffects"];
+				var jsonStatusEffects = jsonAbility[? "statusEffects"];
 				if (!is_undefined(jsonStatusEffects))
 					dbAbility[@ Ability.StatusEffects] = jsonStatusEffects;
 				else

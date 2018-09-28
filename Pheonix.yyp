@@ -623,14 +623,6 @@
             }
         },
         {
-            "Key": "54226a24-3feb-48ea-88c0-7cedde3aa4fe",
-            "Value": {
-                "id": "08a09971-54a8-4bdf-a8f7-91f339e6fe66",
-                "resourcePath": "scripts\\ability_status_effect_create\\ability_status_effect_create.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "54b3cbb4-792e-4c40-86ea-d11ef12c98f1",
             "Value": {
                 "id": "454ce946-33c0-44c6-8c5c-16aaa748d7ba",
@@ -747,6 +739,14 @@
             "Value": {
                 "id": "d3e73764-21a5-484f-89f4-5a57534849c2",
                 "resourcePath": "scripts\\DCC_ToggleNoClip\\DCC_ToggleNoClip.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "73eb1f29-6e63-4ded-bec3-ebc6ce027ead",
+            "Value": {
+                "id": "5bf809e8-125d-408b-9a09-22a92a06149f",
+                "resourcePath": "scripts\\StunStatus_tick\\StunStatus_tick.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1052,14 +1052,6 @@
                 "id": "8443e45c-fe98-44fe-b809-8fae3f768bba",
                 "resourcePath": "scripts\\DCC_SetVerbosity\\DCC_SetVerbosity.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "a154ee26-71d4-4da6-b49f-b2fe0e0ffe5b",
-            "Value": {
-                "id": "098fd64a-131c-4590-b4d7-c5169168a247",
-                "resourcePath": "views\\a154ee26-71d4-4da6-b49f-b2fe0e0ffe5b.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1822,7 +1814,6 @@
         "511b82c2-5b27-41f8-a46a-25ab024a298c",
         "ae7fbc75-20aa-4ce6-9797-e397df936a05",
         "4d613cc2-79d0-46eb-89c4-fb25ea5c5fdb",
-        "54226a24-3feb-48ea-88c0-7cedde3aa4fe",
         "b31ca32b-169b-44f7-a174-e3dc0ef25b9d",
         "bda734c3-2420-4ea0-a038-0035d7259db2",
         "28b1f31a-559d-4f8b-b4b7-f950cbacd808",
@@ -1854,6 +1845,7 @@
         "7846a5a7-1080-448b-b5d3-c9fd9853dba8",
         "0accc45a-69d5-44ab-86d4-9cc23f5e7d7a",
         "6658d314-4036-42d4-8f4e-a0d83743b650",
+        "73eb1f29-6e63-4ded-bec3-ebc6ce027ead",
         "11fbe9fc-b490-465f-acd1-06741a281148",
         "b00d56c2-7ab6-491f-b41a-0196e9603a08",
         "4ea099c0-b8d7-4951-b244-c62abe84c231",

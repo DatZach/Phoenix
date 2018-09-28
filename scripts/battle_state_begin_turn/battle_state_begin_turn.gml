@@ -9,6 +9,14 @@ var statusEffects = stTurn_monster[@ k_mon.status_effects];
 for (var i = 0, len = ds_list_size(statusEffects); i < len; ++i) {
 	var statusEffect = statusEffects[| i];
 	shouldSkipTurn = status_effect_tick(statusEffect, stTurn_monster) || shouldSkipTurn;
+	
+	// TODO I'm not super happy with this code living here because it moves the responsibility of
+	//		Abilities ticking from outside the ability class
+	statusEffect[@ StatusEffect.Turns] -= 1;
+	if (statusEffect[@ StatusEffect.Turns] <= 0) {
+		ds_list_delete_value(stTurn_monster[@ k_mon.status_effects], statusEffect);
+		--len; --i;
+	}
 }
 
 // STATUS EFFECTS - Remove corpse if killed by status effect
