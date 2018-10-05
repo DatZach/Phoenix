@@ -4,10 +4,14 @@
 /// @param source Monster
 /// @param target Monster
 
-gml_pragma("forceinline");
-
 var ability = argument0;
 var source = argument1;
 var target = argument2;
 
-return script_execute(ability[@ Ability.FN_Use], ability, source, target);
+var subs = ability[@ Ability.Sub];
+for (var i = 0, isize = ds_list_size(subs); i < isize; ++i) {
+	var sub = subs[| i];
+	ability_sub_use(ability, sub, source, target);
+}
+
+// TODO Return value?

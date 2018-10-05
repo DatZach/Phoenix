@@ -42,7 +42,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 		: floor(GUI_WIDTH - PADDING - FIELD_RANKS*RANK_WIDTH + i*RANK_WIDTH);
 	var yy = FIELD_BOTTOM - 64;
 	
-	draw_set_color(ability[@ Ability.Type] == ABILITY_HEAL ? c_green : c_red);
+	draw_set_color(c_red);
 	draw_rectangle(xx - 64 + 12, yy + 8, xx + 64 - 12, yy + 8 + 8, false);
 	
 	if ((targetMask & 0xF0) != 0 && i == stTurn_targetRank) {
@@ -51,7 +51,13 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	}
 }
 
-if (ability[@ Ability.Type] == ABILITY_ATTACK) {
+// TODO ability_draw_target_description()
+var subs = ability[@ Ability.Sub];
+for (var i = 0, isize = ds_list_size(subs); i < isize; ++i) {
+	var sub = subs[| i];
+	if (sub[@ AbilitySub.Type] != ABILITY_ATTACK)
+		continue;
+		
 	// Name & Level
 	draw_set_color(c_white);
 	draw_text(left + 8, top, concat(mon_get_name(target), " Lv. ", target[@ k_mon.level]));
@@ -89,12 +95,14 @@ if (ability[@ Ability.Type] == ABILITY_ATTACK) {
 		draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*3, "DAMAGE");
 		draw_set_halign(fa_left);
 	
-		var hitChance = attack_ability_get_hit_chance(ability, source, target);
+		var hitChance = damage_ability_sub_get_hit_chance(ability, sub, source, target);
 		if (hitChance == 100) hitChance = 95;
 		draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*1, concat(hitChance, "%"));
-		var critChance = attack_ability_get_critical_chance(ability, source);
+		var critChance = damage_ability_sub_get_critical_chance(ability, sub, source);
 		draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*2, concat(critChance, "%"));
-		var dmgRange = attack_ability_get_damage_range(ability, source, target);
+		var dmgRange = damage_ability_sub_get_damage_range(ability, sub, source, target);
 		draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*3, concat(dmgRange[0], " - ", dmgRange[1]));
 	}
+	
+	break;
 }

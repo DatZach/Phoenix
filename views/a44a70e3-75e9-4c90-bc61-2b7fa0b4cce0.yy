@@ -11,7 +11,8 @@
         "b00d56c2-7ab6-491f-b41a-0196e9603a08",
         "4ea099c0-b8d7-4951-b244-c62abe84c231",
         "76293eba-55fe-4d4e-85ad-89f074c07be3",
-        "0ff334e8-145d-43a6-9684-5d175ff05f5f"
+        "0ff334e8-145d-43a6-9684-5d175ff05f5f",
+        "74265c14-828d-4795-93a1-d23685823d5c"
     ],
     "filterType": "GMScript",
     "folderName": "StatusEffect",

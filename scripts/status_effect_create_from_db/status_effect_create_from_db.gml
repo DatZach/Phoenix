@@ -3,6 +3,7 @@
 /// @param dbStatusEffect AbilityStatusEffect
 /// @returns StatusEffect
 
+// TODO Deprecated?
 var dbStatusEffect = argument0;
 
 var turns = dbStatusEffect[? "turns"];

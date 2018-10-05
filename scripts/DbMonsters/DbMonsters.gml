@@ -47,29 +47,7 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 			var key = ds_map_find_first(jsonAbilities);
 			for (var j = 0, jlen = ds_map_size(jsonAbilities); j < jlen; ++j) {
 				var jsonAbility = jsonAbilities[? key];
-				var dbAbility;
-				switch(jsonAbility[? "type"]) {
-					case "Attack":
-						dbAbility = attack_ability_create();
-						dbAbility[@ AttackAbility.Accuracy] = ds_map_default_value(jsonAbility, "accuracy", dbAbility[@ AttackAbility.Accuracy]);
-						dbAbility[@ AttackAbility.DamageModifier] = ds_map_default_value(jsonAbility, "damageModifier", dbAbility[@ AttackAbility.DamageModifier]);
-						dbAbility[@ AttackAbility.CriticalModifier] = ds_map_default_value(jsonAbility, "criticalModifier", dbAbility[@ AttackAbility.CriticalModifier]);
-						break;
-					case "Heal":
-						dbAbility = heal_ability_create();
-						dbAbility[@ HealAbility.Magnitude] = ds_map_default_value(jsonAbility, "magnitude", dbAbility[@ HealAbility.Magnitude]);
-						break;
-					case "Flee":
-						dbAbility = flee_ability_create();
-						break;
-					case "Capture":
-						dbAbility = capture_ability_create();
-						break;
-					default:
-						error(true, "Unknown ability type '", jsonAbility[? "type"], "'");
-						break;
-				}
-				
+				var dbAbility = ability_create();
 				dbAbility[@ Ability.Key] = key;
 				dbAbility[@ Ability.Dependencies] = ds_map_default_value(jsonAbility, "dependencies", dbAbility[@ Ability.Dependencies]);
 				dbAbility[@ Ability.RankMask] = ds_map_default_value(jsonAbility, "rankMask", dbAbility[@ Ability.RankMask]);
@@ -77,14 +55,13 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 				dbAbility[@ Ability.TargetMask] = ds_map_default_value(jsonAbility, "targetMask", dbAbility[@ Ability.TargetMask]);
 				dbAbility[@ Ability.Name] = key; // TODO Nix
 				
-				var jsonStatusEffects = jsonAbility[? "statusEffects"];
-				if (!is_undefined(jsonStatusEffects))
-					dbAbility[@ Ability.StatusEffects] = jsonStatusEffects;
-				else
-					dbAbility[@ Ability.StatusEffects] = ds_list_create();
+				var jsonAbilitySub = jsonAbility[? "sub"];
+				for (var k = 0, ksize = ds_list_size(jsonAbilitySub); k < ksize; ++k) {
+					var dbAbilitySub = ability_sub_create_from_db(jsonAbilitySub);
+					ds_list_add(dbAbility[@ Ability.Sub], dbAbilitySub);
+				}
 				
 				ds_map_add(dbAbilities, key, dbAbility);
-				
 				key = ds_map_find_next(jsonAbilities, key);
 			}
 			

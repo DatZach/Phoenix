@@ -2,7 +2,7 @@
 /// Creates a StunStatusEffect
 /// @returns StunStatusEffect
 
-#macro STATUS_EFFECT_STUN 2
+#macro STATUS_EFFECT_STUN 3
 
 enum StunStatusEffect {
 	size = 4,//StatusEffect.size, // TODO Find a way to uncomment this

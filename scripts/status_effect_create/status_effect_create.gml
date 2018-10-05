@@ -2,6 +2,8 @@
 /// Creates an empty StatusEffect
 /// @returns StatusEffect
 
+#macro STATUS_EFFECT_NONE 0
+
 enum StatusEffect {
 	Type,
 	Turns,

@@ -16,45 +16,57 @@
 	},
 	"abilities": {
 		"Shank": {
-			"type": "Attack",
 			"dependencies": [],
 			"rankMask": 15,
 			"targetMask": 15,
-			"accuracy": 90,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 90,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"Heal1": {
-			"type": "Heal",
 			"dependencies": [],
 			"rankMask": 15,
 			"targetMask": 15,
-			"magnitude": 0.15
+			"sub": [{
+				"type": "Heal",
+				"magnitude": 0.15
+			}]
 		},
 		"Heal2": {
-			"type": "Heal",
 			"dependencies": ["Heal1"],
 			"rankMask": 15,
 			"targetMask": 95,
-			"magnitude": 0.25
+			"sub": [{
+				"type": "Heal",
+				"magnitude": 0.25
+			}]
 		},
 		"Heal3": {
-			"type": "Heal",
 			"dependencies": ["Heal2"],
 			"rankMask": 15,
 			"targetMask": 127,
-			"magnitude": 0.33
+			"sub": [{
+				"type": "Heal",
+				"magnitude": 0.33
+			}]
 		},
 		"Capture": {
-			"type": "Capture",
 			"dependencies": [],
 			"rankMask": 15,
-			"targetMask": 1
+			"targetMask": 1,
+			"sub": [{
+				"type": "Capture"
+			}]
 		},
 		"Flee": {
-			"type": "Flee",
 			"dependencies": [],
-			"rankMask": 15
+			"rankMask": 15,
+			"sub": [{
+				"type": "Flee"
+			}]
 		}
 	}
 }, {
@@ -75,30 +87,35 @@
 	},
 	"abilities": {
 		"Bite": {
-			"type": "Attack",
 			"rankMask": 15,
 			"targetMask": 15,
-			"accuracy": 90,
-			"damageModifier": 1,
-			"criticalModifier": 5,
-			"statusEffects": [{
-				"type": "Stun",
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 90,
+				"damageModifier": 1,
+				"criticalModifier": 5,
+			}, {
+				"type": "AddStatus",
+				"statusEffect": "Stun",
 				"accuracy": 200,
 				"turns": 1
 			}, {
-				"type": "Bleed",
+				"type": "AddStatus",
+				"statusEffect": "Bleed",
 				"accuracy": 100,
 				"turns": 2,
 				"strength": 2
 			}]
 		},
 		"Rush": {
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 95,
-			"accuracy": 90,
-			"damageModifier": 1.5,
-			"criticalModifier": 0
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 90,
+				"damageModifier": 1.5,
+				"criticalModifier": 0
+			}]
 		}
 	}
 }, {
@@ -119,12 +136,14 @@
 	},
 	"abilities": {
 		"Scratch": {
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 1,
-			"accuracy": 60,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 60,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		}
 	}
 }, {
@@ -145,106 +164,133 @@
 	},
 	"abilities": {
 		"Pinch": {
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 1,
-			"accuracy": 75,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 75,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"Shred": {
-			"type": "Attack",
 			"dependencies": ["Pinch"],
 			"rankMask": 3,
 			"targetMask": 1,
-			"accuracy": 40,
-			"damageModifier": 1.5,
-			"criticalModifier": 7.5
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 40,
+				"damageModifier": 1.5,
+				"criticalModifier": 7.5
+			}]
 		},
 		"Burrow": {
-			"TODO": "Change Attack to Status",
-			"type": "Attack",
 			"dependencies": ["Shred"],
 			"rankMask": 15,
 			"targetMask": 15,
-			"accuracy": 100,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"TODO": "Change Attack to Status",
+				"type": "Damage",
+				"accuracy": 100,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"Impale": {
-			"type": "Attack",
 			"dependencies": ["Burrow","Sting"],
 			"rankMask": 15,
 			"targetMask": 15,
-			"accuracy": 70,
-			"damageModifier": 1,
-			"criticalModifier": 5
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 70,
+				"damageModifier": 1,
+				"criticalModifier": 5
+			}]
 		},
 		"Needle": {
-			"type": "Attack",
 			"dependencies": ["Impale","SpitBomb"],
 			"rankMask": 3,
 			"targetMask": 1,
-			"accuracy": 75,
-			"damageModifier": 1.25,
-			"criticalModifier": 5
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 75,
+				"damageModifier": 1.25,
+				"criticalModifier": 5
+			}]
 		},
 		"Sting": {
-			"type": "Attack",
 			"rankMask": 1,
 			"targetMask": 1,
-			"accuracy": 65,
-			"damageModifier": 1.5,
-			"criticalModifier": 6
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 65,
+				"damageModifier": 1.5,
+				"criticalModifier": 6
+			}]
 		},
 		"Spit": {
-			"TODO": "Change to status",
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 3,
-			"accuracy": 65,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"TODO": "Change to status",
+				"type": "Damage",
+				"accuracy": 65,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"Spit": {
-			"TODO": "Change to status",
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 3,
-			"accuracy": 65,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"TODO": "Change to status",
+				"type": "Damage",
+				"accuracy": 65,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"SpitBomb": {
-			"TODO": "Change to status",
-			"type": "Attack",
 			"dependencies": ["Spit"],
 			"rankMask": 3,
 			"targetMask": 3,
-			"accuracy": 65,
-			"damageModifier": 1,
-			"criticalModifier": 0
+			"sub": [{
+				"TODO": "Change to status",
+				"type": "Damage",
+				"accuracy": 65,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
 		},
 		"PoisonSting": {
-			"type": "Attack",
 			"dependencies": ["Sting","SpitBomb"],
 			"rankMask": 1,
 			"targetMask": 1,
-			"accuracy": 65,
-			"damageModifier": 1.25,
-			"criticalModifier": 5
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 65,
+				"damageModifier": 1.25,
+				"criticalModifier": 5
+			}, {
+				"type": "AddStatus",
+				"statusEffect": "Poison"
+			}]
 		},
 		"Mend": {
-			"type": "Heal",
 			"rankMask": 1,
 			"targetMask": 1,
-			"magnitude": 0.33
+			"sub": [{
+				"type": "Heal",
+				"magnitude": 0.33
+			}]
 		},
 		"Malt": {
-			"type": "Heal",
 			"rankMask": 1,
 			"targetMask": 1,
-			"magnitude": 0.45
+			"sub": [{
+				"type": "Heal",
+				"magnitude": 0.45
+			}]
 		}
 	}
 }, {
@@ -265,18 +311,21 @@
 	},
 	"abilities": {
 		"Smite": {
-			"type": "Attack",
 			"rankMask": 3,
 			"targetMask": 3,
-			"accuracy": 85,
-			"damageModifier": 1,
-			"criticalModifier": 0,
-			"statusEffects": [{
-				"type": "Stun",
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 85,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}, {
+				"type": "AddStatus",
+				"statusEffect": "Stun",
 				"accuracy": 100,
 				"turns": 1
 			}, {
-				"type": "Bleed",
+				"type": "AddStatus",
+				"statusEffect": "Bleed",
 				"accuracy": 100,
 				"turns": 2,
 				"damage": 2

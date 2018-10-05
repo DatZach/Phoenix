@@ -1,13 +1,10 @@
-/// ds_map_default_value(map,key,val)
-//
-//  Returns the value of a key from a given map,
-//  inserting a default value into the map if 
-//  the key does not yet exist.
-//
-//      map         id of the map to modify
-//      key         key in the map
-//      val         default value to insert
-//
+/// @func ds_map_default_value(map,key,val)
+///  Returns the value of a key from a given map,
+///  inserting a default value into the map if 
+///  the key does not yet exist.
+/// @param map ds_map id of the map to modify
+/// @param key var key in the map
+/// @param val var default value to insert
 /// GMLscripts.com/license
 {
     var map, key, val;

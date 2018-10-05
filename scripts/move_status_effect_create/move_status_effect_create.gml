@@ -1,3 +1,3 @@
-#macro STATUS_EFFECT_MOVE 3
+#macro STATUS_EFFECT_MOVE 4
 
 error("NotImplementedException");
