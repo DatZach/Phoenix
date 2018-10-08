@@ -2,7 +2,7 @@
 /// Creates a PoisonStatusEffect
 /// @returns PoisonStatusEffect
 
-#macro STATUS_EFFECT_POISON 2
+#macro STATUS_EFFECT_POISON 1
 
 enum PoisonStatusEffect {
 	Strength = 4,//StatusEffect.size, // TODO Find a way to uncomment this

@@ -2,7 +2,7 @@
 /// Creates a BleedStatusEffect
 /// @returns BleedStatusEffect
 
-#macro STATUS_EFFECT_BLEED 1
+#macro STATUS_EFFECT_BLEED 0
 
 enum BleedStatusEffect {
 	Strength = 4,//StatusEffect.size, // TODO Find a way to uncomment this

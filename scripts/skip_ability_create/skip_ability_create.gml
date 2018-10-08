@@ -2,4 +2,6 @@
 /// Creates a new Skip Ability
 /// @returns Ability
 
-return ability_create();
+var ability = ability_create();
+	ability[@ Ability.Name] = "Skip";
+return ability;

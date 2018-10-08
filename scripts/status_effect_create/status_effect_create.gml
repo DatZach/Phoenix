@@ -2,7 +2,7 @@
 /// Creates an empty StatusEffect
 /// @returns StatusEffect
 
-#macro STATUS_EFFECT_NONE 0
+#macro STATUS_EFFECT_NONE noone
 
 enum StatusEffect {
 	Type,

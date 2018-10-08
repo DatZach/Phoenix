@@ -55,8 +55,9 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 				dbAbility[@ Ability.TargetMask] = ds_map_default_value(jsonAbility, "targetMask", dbAbility[@ Ability.TargetMask]);
 				dbAbility[@ Ability.Name] = key; // TODO Nix
 				
-				var jsonAbilitySub = jsonAbility[? "sub"];
-				for (var k = 0, ksize = ds_list_size(jsonAbilitySub); k < ksize; ++k) {
+				var jsonAbilitySubs = jsonAbility[? "sub"];
+				for (var k = 0, ksize = ds_list_size(jsonAbilitySubs); k < ksize; ++k) {
+					var jsonAbilitySub = jsonAbilitySubs[| k];
 					var dbAbilitySub = ability_sub_create_from_db(jsonAbilitySub);
 					ds_list_add(dbAbility[@ Ability.Sub], dbAbilitySub);
 				}

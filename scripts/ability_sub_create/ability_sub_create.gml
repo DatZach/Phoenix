@@ -9,10 +9,11 @@ enum AbilitySub {
 	
 	FN_Use,
 	FN_DrawDescription,
+	FN_DrawTargetDescription,
 	
 	sizeof
 }
 
-#macro ABILITY_SUB_SIZEOF 4
+#macro ABILITY_SUB_SIZEOF 5
 
 error(true, "Cannot create abstract class AbilitySub");

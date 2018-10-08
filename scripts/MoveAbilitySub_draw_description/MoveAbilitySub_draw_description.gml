@@ -26,6 +26,6 @@ draw_text(left + 8, top + 40 + LINE_HEIGHT*1, "Change position among ranks.");
 draw_set_halign(fa_right);
 draw_text(left + 104 - 8, top + 40 + LINE_HEIGHT*2, "RANGE");
 draw_set_halign(fa_left);
-draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*2, string(ability[@ MoveAbility.Distance]));
+draw_text(left + 104 + 8, top + 40 + LINE_HEIGHT*2, string(sub[@ MoveAbilitySub.Distance]));
 
 return 40 + LINE_HEIGHT*3;

@@ -15,5 +15,6 @@ var value = array_create(HealAbilitySub.sizeof);
 
 	value[@ AbilitySub.FN_Use] = HealAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = HealAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 
 return value;

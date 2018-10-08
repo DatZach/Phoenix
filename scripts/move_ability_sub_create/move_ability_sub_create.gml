@@ -5,13 +5,16 @@
 #macro ABILITY_SUB_MOVE 5
 
 enum MoveAbilitySub {
-	sizeof = ABILITY_SUB_SIZEOF //AbilitySub.size, // TODO Find a way to uncomment this
+	Distance = ABILITY_SUB_SIZEOF, //AbilitySub.size, // TODO Find a way to uncomment this
+	sizeof
 }
 
 var value = array_create(MoveAbilitySub.sizeof);
 	value[@ AbilitySub.Type] = ABILITY_SUB_MOVE;
+	value[@ MoveAbilitySub.Distance] = 0;
 
 	value[@ AbilitySub.FN_Use] = MoveAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = MoveAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 
 return value;

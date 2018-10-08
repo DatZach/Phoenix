@@ -29,6 +29,7 @@
 		"Heal1": {
 			"dependencies": [],
 			"rankMask": 15,
+			"targetField": 0,
 			"targetMask": 15,
 			"sub": [{
 				"type": "Heal",
@@ -38,6 +39,7 @@
 		"Heal2": {
 			"dependencies": ["Heal1"],
 			"rankMask": 15,
+			"targetField": 0,
 			"targetMask": 95,
 			"sub": [{
 				"type": "Heal",
@@ -47,6 +49,7 @@
 		"Heal3": {
 			"dependencies": ["Heal2"],
 			"rankMask": 15,
+			"targetField": 0,
 			"targetMask": 127,
 			"sub": [{
 				"type": "Heal",

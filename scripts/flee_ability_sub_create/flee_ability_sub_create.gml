@@ -13,4 +13,5 @@ var value = array_create(FleeAbilitySub.sizeof);
 
 	value[@ AbilitySub.FN_Use] = FleeAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = FleeAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 return value;

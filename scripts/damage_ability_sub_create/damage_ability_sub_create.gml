@@ -19,5 +19,6 @@ var value = array_create(DamageAbilitySub.sizeof);
 
 	value[@ AbilitySub.FN_Use] = DamageAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = DamageAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = DamageAbilitySub_draw_target_description;
 
 return value;

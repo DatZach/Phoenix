@@ -7,8 +7,8 @@
 
 var ability = argument0;
 var sub = argument1;
-var source = argument1;
-var target = argument2;
+var source = argument2;
+var target = argument3;
 
 assert(source != noone, "Source cannot be noone");
 assert(target != noone, "Target cannot be noone");

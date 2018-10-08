@@ -8,6 +8,7 @@ enum AddStatusAbilitySub {
 	StatusEffect = ABILITY_SUB_SIZEOF,//AbilitySub.size, // TODO Find a way to uncomment this
 	Accuracy,
 	Turns,
+	Extended,
 	sizeof
 }
 
@@ -16,8 +17,10 @@ var value = array_create(AddStatusAbilitySub.sizeof);
 	value[@ AddStatusAbilitySub.StatusEffect] = STATUS_EFFECT_NONE;
 	value[@ AddStatusAbilitySub.Accuracy] = 100;
 	value[@ AddStatusAbilitySub.Turns] = 1;
+	value[@ AddStatusAbilitySub.Extended] = noone;
 
 	value[@ AbilitySub.FN_Use] = AddStatusAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = AddStatusAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 
 return value;

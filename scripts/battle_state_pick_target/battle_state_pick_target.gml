@@ -9,6 +9,13 @@ if (state_get_timer() == 0) {
 		state_switch("UseAbility");
 		return;
 	}
+	
+	var abilities = stTurn_monster[@ k_mon.abilities];
+	var ability = abilities[@ stTurn_selectedAbility];
+	if (ability == noone || ds_list_size(ability[@ Ability.Sub]) == 0) {
+		state_switch("Round");
+		return;
+	}
 }
 
 var trainer = trainers[@ stTurn_who];

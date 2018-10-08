@@ -13,4 +13,5 @@ var value = array_create(CaptureAbilitySub.sizeof);
 
 	value[@ AbilitySub.FN_Use] = CaptureAbilitySub_use;
 	value[@ AbilitySub.FN_DrawDescription] = CaptureAbilitySub_draw_description;
+	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 return value;

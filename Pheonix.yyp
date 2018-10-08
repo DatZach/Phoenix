@@ -602,7 +602,7 @@
             "Key": "4ea099c0-b8d7-4951-b244-c62abe84c231",
             "Value": {
                 "id": "629a46c2-068f-4e74-878b-8fec712fbd10",
-                "resourcePath": "scripts\\status_effect_create_from_db\\status_effect_create_from_db.yy",
+                "resourcePath": "scripts\\status_effect_create_from_sub\\status_effect_create_from_sub.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1055,6 +1055,14 @@
             }
         },
         {
+            "Key": "8d959491-7578-41e5-a6d8-f6546a90932d",
+            "Value": {
+                "id": "a2512bb3-4433-44b4-a87c-033ebf91289c",
+                "resourcePath": "scripts\\ability_draw_target_description\\ability_draw_target_description.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9001b157-e50b-4bb1-94bb-735bbede23ea",
             "Value": {
                 "id": "cf675d07-f482-4404-a7e3-cf6b4904ca6f",
@@ -1099,6 +1107,14 @@
             "Value": {
                 "id": "ef5e4f27-b644-4d51-89a8-b30342f2615b",
                 "resourcePath": "scripts\\HealAbilitySub_draw_description\\HealAbilitySub_draw_description.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "985f9009-b08d-4891-b0c2-a2202b84f284",
+            "Value": {
+                "id": "8ec5efbe-b97f-4220-9e1e-c4eafd45b64f",
+                "resourcePath": "scripts\\DamageAbilitySub_draw_target_description\\DamageAbilitySub_draw_target_description.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1567,6 +1583,14 @@
             }
         },
         {
+            "Key": "db3ec6fe-d635-4a4b-bcc7-8e179dc65dcc",
+            "Value": {
+                "id": "501474a5-2aa4-4223-8705-679c8e98a28b",
+                "resourcePath": "scripts\\ability_sub_draw_target_description\\ability_sub_draw_target_description.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dbb3df74-03a5-4719-a5cd-56a9b7f34d99",
             "Value": {
                 "id": "56c01ab4-2f2e-4432-8772-ce5043c92354",
@@ -1889,6 +1913,7 @@
         "53617bfd-4983-449d-b9a9-5284e0ec4e85",
         "0dcea574-2138-4eea-b27c-177ae16f0016",
         "52438100-6f2b-4348-806f-7cba0d29e96a",
+        "985f9009-b08d-4891-b0c2-a2202b84f284",
         "f4587c06-cb95-47b4-8596-8cd107082612",
         "f415b8b9-2e1c-44c2-9fe9-6ea78218c350",
         "3bb72a23-cd76-4b54-8ed8-8cefda3661be",
@@ -1913,11 +1938,13 @@
         "f7bd0839-0ffb-41b1-b5dc-db6cc3178208",
         "c412337f-af6a-48ed-bb67-2af430051e25",
         "792640cb-1b76-4536-96bd-76c75bfe543a",
+        "db3ec6fe-d635-4a4b-bcc7-8e179dc65dcc",
         "3dae60e2-8f0d-46c0-857a-1f2051c77031",
         "c4fe1037-e96f-4bf6-a772-36a9979fb755",
         "1ac10fdc-5615-40f4-b7d3-147e6aaedf30",
         "bddb89b9-12de-48d4-9fdb-4ca516be1a7f",
         "40035c75-f72c-4ec0-8428-169adec809bd",
+        "8d959491-7578-41e5-a6d8-f6546a90932d",
         "9cafd866-e92b-485f-a758-16ca429159bd",
         "1ec4d5ee-0ed3-4bdd-85a3-a3713b35b5ca",
         "7846a5a7-1080-448b-b5d3-c9fd9853dba8",

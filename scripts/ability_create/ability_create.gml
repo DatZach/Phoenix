@@ -3,7 +3,6 @@
 /// @returns Ability
 
 enum Ability {
-	//Type,					// real
 	Key,					// string
 	Name,					// string
 	Dependencies,			// list<string>
@@ -11,9 +10,6 @@ enum Ability {
 	TargetField,			// real
 	TargetMask,				// real
 	Sub,					// list<AbilitySub> TODO Come up with a better name
-	
-	//FN_Use,					// script
-	//FN_DrawDescription,		// script
 	
 	sizeof
 }

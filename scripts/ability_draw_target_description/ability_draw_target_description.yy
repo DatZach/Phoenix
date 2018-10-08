@@ -1,8 +1,8 @@
 {
-    "id": "4ea099c0-b8d7-4951-b244-c62abe84c231",
+    "id": "8d959491-7578-41e5-a6d8-f6546a90932d",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "status_effect_create_from_db",
+    "name": "ability_draw_target_description",
     "IsCompatibility": false,
     "IsDnD": false
 }

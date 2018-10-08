@@ -10,7 +10,7 @@ var sub = argument1;
 var source = argument2;
 var target = argument3;
 
-var statusEffect = status_effect_create_from_db(sub);
+var statusEffect = status_effect_create_from_sub(sub);
 var indType = IndType.Bleed + sub[@ AddStatusAbilitySub.StatusEffect];
         
 var isHit = randchance(sub[@ AddStatusAbilitySub.Accuracy] - status_effect_get_resistence(statusEffect, target));

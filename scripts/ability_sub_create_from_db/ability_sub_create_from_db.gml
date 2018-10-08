@@ -5,7 +5,8 @@
 
 var json = argument0;
 
-switch(json[? "Type"]) {
+var type = json[? "type"];
+switch(type) {
 	case "Damage": {
 		var sub = damage_ability_sub_create();
 		sub[@ DamageAbilitySub.DamageModifier] = ds_map_default_value(json, "damageModifier", sub[@ DamageAbilitySub.DamageModifier]);
@@ -30,13 +31,15 @@ switch(json[? "Type"]) {
 		sub[@ AddStatusAbilitySub.StatusEffect] = status_effect_type_parse(json[? "statusEffect"]);
 		sub[@ AddStatusAbilitySub.Accuracy] = ds_map_default_value(json, "accuracy", sub[@ AddStatusAbilitySub.Accuracy]);
 		sub[@ AddStatusAbilitySub.Turns] = ds_map_default_value(json, "turns", sub[@ AddStatusAbilitySub.Accuracy]);
+		if (ds_map_size(json) > 4)
+			sub[@ AddStatusAbilitySub.Extended] = json;
 		return sub;
 	}
 		
 	case "Move":
 	case "Skip":
-		error(true, "Unsupported Sub Type: ", json[? "Type"]);
+		error(true, "Unsupported Sub Type: ", type);
 	
 	default:
-		error(true, "Unknown Ability Sub Type: ", json[? "Type"]);
+		error(true, "Unknown Ability Sub Type: ", type);
 }

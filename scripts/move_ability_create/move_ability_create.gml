@@ -10,7 +10,10 @@ var position = argument_count > 0 ? argument[1] : 0;
 var mask = (((1 << (distance+1)) - 1) << position) | (1<<max(0, position-1));
 
 var ability = ability_create();
+	ability[@ Ability.Name] = "Move";
+	ability[@ Ability.TargetField] = FIELD_ALLY;
 	ability[@ Ability.TargetMask] = mask;
 	var sub = move_ability_sub_create();
+	sub[@ MoveAbilitySub.Distance] = distance;
 	ds_list_add(ability[@ Ability.Sub], sub);
 return ability;
