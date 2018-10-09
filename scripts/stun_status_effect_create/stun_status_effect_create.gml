@@ -5,12 +5,12 @@
 #macro STATUS_EFFECT_STUN 2
 
 enum StunStatusEffect {
-	size = 4,//StatusEffect.size, // TODO Find a way to uncomment this
+	sizeof = STATUS_EFFECT_SIZEOF,//StatusEffect.size, // TODO Find a way to uncomment this
 }
 
 var turns = argument0;
 
-var statusEffect = array_create(StunStatusEffect.size);
+var statusEffect = array_create(StunStatusEffect.sizeof);
 	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_STUN;
 	statusEffect[@ StatusEffect.Turns] = turns;
 	

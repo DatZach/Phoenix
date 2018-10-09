@@ -24,6 +24,12 @@
 				"accuracy": 90,
 				"damageModifier": 1,
 				"criticalModifier": 0
+			}, {
+				"type": "AddStatus",
+				"statusEffect": "Buff",
+				"stats": {
+					"strength": 100
+				}
 			}]
 		},
 		"Heal1": {

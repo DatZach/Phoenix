@@ -9,8 +9,20 @@ var stat = argument1;
 
 var baseStats = mon[@ k_mon.base_stats];
 var ivStats = mon[@ k_mon.iv_stats];
-var modifier = 0; // TODO Implement
+var modifier = 0;
 
+// Modifier
+var statusEffects = mon[@ k_mon.status_effects];
+for(var i = 0, isize = ds_list_size(statusEffects); i < isize; ++i) {
+	var statusEffect = statusEffects[| i];
+	if (statusEffect != STATUS_EFFECT_BUFF && statusEffect != STATUS_EFFECT_DEBUFF)
+		continue;
+	
+	var seStats = statusEffect[@ BuffStatusEffect.Stats];
+	modifier += seStats[stat];
+}
+
+// Stat
 switch(stat) {
 	case k_stats.hp:
 		return floor(baseStats[stat] + ivStats[stat] + modifier) + mon[k_mon.level];

@@ -5,15 +5,15 @@
 #macro STATUS_EFFECT_BLEED 0
 
 enum BleedStatusEffect {
-	Strength = 4,//StatusEffect.size, // TODO Find a way to uncomment this
+	Strength = STATUS_EFFECT_SIZEOF,//StatusEffect.size, // TODO Find a way to uncomment this
 	
-	size
+	sizeof
 }
 
 var turns = argument0;
 var strength = argument1;
 
-var statusEffect = array_create(BleedStatusEffect.size);
+var statusEffect = array_create(BleedStatusEffect.sizeof);
 	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_BLEED;
 	statusEffect[@ StatusEffect.Turns] = turns;
 	statusEffect[@ BleedStatusEffect.Strength] = strength;

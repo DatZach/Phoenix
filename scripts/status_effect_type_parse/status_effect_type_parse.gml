@@ -14,6 +14,12 @@ switch(value) {
 		return STATUS_EFFECT_POISON;
 	case "Move":
 		return STATUS_EFFECT_MOVE;
+	case "Gaurd":
+		return STATUS_EFFECT_GAURD;
+	case "Buff":
+		return STATUS_EFFECT_BUFF;
+	case "Debuff":
+		return STATUS_EFFECT_DEBUFF;
 	
 	default:
 		error(true, "Illegal Value: ", value);

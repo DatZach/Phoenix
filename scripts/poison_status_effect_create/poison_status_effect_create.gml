@@ -5,15 +5,15 @@
 #macro STATUS_EFFECT_POISON 1
 
 enum PoisonStatusEffect {
-	Strength = 4,//StatusEffect.size, // TODO Find a way to uncomment this
+	Strength = STATUS_EFFECT_SIZEOF,//StatusEffect.size, // TODO Find a way to uncomment this
 	
-	size
+	sizeof
 }
 
 var turns = argument0;
 var strength = argument1;
 
-var statusEffect = array_create(PoisonStatusEffect.size);
+var statusEffect = array_create(PoisonStatusEffect.sizeof);
 	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_POISON;
 	statusEffect[@ StatusEffect.Turns] = turns;
 	statusEffect[@ PoisonStatusEffect.Strength] = strength;

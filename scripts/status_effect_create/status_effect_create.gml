@@ -10,7 +10,9 @@ enum StatusEffect {
 	
 	FN_Tick,
 	
-	size
+	sizeof
 }
+
+#macro STATUS_EFFECT_SIZEOF 4
 
 show_error("Abstract class StatusEffect cannot be created.", true);
