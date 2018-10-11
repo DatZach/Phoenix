@@ -25,7 +25,7 @@ switch(type) {
 	case STATUS_EFFECT_GUARD:
 		return guard_status_effect_create(turns, noone); // TODO Set guardian
 	case STATUS_EFFECT_BUFF: {
-		var stats = stats_create_from_db(ext);
+		var stats = stats_create_from_db(ext[? "stats"]);
 		return buff_status_effect_create(turns, stats);
 	}
 	case STATUS_EFFECT_DEBUFF: {

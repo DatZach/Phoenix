@@ -2,7 +2,7 @@
     "id": "2df1265c-8796-45e0-a874-4bdf2363c89d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "fxIndicator",
+    "name": "fxToastStatus",
     "eventList": [
         {
             "id": "97ee6d83-caba-4ac6-9a62-35f5b1024e2e",

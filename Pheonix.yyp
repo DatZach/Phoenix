@@ -330,7 +330,7 @@
             "Key": "2df1265c-8796-45e0-a874-4bdf2363c89d",
             "Value": {
                 "id": "c083a80b-1f2a-420d-bf92-e26efadc9462",
-                "resourcePath": "objects\\fxIndicator\\fxIndicator.yy",
+                "resourcePath": "objects\\fxToastStatus\\fxToastStatus.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -410,7 +410,7 @@
             "Key": "37c5b2eb-64a6-4f57-a128-d8916dc486d9",
             "Value": {
                 "id": "9561a9da-fe9d-4e43-b32f-3d868463971b",
-                "resourcePath": "scripts\\fx_battle_indicator\\fx_battle_indicator.yy",
+                "resourcePath": "scripts\\fx_toast_status\\fx_toast_status.yy",
                 "resourceType": "GMScript"
             }
         },

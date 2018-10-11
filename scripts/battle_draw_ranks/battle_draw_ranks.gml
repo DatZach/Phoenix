@@ -39,7 +39,7 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 	for (var j = 0, len = ds_list_size(statusEffects); j < len; ++j) {
 		var statusEffect = statusEffects[| j];
 		var seType = statusEffect[@ StatusEffect.Type];
-		draw_sprite(sIconStatusEffect, seType, xx - 64 + 15 + seType*(12 + 10), yy + 24 + 11 + 8);
+		draw_sprite(sIconStatusEffect, seType, xx - 64 + 15 + seType*16, yy + 24 + 11 + 8);
 	}
 	
 	if (rank[@ k_mon.hp] <= 0)

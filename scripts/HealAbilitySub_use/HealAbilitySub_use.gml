@@ -21,6 +21,6 @@ target[@ k_mon.hp] += hp;
 if (target[@ k_mon.hp] > mon_get_max_hp(target))
 	target[@ k_mon.hp] = mon_get_max_hp(target);
 
-fx_battle_indicator(target, IndType.Heal, string(hp));
+fx_toast_status(target, IndType.Heal, string(hp));
 
 return true;

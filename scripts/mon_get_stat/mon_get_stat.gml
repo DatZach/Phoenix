@@ -12,14 +12,19 @@ var ivStats = mon[@ k_mon.iv_stats];
 var modifier = 0;
 
 // Modifier
+var mStat = stat;
+if (mStat == k_stats.min_damage || mStat == k_stats.max_damage)
+	mStat = k_stats.strength;
+
 var statusEffects = mon[@ k_mon.status_effects];
 for(var i = 0, isize = ds_list_size(statusEffects); i < isize; ++i) {
 	var statusEffect = statusEffects[| i];
-	if (statusEffect != STATUS_EFFECT_BUFF && statusEffect != STATUS_EFFECT_DEBUFF)
+	if (statusEffect[@ StatusEffect.Type] != STATUS_EFFECT_BUFF &&
+		statusEffect[@ StatusEffect.Type] != STATUS_EFFECT_DEBUFF)
 		continue;
 	
 	var seStats = statusEffect[@ BuffStatusEffect.Stats];
-	modifier += seStats[stat];
+	modifier += seStats[mStat];
 }
 
 // Stat
@@ -28,7 +33,7 @@ switch(stat) {
 		return floor(baseStats[stat] + ivStats[stat] + modifier) + mon[k_mon.level];
 	
 	case k_stats.strength:
-		assert(false, "Use min_damage or max_damage");
+		assert(true, "Use min_damage or max_damage");
 	case k_stats.min_damage:
 		return floor(baseStats[k_stats.strength] + ivStats[k_stats.strength] + modifier);
 	case k_stats.max_damage:

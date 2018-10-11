@@ -41,7 +41,7 @@ if (stTurn_who == FIELD_ALLY) {
 		}
 	}
 	
-	fx_battle_indicator(target, IndType.Damage, dmg);
+	fx_toast_status(target, IndType.Damage, dmg);
 }
 else {
 	// Foe attacks Player
@@ -50,10 +50,10 @@ else {
 			target[@ k_mon.dead] = true;
 			var ranks = field[@ stTurn_targetField];
 			ranks[@ stTurn_targetRank] = noone;
-			fx_battle_indicator(target, IndType.DeathBlow);
+			fx_toast_status(target, IndType.DeathBlow);
 		}
 		else
-			fx_battle_indicator(target, IndType.DeathsDoor, dmg);
+			fx_toast_status(target, IndType.DeathsDoor, dmg);
 	}
 	else {
 		target[@ k_mon.hp] -= dmg;
@@ -62,7 +62,7 @@ else {
 			target[@ k_mon.hp] = 0;
 		}
 			
-		fx_battle_indicator(target, IndType.Damage, dmg);
+		fx_toast_status(target, IndType.Damage, dmg);
 	}
 }
 

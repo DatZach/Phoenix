@@ -10,6 +10,3 @@ camera = noone;
 target = noone;
 
 shake = 0;
-
-global.test = 0;
-

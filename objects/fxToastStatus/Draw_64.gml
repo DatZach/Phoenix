@@ -35,16 +35,31 @@ switch (type & ~IndType.Resist) {
 		break;
 	case IndType.Moved:
 		iconIdx = 3;
-		draw_set_color(c_aqua);
+		draw_set_color(c_blue);
 		message = "Move";
 		break;
-	case IndType.DeathsDoor:
+	case IndType.Gaurd:
 		iconIdx = 4;
+		draw_set_color(c_aqua);
+		message = "Gaurd";
+		break;
+	case IndType.Buff:
+		iconIdx = 5;
+		draw_set_color(c_blue);
+		message = "Buff";
+		break;
+	case IndType.Debuff:
+		idconIdx = 6;
+		draw_set_color(c_orange);
+		message = "Debuff";
+		break;
+	case IndType.DeathsDoor:
+		iconIdx = 7;
 		draw_set_color(c_white);
 		message = "Death's Door";
 		break;
 	case IndType.DeathBlow:
-		iconIdx = 4;
+		iconIdx = 7;
 		draw_set_color(c_yellow);
 		message = "Death Blow!";
 		break;

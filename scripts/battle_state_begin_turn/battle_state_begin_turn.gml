@@ -23,7 +23,7 @@ for (var i = 0, len = ds_list_size(statusEffects); i < len; ++i) {
 if (stTurn_monster[@ k_mon.hp] <= 0) {
 	var ranks = field[@ stTurn_who];
 	if (stTurn_who == FIELD_ALLY)
-		fx_battle_indicator(ranks[@ stTurn_rank], IndType.DeathBlow);
+		fx_toast_status(ranks[@ stTurn_rank], IndType.DeathBlow);
 	
 	ranks[@ stTurn_rank] = noone;
 	shouldSkipTurn = true;

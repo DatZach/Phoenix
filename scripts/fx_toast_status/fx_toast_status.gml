@@ -1,4 +1,4 @@
-/// @func fx_battle_indicator(target, icon, [message])
+/// @func fx_toast_status(target, icon, [message])
 /// Shows an indicator message over target
 /// @context mBattle
 /// @param target Monster
@@ -14,6 +14,9 @@ enum IndType {
 	Poisoned,
 	Stunned,
 	Moved,
+	Gaurd,
+	Buff,
+	Debuff,
 	DeathsDoor,
 	DeathBlow,
 	Dodge,
@@ -54,7 +57,7 @@ var yy = FIELD_BOTTOM - 64 - RANK_HEIGHT*0.75;
 var offset = true;
 while (offset) {
 	offset = false;
-	with (fxIndicator) {
+	with (fxToastStatus) {
 		if (rectangle_in_rectangle(x - 64, y - 12, x + 64, y + 12,
 								   xx - 64, yy - 12, xx + 64, yy + 12)) {
 			yy += 32;
@@ -63,7 +66,7 @@ while (offset) {
 	}
 }
 
-var inst = instance_create_layer(xx, yy, LAYER_INSTANCES, fxIndicator);
+var inst = instance_create_layer(xx, yy, LAYER_INSTANCES, fxToastStatus);
 inst.type = type;
 inst.message = message;
 
