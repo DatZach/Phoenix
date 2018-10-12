@@ -29,7 +29,7 @@ switch(type) {
 		return buff_status_effect_create(turns, stats);
 	}
 	case STATUS_EFFECT_DEBUFF: {
-		var stats = stats_create_from_db(ext);
+		var stats = stats_create_from_db(ext[? "stats"]);
 		return debuff_status_effect_create(turns, stats);
 	}
 	default:

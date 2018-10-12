@@ -42,6 +42,7 @@
 				"magnitude": 0.15
 			}, {
 				"type": "AddStatus",
+				"turns": 2,
 				"statusEffect": "Debuff",
 				"stats": {
 					"protection": -10

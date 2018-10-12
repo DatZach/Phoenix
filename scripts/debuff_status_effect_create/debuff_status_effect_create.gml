@@ -15,7 +15,7 @@ var turns = argument0;
 var stats = argument1;
 
 var statusEffect = array_create(DebuffStatusEffect.sizeof);
-	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_BUFF;
+	statusEffect[@ StatusEffect.Type] = STATUS_EFFECT_DEBUFF;
 	statusEffect[@ StatusEffect.Turns] = turns;
 	statusEffect[@ DebuffStatusEffect.Stats] = stats;
 	
