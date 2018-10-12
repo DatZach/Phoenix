@@ -34,4 +34,4 @@ for (var i = 0; i < 4; ++i) {
 draw_set_color(c_white);
 draw_text(left + 8, top + 40 + LINE_HEIGHT*1, "Attempt to capture Foe.");
 
-return 40 + LINE_HEIGHT*2;
+return LINE_HEIGHT*2;

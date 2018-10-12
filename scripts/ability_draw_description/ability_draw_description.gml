@@ -13,5 +13,5 @@ for (var i = 0, isize = ds_list_size(subs); i < isize; ++i) {
 	var sub = subs[| i];
 	var offset = ability_sub_draw_description(ability, sub, left, top, right, bottom);
 	if (is_real(offset))
-		bottom += offset;
+		top += offset;
 }

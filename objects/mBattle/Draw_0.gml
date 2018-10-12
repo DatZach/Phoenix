@@ -86,7 +86,7 @@ if (stTurn_monster != noone) {
 		draw_set_halign(fa_left);
 			
 		if (i == stTurn_selectedAbility && ability != noone)
-			ability_draw_description(ability, left, top, right, bottom);
+			ability_draw_description(ability, left, top + 40, right, bottom);
 		
 		if (i == stTurn_selectedAbility)
 			draw_line(left + i*stride, top + LINE_HEIGHT - 1, left + (i+1)*stride, top + LINE_HEIGHT - 1);

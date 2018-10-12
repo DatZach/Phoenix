@@ -12,4 +12,4 @@ var bottom = argument5;
 draw_set_color(c_white);
 draw_text(left + 8, top + 40 + LINE_HEIGHT*0, "Attempt to escape from battle.");
 
-return 40 + LINE_HEIGHT*0;
+return LINE_HEIGHT*1;

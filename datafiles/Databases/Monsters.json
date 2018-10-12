@@ -40,6 +40,12 @@
 			"sub": [{
 				"type": "Heal",
 				"magnitude": 0.15
+			}, {
+				"type": "AddStatus",
+				"statusEffect": "Debuff",
+				"stats": {
+					"protection": -10
+				}
 			}]
 		},
 		"Heal2": {
