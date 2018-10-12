@@ -160,6 +160,15 @@
 				"damageModifier": 1,
 				"criticalModifier": 0
 			}]
+		},
+		"Protect": {
+			"rankMask": 15,
+			"targetField": 0,
+			"targetMask": 15,
+			"sub": [{
+				"type": "AddStatus",
+				"statusEffect": "Guard"
+			}]
 		}
 	}
 }, {

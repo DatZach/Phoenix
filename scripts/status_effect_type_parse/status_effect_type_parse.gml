@@ -14,8 +14,8 @@ switch(value) {
 		return STATUS_EFFECT_POISON;
 	case "Move":
 		return STATUS_EFFECT_MOVE;
-	case "Gaurd":
-		return STATUS_EFFECT_GAURD;
+	case "Guard":
+		return STATUS_EFFECT_GUARD;
 	case "Buff":
 		return STATUS_EFFECT_BUFF;
 	case "Debuff":

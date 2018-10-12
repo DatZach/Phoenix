@@ -23,7 +23,7 @@ switch(type) {
 	case STATUS_EFFECT_MOVE:
 		return move_status_effect_create();
 	case STATUS_EFFECT_GUARD:
-		return guard_status_effect_create(turns, noone); // TODO Set guardian
+		return guard_status_effect_create(turns, stTurn_monster);
 	case STATUS_EFFECT_BUFF: {
 		var stats = stats_create_from_db(ext[? "stats"]);
 		return buff_status_effect_create(turns, stats);

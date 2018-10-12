@@ -13,6 +13,11 @@ var target = argument3;
 assert(source != noone, "Source cannot be noone");
 assert(target != noone, "Target cannot be noone");
 
+// Gaurd always overrides target
+var guardStatusEffect = mon_find_status_effect(target, STATUS_EFFECT_GUARD);
+if (guardStatusEffect != noone)
+	target = guardStatusEffect[@ GuardStatusEffect.Guardian];
+
 // roll_is_hit()
 var chance = damage_ability_sub_get_hit_chance(ability, sub, source, target);
 var isHit = randchance(chance);
