@@ -1007,6 +1007,14 @@
             }
         },
         {
+            "Key": "805e97a9-8036-4ce8-9680-9593df493145",
+            "Value": {
+                "id": "498d61c6-3f42-40da-8ee6-9529e7bc6012",
+                "resourcePath": "scripts\\guard_status_effect_clear\\guard_status_effect_clear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "81a81d7d-4752-4952-a8e9-b7dd2712715b",
             "Value": {
                 "id": "07c6d05f-cd52-4c22-83e0-e1924e74a248",
@@ -2018,6 +2026,7 @@
         "73eb1f29-6e63-4ded-bec3-ebc6ce027ead",
         "11fbe9fc-b490-465f-acd1-06741a281148",
         "f127ad20-de06-46d1-971e-7f06f3a3e73c",
+        "805e97a9-8036-4ce8-9680-9593df493145",
         "b720d835-4cad-49aa-be5b-e96aa669b99c",
         "d316a139-b1b6-4b8e-8f69-443d7148d0f3",
         "b00d56c2-7ab6-491f-b41a-0196e9603a08",

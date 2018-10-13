@@ -38,10 +38,10 @@ switch (type & ~IndType.Resist) {
 		draw_set_color(c_blue);
 		message = "Move";
 		break;
-	case IndType.Gaurd:
+	case IndType.Guard:
 		iconIdx = 4;
 		draw_set_color(c_aqua);
-		message = "Gaurd";
+		message = "Guard";
 		break;
 	case IndType.Buff:
 		iconIdx = 5;

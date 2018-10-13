@@ -21,6 +21,8 @@ if (stTurn_who == FIELD_ALLY) {
 			target[@ k_mon.dead] = true;
 			target[@ k_mon.hp] = mon_get_max_hp(target);
 			
+			guard_status_effect_clear(field[@ stTurn_targetField], target);
+			
 			var source = stTurn_monster; // TODO Should this be passed in?
 			if (target == trainers[@ FIELD_FOE]) {
 				if (target[@ k_mon.level] > source[@ k_mon.level]*2)
@@ -50,6 +52,7 @@ else {
 			target[@ k_mon.dead] = true;
 			var ranks = field[@ stTurn_targetField];
 			ranks[@ stTurn_targetRank] = noone;
+			guard_status_effect_clear(field[@ stTurn_targetField], target);
 			fx_toast_status(target, IndType.DeathBlow);
 		}
 		else

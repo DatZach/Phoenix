@@ -14,7 +14,7 @@ enum IndType {
 	Poisoned,
 	Stunned,
 	Moved,
-	Gaurd,
+	Guard,
 	Buff,
 	Debuff,
 	DeathsDoor,
