@@ -1,14 +1,14 @@
 {
-    "id": "b74fcdb5-8e2a-4017-99db-644f291c7e39",
+    "id": "769445d9-279a-4ee7-8940-6b602ecdac6e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "oSlope",
+    "name": "pMob",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "6cc96294-ee76-4fb3-ad57-c05f0b72996f",
+    "parentObjectId": "6be8a95b-c580-4472-8256-f410e91a2e4c",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -23,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": true,
-    "spriteId": "50d9028d-ee96-44d5-9b2d-5d69eaf5c811",
-    "visible": false
+    "solid": false,
+    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "visible": true
 }
