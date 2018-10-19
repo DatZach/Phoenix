@@ -5,4 +5,6 @@
 #macro GUI_WIDTH display_get_gui_width()
 #macro GUI_HEIGHT display_get_gui_height()
 #macro LAYER_INSTANCES "Instances"
+#macro LAYER_INSTANCES_FOREGROUND "Instances_Foreground"
+#macro LAYER_COLLISIONS "Collisions"
 #macro POINTS_PER_HEART 4

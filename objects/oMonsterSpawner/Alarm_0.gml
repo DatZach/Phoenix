@@ -1,6 +1,6 @@
 /// @desc Spawn
 
-var shouldSpawn = randchance(chance);
+var shouldSpawn = randchance(chance) && (count < capacity || capacity == 0);
 if (shouldSpawn) {
 	var xx, yy;
 	do {
@@ -30,6 +30,9 @@ if (shouldSpawn) {
 	
 	var inst = instance_create_layer(xx, yy, LAYER_INSTANCES, oMonster);
 	inst.monster = mon;
+	inst.spawner = self;
+	
+	++count;
 	
 	trace("Spawned lv. ", level, " ", mon_get_name(mon));
 }

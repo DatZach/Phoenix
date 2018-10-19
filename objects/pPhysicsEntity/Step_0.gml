@@ -1,3 +1,5 @@
+if (in_battle()) exit;
+
 // Clamp velocities
 var absSpeed = abs(spd);
 if (absSpeed > maxspd) {

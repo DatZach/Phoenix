@@ -83,6 +83,20 @@
             "value": "50",
             "varName": "chance",
             "varType": 0
+        },
+        {
+            "id": "7d42f864-c3d1-460e-951e-54249e69134e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "capacity",
+            "varType": 0
         }
     ],
     "solid": false,
