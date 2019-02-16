@@ -3,19 +3,24 @@
 if (camera == noone) exit;
 if (!instance_exists(target)) exit;
 
+var tx = target.x + lengthdir_x(width * RADIUS, target.dir);
+var ty = target.y + lengthdir_y(height * RADIUS, target.dir);
+
+x += target.x - tpx;
+y += target.y - tpy;
+
 if (shake <= 0) {
-	/*var dx = abs(target.x - x) / room_width;
-	var dy = abs(target.y - y) / room_height;
-	var d = max(max(dx, dy), 0.3);
-	x = round(lerp(x, target.x, d));
-	y = round(lerp(y, target.y, d));*/
+	var dx = abs(tx - x) / (width * (RADIUS*2)) * RADIUS;
+	var dy = abs(ty - y) / (height * (RADIUS*2)) * RADIUS;
+	var d = clamp(max(dx, dy), 0.025, 0.075);
+	x = lerp(x, tx, d);
+	y = lerp(y, ty, d);
 	
-	x = target.x;
-	y = target.y;
+	//trace(x, ",", y, " -> ", tx, ",", ty);
 }
 else {
-	x = target.x + (target.x - target.xprevious) / 2;
-	y = target.y + (target.y - target.yprevious) / 2;
+	x = tx + (tx - target.xprevious) / 2;
+	y = ty + (ty - target.yprevious) / 2;
 	
 	if (shake > cs_heavy) {
 		x += irandom(60);
@@ -39,6 +44,9 @@ else {
 
 camera_set_view_pos(
 	camera,
-	clamp(x - width * 0.5, 0, room_width - width),
-	clamp(y - height * 0.5, 0, room_height - height)
+	round(clamp(x - width * 0.5, 0, room_width - width)),
+	round(clamp(y - height * 0.5, 0, room_height - height))
 );
+
+tpx = target.x;
+tpy = target.y;

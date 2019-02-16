@@ -78,9 +78,9 @@ x = floor(x);
 y = floor(y);
 
 // INTERACTION
-dir = point_direction(0, 0, moveRight - moveLeft, moveDown - moveUp);
-
 if (moveLeft || moveRight || moveUp || moveDown) {
+	dir = point_direction(0, 0, moveRight - moveLeft, moveDown - moveUp);
+	
 	// Acceleration
 	if (spd < maxspd)
 		spd += accel;

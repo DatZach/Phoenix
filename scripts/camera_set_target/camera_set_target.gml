@@ -5,3 +5,7 @@
 var instance = argument0;
 
 mCamera.target = instance;
+mCamera.x = instance.x;
+mCamera.y = instance.y;
+mCamera.tpx = instance.x;
+mCamera.tpy = instance.y;
