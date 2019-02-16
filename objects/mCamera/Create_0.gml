@@ -4,8 +4,8 @@
 
 x = 0;
 y = 0;
-width = VIDEO_RESOLUTION_WIDTH_DEFAULT;
-height = VIDEO_RESOLUTION_HEIGHT_DEFAULT;
+width = VIDEO_RESOLUTION_WIDTH_DEFAULT / 2;
+height = VIDEO_RESOLUTION_HEIGHT_DEFAULT / 2;
 camera = noone;
 target = noone;
 

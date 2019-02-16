@@ -2,9 +2,12 @@
 
 // Configuration
 event_inherited();
-maxspd = 180;
-accel = 180;
+maxspd = 85;
+accel = 85;
 fric = 0.2;
+
+image_speed = 0;
+image_index = 1;
 
 player = player_trainer_create();
 var trainer = mon_create();
@@ -21,3 +24,5 @@ var trainer = mon_create();
 		abilities[@ 2] = dbAbilities[? "Capture"];
 		abilities[@ 3] = dbAbilities[? "Flee"];
 player[@ k_trainer.trainer] = trainer;
+
+camera_set_target(self);

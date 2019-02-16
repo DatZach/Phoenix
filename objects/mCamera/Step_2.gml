@@ -4,11 +4,14 @@ if (camera == noone) exit;
 if (!instance_exists(target)) exit;
 
 if (shake <= 0) {
-	var dx = abs(target.x - x) / room_width;
+	/*var dx = abs(target.x - x) / room_width;
 	var dy = abs(target.y - y) / room_height;
 	var d = max(max(dx, dy), 0.3);
 	x = round(lerp(x, target.x, d));
-	y = round(lerp(y, target.y, d));
+	y = round(lerp(y, target.y, d));*/
+	
+	x = target.x;
+	y = target.y;
 }
 else {
 	x = target.x + (target.x - target.xprevious) / 2;
@@ -36,6 +39,6 @@ else {
 
 camera_set_view_pos(
 	camera,
-	x - width * 0.5,
-	y - height * 0.5
+	clamp(x - width * 0.5, 0, room_width - width),
+	clamp(y - height * 0.5, 0, room_height - height)
 );

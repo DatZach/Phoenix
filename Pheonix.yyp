@@ -378,7 +378,7 @@
             "Key": "2fd4c788-353c-4fcc-a022-0de934a4e7c2",
             "Value": {
                 "id": "587c7f0b-e142-4281-befa-44547359fef5",
-                "resourcePath": "tilesets\\tsBatch1\\tsBatch1.yy",
+                "resourcePath": "tilesets\\tsForest\\tsForest.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -1223,14 +1223,6 @@
             }
         },
         {
-            "Key": "87202d76-01eb-430d-969f-599c5567f634",
-            "Value": {
-                "id": "946a7d2a-e817-4233-a533-b484765b71b6",
-                "resourcePath": "sprites\\sPlayerIdle\\sPlayerIdle.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "886c5130-90f0-45aa-a46d-63807286ae3f",
             "Value": {
                 "id": "a74d2322-6858-41fa-bcfc-3c56f6d783a3",
@@ -2010,7 +2002,7 @@
             "Key": "eace3acd-1ac7-446c-9244-31b16b7bf91e",
             "Value": {
                 "id": "708ea8c7-ce7c-4e3b-8900-e91f7b82c753",
-                "resourcePath": "sprites\\stsBatch1\\stsBatch1.yy",
+                "resourcePath": "sprites\\stsForest\\stsForest.yy",
                 "resourceType": "GMSprite"
             }
         },
