@@ -4,7 +4,7 @@ moveUp = input_check(global.k_up) && !input_check(global.k_down);
 moveDown = input_check(global.k_down) && !input_check(global.k_up);
 
 if (input_check_pressed(global.k_action))
-	spd = 1200;
+	instance_create_layer(x, y, layer, oBou);
 
 event_inherited();
 

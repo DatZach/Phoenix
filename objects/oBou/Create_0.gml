@@ -1,0 +1,1 @@
+alarm[0] = TARGET_FPS / 4;
