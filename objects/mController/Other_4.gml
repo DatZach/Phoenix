@@ -1,2 +1,1 @@
-// NOTE Supports collision_at
-global.collisionLayerId = layer_tilemap_get_id("Collisions");
+layer_set_visible(layer_get_id(LAYER_COLLISIONS), false);

@@ -7,4 +7,4 @@
 #macro LAYER_INSTANCES "Instances"
 #macro LAYER_INSTANCES_FOREGROUND "Instances_Foreground"
 #macro LAYER_COLLISIONS "Collisions"
-#macro POINTS_PER_HEART 4
+#macro TILE_SIZE 24

@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "01892b5e-1a49-44e0-84d1-f69070ae9b0f",
-            "Value": {
-                "id": "a598e201-6490-492a-99f8-26e267d4fdcd",
-                "resourcePath": "sprites\\sBlock\\sBlock.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "01d35858-547d-4250-b156-24a66ebba38a",
             "Value": {
                 "id": "ce68ab47-f639-4ab9-886a-0e7e38dfa656",
@@ -767,14 +759,6 @@
             }
         },
         {
-            "Key": "50d9028d-ee96-44d5-9b2d-5d69eaf5c811",
-            "Value": {
-                "id": "a05f6b27-3a78-499d-a3f6-bb8b4d4c7171",
-                "resourcePath": "sprites\\sSlope\\sSlope.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "51009c4c-8460-422e-81e7-5cfffb8f5226",
             "Value": {
                 "id": "1eb00c73-9290-4f07-a0e5-da5d528720b3",
@@ -836,6 +820,14 @@
                 "id": "7011ee65-ac94-4b63-9b91-c4b30f95a733",
                 "resourcePath": "scripts\\in_battle\\in_battle.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "539caa47-6091-4196-a6ad-759113c5e79d",
+            "Value": {
+                "id": "600d85bb-3c78-4fcc-a5d2-a64cd6291bec",
+                "resourcePath": "sprites\\sTree\\sTree.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1591,14 +1583,6 @@
             }
         },
         {
-            "Key": "b74fcdb5-8e2a-4017-99db-644f291c7e39",
-            "Value": {
-                "id": "5e758aef-1012-4c72-9cd5-487b04ab96ac",
-                "resourcePath": "objects\\oSlope\\oSlope.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "b7d1379c-41a4-48a6-b0ce-f5cda55056c2",
             "Value": {
                 "id": "fc905bd0-d5ae-4bf5-a298-c4a37643379d",
@@ -2191,11 +2175,11 @@
             }
         },
         {
-            "Key": "fb0490e9-4911-4a03-8070-05e64c7039a9",
+            "Key": "fa91067d-a69b-47d7-88f6-7b61dcb33a6f",
             "Value": {
-                "id": "79ccdaa5-c395-4751-955a-1a1b0d53432f",
-                "resourcePath": "objects\\oBlock\\oBlock.yy",
-                "resourceType": "GMObject"
+                "id": "a40f8135-b550-4281-b984-acf0aa6344c6",
+                "resourcePath": "views\\fa91067d-a69b-47d7-88f6-7b61dcb33a6f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

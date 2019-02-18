@@ -29,30 +29,35 @@ while (save >= 1) {
 rep = floor(rep);
 
 // MOVEMENT
+// BUG BBox not fully respected
 var xStep = round(lengthdir_x(1, dir));
 var yStep = round(lengthdir_y(1, dir));
+var ex = xStep < 0 ? bbox_left : bbox_right;
+var ey = yStep < 0 ? bbox_top : bbox_bottom;
+var bx = ex;
+var by = ey;
 
 repeat(rep) {
-	if (!collision_at(x + xStep, y + yStep)) {
-		x += xStep;
-		y += yStep;
+	if (!collision_at(bx + xStep, by + yStep)) {
+		bx += xStep;
+		by += yStep;
 	}
-	else if (!collision_at(x + xStep - sign(xStep), y + yStep)) {
+	else if (!collision_at(bx + xStep - sign(xStep), by + yStep)) {
 		xStep -= sign(xStep);
-		x += xStep;
-		y += yStep;
+		bx += xStep;
+		by += yStep;
 	}
-	else if (!collision_at(x + xStep, y + yStep - sign(yStep))) {
+	else if (!collision_at(bx + xStep, by + yStep - sign(yStep))) {
 		yStep -= sign(yStep);
-		x += xStep;
-		y += yStep;
+		bx += xStep;
+		by += yStep;
 	}
 	else
 		break;
 }
 
-x = floor(x);
-y = floor(y);
+x = floor(x + bx - ex);
+y = floor(y + by - ey);
 
 // INTERACTION
 if (moveLeft || moveRight || moveUp || moveDown) {
