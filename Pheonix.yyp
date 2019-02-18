@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "30d6f022-e2ea-4bf3-8cca-6fe535d7e8c4",
+            "Value": {
+                "id": "23ec6df1-a7b8-48f5-93fa-14ff06a6f5c7",
+                "resourcePath": "tilesets\\tsCollisions\\tsCollisions.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "3136c5f3-731f-4078-a077-809c887e57db",
             "Value": {
                 "id": "79ec09ca-100e-4a0c-b385-f1cb9bf36ac4",
@@ -668,6 +676,14 @@
                 "id": "895a851d-5482-4fb4-808b-13575a470476",
                 "resourcePath": "scripts\\InitializeDatabases\\InitializeDatabases.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "467f5daf-2f7d-4c1f-9acd-93d3597a80ae",
+            "Value": {
+                "id": "c5a04e58-b0af-45b4-8911-1ddc7d297bfe",
+                "resourcePath": "sprites\\sLayerTrigger\\sLayerTrigger.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1179,6 +1195,14 @@
             "Value": {
                 "id": "498d61c6-3f42-40da-8ee6-9529e7bc6012",
                 "resourcePath": "scripts\\guard_status_effect_clear\\guard_status_effect_clear.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "81a47e98-b348-4c93-954d-dd981aad5e08",
+            "Value": {
+                "id": "8667f31d-edb6-4060-a4fa-cdf43107a90e",
+                "resourcePath": "scripts\\string_ends_with\\string_ends_with.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1999,6 +2023,14 @@
             }
         },
         {
+            "Key": "ea59c89c-fbeb-4795-9d9b-40bfd88254f7",
+            "Value": {
+                "id": "1023cc32-b2f8-4c9b-869a-7d09ebc11fa6",
+                "resourcePath": "scripts\\collision_layer_set_active\\collision_layer_set_active.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eace3acd-1ac7-446c-9244-31b16b7bf91e",
             "Value": {
                 "id": "708ea8c7-ce7c-4e3b-8900-e91f7b82c753",
@@ -2011,6 +2043,14 @@
             "Value": {
                 "id": "01e63860-1ef1-451e-8211-cddf4c849f5b",
                 "resourcePath": "sprites\\sIconStatusEffect\\sIconStatusEffect.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ec6cdcd8-0dde-46af-8f61-54a1e91ae640",
+            "Value": {
+                "id": "9bd5c048-830c-4bf9-810a-28e1ed7b69cc",
+                "resourcePath": "sprites\\stsCollisions\\stsCollisions.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2028,6 +2068,14 @@
                 "id": "b0bfec3e-3295-4e3c-ab72-553bf258fa24",
                 "resourcePath": "views\\ed87acf9-eaa2-4b07-9c54-72ddfbab77b4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eea1a8a5-c42e-4765-9139-b214caaecc97",
+            "Value": {
+                "id": "3231a6f8-59fa-41ae-b51f-43259ff9dc6e",
+                "resourcePath": "objects\\oTriggerLayer\\oTriggerLayer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2229,6 +2277,7 @@
         "f6f2a476-5e56-4bc8-9f96-36897e47c3e1",
         "bdb445b1-e6df-479f-a9d3-41701bee2de2",
         "30c0bc26-937e-483c-8d50-f429919d20a5",
+        "ea59c89c-fbeb-4795-9d9b-40bfd88254f7",
         "0a653c20-69b6-4ccf-9ac3-3f612676ffb7",
         "527510ea-2dfb-408a-9c00-bfd1c30892ac",
         "d5a68903-3388-4a59-991e-0662d7bd47ba",
@@ -2331,6 +2380,7 @@
         "249076f5-8ae8-4fb2-bcd7-590bce543b39",
         "ff41483d-7a6f-4c3c-9b8c-58943f221357",
         "c9f069ea-3b9d-4c70-9124-ba9966e36e3e",
+        "81a47e98-b348-4c93-954d-dd981aad5e08",
         "0259a85c-4c61-4282-82a1-299f15fce608",
         "7920b17b-22a7-4f05-ac29-709cececdacc",
         "1479cd8c-5f12-498d-80dc-6493b5c894de",

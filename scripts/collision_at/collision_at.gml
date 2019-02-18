@@ -4,7 +4,9 @@
 /// @param y real
 
 gml_pragma("forceinline");
-return !place_free(argument0, argument1);
+
+return tilemap_get_at_pixel(global.collisionLayerId, argument0, argument1) != 0;
+//return !place_free(argument0, argument1);
 
 //var inst = instance_place(argument0, argument1, pCollidable);
 //return inst != noone && inst.solid;
