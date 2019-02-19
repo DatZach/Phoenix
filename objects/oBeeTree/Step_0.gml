@@ -19,7 +19,7 @@ if (hiveOffset > 20) {
 	
 	var cpu = cpu_trainer_create();
 	ds_list_add(cpu[k_trainer.party], mon);
-	battle_create([oPlayer.player, cpu]);
+	battle_create([oPlayer.trainer, cpu]);
 	triggered = true;
 }
 else if (hiveOffset > 0)

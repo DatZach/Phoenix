@@ -2231,6 +2231,14 @@
             }
         },
         {
+            "Key": "fc8b253c-aecd-4cde-9f76-ea857c812036",
+            "Value": {
+                "id": "207504ff-cfaa-4ce4-8472-2e2c2e7ab953",
+                "resourcePath": "objects\\oHud\\oHud.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fd78e547-1aa9-4bbd-bba4-20357078da9d",
             "Value": {
                 "id": "d2799d2a-d696-46df-a9b5-0f21bfaff459",
