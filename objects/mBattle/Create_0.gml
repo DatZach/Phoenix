@@ -30,3 +30,5 @@ state_create("PickTarget", battle_state_pick_target, battle_state_draw_pick_targ
 state_create("UseAbility", battle_state_use_ability);
 state_create("End", battle_state_end);
 state_switch("Init");
+
+depth = -1000;

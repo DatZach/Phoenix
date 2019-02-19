@@ -21,3 +21,5 @@ surface = noone;
 selectedNode = noone;
 nodes = ds_list_create();			// [| [ability, x, y], ... ]
 connections = ds_list_create();		// [| [srcNodeIdx, destNodeIdx], ... ]
+
+depth = -1002;

@@ -10,3 +10,5 @@ for (var i = 0, isize = ds_map_size(mBattle.awards); i < isize; ++i) {
 io_clear();
 
 alarm[0] = 6;
+
+depth = -1001;
