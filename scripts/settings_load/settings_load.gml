@@ -30,6 +30,8 @@ global.k_down = ini_read_real("KeyBindings", "down", global.k_down);
 global.k_action = ini_read_real("KeyBindings", "action", global.k_action);
 global.k_toggle_item_overlay = ini_read_real("KeyBindings", "toggle_item_overlay", global.k_toggle_item_overlay);
 global.k_toggle_pause_menu = ini_read_real("KeyBindings", "toggle_pause_menu", global.k_toggle_pause_menu);
+global.k_bumper_left = ini_read_real("KeyBindings", "bumper_left", global.k_bumper_left);
+global.k_bumper_right = ini_read_real("KeyBindings", "bumper_right", global.k_bumper_right);
 
 ini_close();
 

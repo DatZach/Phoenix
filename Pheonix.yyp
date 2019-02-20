@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00171c11-d51c-482e-a823-e132e3d93c1f",
+            "Value": {
+                "id": "d845849c-b00c-4a0d-aabb-379be017230d",
+                "resourcePath": "scripts\\clamp_wrap\\clamp_wrap.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "006a06cc-9633-4502-8b08-4583252ce0da",
             "Value": {
                 "id": "0bf17f62-a6b3-4260-b9ca-33d461f08e4b",
@@ -1511,6 +1519,14 @@
             }
         },
         {
+            "Key": "ad6af4a4-42bc-4dd8-9264-351523c88771",
+            "Value": {
+                "id": "22e17dcd-6797-4f8b-a945-7a91471c3498",
+                "resourcePath": "scripts\\trainer_get_party\\trainer_get_party.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ad6c81aa-85b0-4b3f-93e5-a7df71c16f80",
             "Value": {
                 "id": "f418091c-47ef-468d-9861-4a074d72d449",
@@ -2234,7 +2250,7 @@
             "Key": "fc8b253c-aecd-4cde-9f76-ea857c812036",
             "Value": {
                 "id": "207504ff-cfaa-4ce4-8472-2e2c2e7ab953",
-                "resourcePath": "objects\\oHud\\oHud.yy",
+                "resourcePath": "objects\\mHud\\mHud.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2309,6 +2325,7 @@
         "cb34ba97-d24f-43eb-8a63-ff2f9c5e98aa",
         "67de646a-50ae-4094-829e-78db611b76f4",
         "03f8b848-cc55-44cb-a59d-2a94bb7f1c27",
+        "ad6af4a4-42bc-4dd8-9264-351523c88771",
         "b7259686-3d34-46e1-a86e-7200011de43b",
         "5a0af389-17e2-4cb5-beb9-2a69a9405901",
         "49e4e0a8-8ec3-4657-b2b5-7db26576cb63",
@@ -2427,6 +2444,7 @@
         "32c54477-904d-4c46-8a0a-a7b6ec1fd73e",
         "f39bb211-f231-4302-810b-c32e43f58e2d",
         "1280bdce-eb0f-4712-87ab-6dd8ed7bd1f0",
+        "00171c11-d51c-482e-a823-e132e3d93c1f",
         "464e0b4b-ddcd-4ceb-ac13-1733395c8653",
         "79a5a0ca-c842-43b4-9e81-d09b5ec0a8ae",
         "9c8768c9-d7d3-4ac8-b493-3b33ea535148"

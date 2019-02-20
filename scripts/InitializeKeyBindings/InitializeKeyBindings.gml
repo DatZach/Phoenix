@@ -9,3 +9,5 @@ global.k_back = ord("X");
 global.k_action = ord("C");
 global.k_toggle_item_overlay = vk_tab;
 global.k_toggle_pause_menu = vk_escape;
+global.k_bumper_left = ord("A");
+global.k_bumper_right = ord("S");

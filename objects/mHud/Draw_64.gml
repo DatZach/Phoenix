@@ -43,5 +43,29 @@ draw_rectangle(
 	false
 );
 
+// Party Status
+xx = PADDING + (FIELD_RANKS-1)*9;
+yy = PADDING + PORTRAIT_SIZE + 4;
+
+var party = trainer_get_party(oPlayer.trainer);
+var partySize = array_length_1d(party);
+for (var i = 0; i < FIELD_RANKS; ++i) {
+	draw_set_alpha(0.5);
+	draw_set_color(c_black);
+	draw_rectangle(xx - i*9, yy, xx - i*9 + 5, yy + 5, false);
+	draw_set_alpha(1);
+	
+	if (i >= partySize)
+		continue;
+	
+	// TODO Indicate low health and status effects
+	draw_set_color(c_white);
+	draw_rectangle(xx - i*9 + 1, yy + 1, xx - i*9 + 4, yy + 4, false);
+	
+	var monster = party[@ i];
+	if (selectedMonster == monster)
+		draw_rectangle(xx - i*9, yy, xx - i*9 + 5, yy + 5, true);
+}
+
 // TODO Note other party members and their status
 // TODO Note Overworld Action
