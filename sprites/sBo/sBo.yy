@@ -2,7 +2,7 @@
     "id": "7d31abef-6323-47c4-b882-8f4ee0c0c30c",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sBou",
+    "name": "sBo",
     "For3D": false,
     "HTile": false,
     "VTile": false,

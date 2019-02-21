@@ -39,6 +39,8 @@ var chimaera = mon_create();
 		abilities[@ 0] = dbAbilities[? "Bite"];
 		abilities[@ 1] = dbAbilities[? "Rush"];
 ds_list_add(trainer[k_trainer.party], chimaera);
+var pmChimaera = instance_create_layer(x + irandom_range(32, 64), y + irandom_range(32, 64), layer, oPartyMember);
+pmChimaera.monster = chimaera;
 var chimaera = mon_create();
 	mon_set_seed(chimaera, 2, randint());
 	chimaera[@ k_mon.experience] = mon_get_level_experience(chimaera, 3);

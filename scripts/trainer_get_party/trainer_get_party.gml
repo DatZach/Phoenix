@@ -12,7 +12,7 @@ var size = min(FIELD_RANKS, ds_list_size(party) + hasTrainer);
 
 var result = array_create(size);
 if (hasTrainer) result[@ size - 1] = monTrainer;
-for (var i = 0; i < size - 1; ++i)
+for (var i = 0; i < size - hasTrainer; ++i)
 	result[i] = party[| i];
 
 return result;
