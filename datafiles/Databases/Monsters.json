@@ -84,7 +84,8 @@
 				"type": "Flee"
 			}]
 		}
-	}
+	},
+	"overworldAbility": "Wack"
 }, {
 	"name": "Chimaera",
 	"stats": {
@@ -133,7 +134,8 @@
 				"criticalModifier": 0
 			}]
 		}
-	}
+	},
+	"overworldAbility": "Dash"
 }, {
 	"name": "Nix",
 	"stats": {
@@ -170,7 +172,8 @@
 				"statusEffect": "Guard"
 			}]
 		}
-	}
+	},
+	"overworldAbility": null
 }, {
 	"name": "Scorpion",
 	"stats": {
@@ -317,7 +320,8 @@
 				"magnitude": 0.45
 			}]
 		}
-	}
+	},
+	"overworldAbility": null
 }, {
 	"name": "Crusaider",
 	"stats": {
@@ -356,5 +360,6 @@
 				"damage": 2
 			}]
 		}
-	}
+	},
+	"overworldAbility": null
 }]

@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "174be41a-9ca0-479a-8779-a8510dd64ce2",
+            "Value": {
+                "id": "e2b4d90c-0321-4186-96a0-ba8d8f37059e",
+                "resourcePath": "scripts\\mon_use_overworld_ability\\mon_use_overworld_ability.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1780113b-235a-4ea2-a8b9-0e35ba58a9db",
             "Value": {
                 "id": "0003045b-f5f9-488e-9eb2-d0e94dcf6108",
@@ -779,6 +787,14 @@
             "Value": {
                 "id": "f20a154b-6e33-483a-91e1-a3882a09a1ad",
                 "resourcePath": "scripts\\mon_find_status_effect\\mon_find_status_effect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "51eb85ae-5e4b-4c18-9f16-f474f4444e51",
+            "Value": {
+                "id": "ae9cd737-2a7a-44ce-b19a-b4af1674926e",
+                "resourcePath": "scripts\\OaDash_use\\OaDash_use.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1423,6 +1439,14 @@
             }
         },
         {
+            "Key": "a309632a-c3d9-4cd0-8585-3d537d42d28c",
+            "Value": {
+                "id": "ec29b6f8-46be-4de5-a047-c50c6fb3f092",
+                "resourcePath": "views\\a309632a-c3d9-4cd0-8585-3d537d42d28c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "a30ee0c0-4c7e-4218-b72d-ffa41837cdff",
             "Value": {
                 "id": "06897e5e-c849-45e5-ae19-a167543a626b",
@@ -1628,6 +1652,14 @@
                 "id": "5d92c1a2-ff92-4fca-988e-bf6f1a804012",
                 "resourcePath": "views\\b7e0d5f2-8cd6-4ac6-80f9-0927c7546217.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b82e6782-2a31-42ca-95bd-64f1c133f2bb",
+            "Value": {
+                "id": "91f8e440-4e86-4252-b86d-3eed61fff062",
+                "resourcePath": "scripts\\OaWack_use\\OaWack_use.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2316,6 +2348,8 @@
         "9001b157-e50b-4bb1-94bb-735bbede23ea",
         "f6f2a476-5e56-4bc8-9f96-36897e47c3e1",
         "bdb445b1-e6df-479f-a9d3-41701bee2de2",
+        "51eb85ae-5e4b-4c18-9f16-f474f4444e51",
+        "b82e6782-2a31-42ca-95bd-64f1c133f2bb",
         "30c0bc26-937e-483c-8d50-f429919d20a5",
         "ea59c89c-fbeb-4795-9d9b-40bfd88254f7",
         "0a653c20-69b6-4ccf-9ac3-3f612676ffb7",
@@ -2338,6 +2372,7 @@
         "511b82c2-5b27-41f8-a46a-25ab024a298c",
         "ae7fbc75-20aa-4ce6-9797-e397df936a05",
         "4d613cc2-79d0-46eb-89c4-fb25ea5c5fdb",
+        "174be41a-9ca0-479a-8779-a8510dd64ce2",
         "53617bfd-4983-449d-b9a9-5284e0ec4e85",
         "0dcea574-2138-4eea-b27c-177ae16f0016",
         "52438100-6f2b-4348-806f-7cba0d29e96a",

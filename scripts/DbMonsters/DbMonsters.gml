@@ -2,9 +2,10 @@
 /// Initializes Monsters Database
 
 enum k_db_mon {
-	name,			// string
-	stats,			// Stats
-	abilities,		// Map<string, Ability>
+	name,				// string
+	stats,				// Stats
+	abilities,			// Map<string, Ability>
+	overworld_ability,	// OverworldAbility Key
 	_size
 }
 
@@ -53,5 +54,6 @@ for (var i = 0, len = ds_list_size(jsonMonsters); i < len; ++i) {
 			}
 			
 		dbMonster[k_db_mon.abilities] = dbAbilities;
+		dbMonster[k_db_mon.overworld_ability] = jsonMonster[? "overworldAbility"];
 	ds_list_add(global.dbMonsters, dbMonster);
 }

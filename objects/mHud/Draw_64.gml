@@ -2,7 +2,7 @@ PADDING = floor(GUI_WIDTH * 0.01);
 FIELD_BOTTOM = floor(GUI_HEIGHT * 0.66);
 LINE_HEIGHT = string_height("W");
 PORTRAIT_SIZE = 32;
-HEALTH_WIDTH = 320;
+HEALTH_WIDTH = 240;
 
 var xx = PADDING;
 var yy = PADDING;
@@ -67,5 +67,17 @@ for (var i = 0; i < FIELD_RANKS; ++i) {
 		draw_rectangle(xx - i*9, yy, xx - i*9 + 5, yy + 5, true);
 }
 
-// TODO Note other party members and their status
-// TODO Note Overworld Action
+// Overworld Ability
+xx = PADDING + PORTRAIT_SIZE + PADDING;
+yy = PORTRAIT_SIZE + 4 + 4;
+var class = selectedMonster[@ k_mon.class];
+var dbMonster = global.dbMonsters[| class];
+
+var oaKey = dbMonster[@ k_db_mon.overworld_ability];
+if (oaKey != undefined) {
+	draw_text_outline(
+		xx, yy,
+		concat("[", input_get_name(global.k_action), "] ", oaKey),
+		1, c_black, 4
+	);
+}
