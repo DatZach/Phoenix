@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "0de38ee0-6c3b-4945-b494-0c6aa5c86988",
+            "Value": {
+                "id": "a2a6c33a-05a2-45e4-93d9-a44203fbf76d",
+                "resourcePath": "sprites\\sChimaeraIdleDown\\sChimaeraIdleDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ff334e8-145d-43a6-9684-5d175ff05f5f",
             "Value": {
                 "id": "fbbde8b1-660b-4624-b1e5-31d5272fcf59",
@@ -338,7 +346,7 @@
             "Key": "26655ce3-820b-4f9e-abc0-727cbe098d33",
             "Value": {
                 "id": "1021db61-4b22-43f3-be3f-8b78e966e09f",
-                "resourcePath": "sprites\\sSquirrelWalkUp\\sSquirrelWalkUp.yy",
+                "resourcePath": "sprites\\sChimaeraWalkUp\\sChimaeraWalkUp.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1234,7 +1242,7 @@
             "Key": "7de56c9a-1992-4432-a239-e990308f2e64",
             "Value": {
                 "id": "f0d0e432-666b-4108-ac65-52a63e216d81",
-                "resourcePath": "sprites\\sSquirrelWalkLeft\\sSquirrelWalkLeft.yy",
+                "resourcePath": "sprites\\sChimaeraWalkLeft\\sChimaeraWalkLeft.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1348,6 +1356,14 @@
                 "id": "a2512bb3-4433-44b4-a87c-033ebf91289c",
                 "resourcePath": "scripts\\ability_draw_target_description\\ability_draw_target_description.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8dcdc270-903f-4dd3-a19f-5fc18ac41ad8",
+            "Value": {
+                "id": "38e57066-fdc7-4308-bf38-aa17ce0b34ce",
+                "resourcePath": "sprites\\sPOI\\sPOI.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1570,7 +1586,7 @@
             "Key": "ac91210b-7117-4177-b1b4-0b0bf143da0a",
             "Value": {
                 "id": "55e7b0e5-8951-43cc-8946-35d78daa7b14",
-                "resourcePath": "sprites\\sSquirrelWalkDown\\sSquirrelWalkDown.yy",
+                "resourcePath": "sprites\\sChimaeraWalkDown\\sChimaeraWalkDown.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1778,7 +1794,7 @@
             "Key": "c287dd58-0cda-4df4-8f0b-1fc1be4693ac",
             "Value": {
                 "id": "51a64632-bc94-4867-8bd7-5341c116d8c3",
-                "resourcePath": "sprites\\sSquirrelWalkRight\\sSquirrelWalkRight.yy",
+                "resourcePath": "sprites\\sChimaeraWalkRight\\sChimaeraWalkRight.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1863,6 +1879,14 @@
             }
         },
         {
+            "Key": "cca67db1-af7c-4354-86d8-ce70357d7c5e",
+            "Value": {
+                "id": "0d742897-ddc9-454e-aedc-f155a3601c59",
+                "resourcePath": "sprites\\sChimaeraIdleRight\\sChimaeraIdleRight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ccbb4b48-41d3-4117-9c56-6aa913b17b4f",
             "Value": {
                 "id": "3cbbb570-1053-457e-92a8-56eeb1ea9432",
@@ -1927,6 +1951,14 @@
             }
         },
         {
+            "Key": "d623d3bc-48f1-44d4-9064-a5b8bc5212f4",
+            "Value": {
+                "id": "0ff1c47e-c5c6-4a17-88ea-c46e39dab482",
+                "resourcePath": "objects\\oPOI\\oPOI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d66b8cb9-7666-42d8-bb63-a86dd6906548",
             "Value": {
                 "id": "e041f166-4e06-42bf-a702-1ed90835c836",
@@ -1983,11 +2015,27 @@
             }
         },
         {
+            "Key": "d949089b-cfde-4359-9b89-4ea0edcdefc0",
+            "Value": {
+                "id": "f871f109-6053-4e4f-b3d9-3636087d7f64",
+                "resourcePath": "sprites\\sChimaeraIdleLeft\\sChimaeraIdleLeft.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d9d87119-88ac-46fb-93d9-97b04c47eea6",
             "Value": {
                 "id": "4c897af1-173c-41c5-aea1-a153563df843",
                 "resourcePath": "views\\d9d87119-88ac-46fb-93d9-97b04c47eea6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "db3689f0-cf48-4e8b-b45c-c434b1d2c68a",
+            "Value": {
+                "id": "dff5c3ca-70c1-43b6-90f7-9ce40dd98a3b",
+                "resourcePath": "sprites\\sChimaeraIdleUp\\sChimaeraIdleUp.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
