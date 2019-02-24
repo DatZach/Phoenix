@@ -3,11 +3,12 @@
 
 enum k_db_item {
 	key,				// string
-	image_index,		// real
+	img_index,			// real
 	type,				// ItemType
 	width,				// real
 	height,				// real
 	max_stock,			// real
+	callback,			// script
 	_size
 }
 
@@ -35,7 +36,8 @@ for (var key = ds_map_find_first(json); !is_undefined(key); key = ds_map_find_ne
 	var jsonItem = json[? key];
 	
 	var dbItem = array_create(k_db_item._size);
-		dbItem[@ k_db_item.image_index] = jsonItem[? "imageIndex"];
+		dbItem[@ k_db_item.key] = key;
+		dbItem[@ k_db_item.img_index] = jsonItem[? "imageIndex"];
 		dbItem[@ k_db_item.type] = ItemType.None;
 		var itemTypes = string_split(jsonItem[? "type"], "|");
 		for (var i = 0, ilen = array_length_1d(itemTypes); i < ilen; ++i) {

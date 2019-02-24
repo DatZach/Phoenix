@@ -6,6 +6,8 @@ moveDown = input_check(global.k_down) && !input_check(global.k_up);
 
 if (input_check_pressed(global.k_action))
 	mon_use_overworld_ability(activeMonster);
+if (input_check_pressed(global.k_back))
+	equip_use();
 
 // Animation
 if (moveUp)

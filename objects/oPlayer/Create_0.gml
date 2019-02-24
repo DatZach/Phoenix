@@ -10,6 +10,8 @@ image_speed = 0;
 image_index = 1;
 
 inventory = inventory_create();
+equippedItem = noone;
+equipStack = ds_stack_create();
 trainer = player_trainer_create();
 
 var mon = mon_create();

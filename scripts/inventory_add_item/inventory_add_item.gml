@@ -1,7 +1,7 @@
 /// @func inventory_add_item(inventory, itemKey)
 /// Adds an item to the inventory
 /// @param inventory Inventory
-/// @param item string
+/// @param itemKey string
 /// @returns Item Returns Item or noone if none could be added
 
 var inventory = argument0;
