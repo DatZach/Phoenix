@@ -6,6 +6,7 @@ debugConsole = console_create();
 debugVerbosity = DebugVerbosity.Warn;
 DBG_ShowAABB = false;
 DBG_NoClip = false;
+depth = -10000;
 
 console_add_command(debugConsole, "echo", DCC_Echo);
 console_add_command(debugConsole, "dbgo", DCC_ToggleDebugOverlay);

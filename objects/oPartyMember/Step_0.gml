@@ -1,5 +1,5 @@
 // TODO Write a less hacky implementation
-monster = mHud.selectedMonster;
+monster = oPlayer.activeMonster;
 if (monster == oPlayer.trainer[@ k_trainer.trainer]) {
 	sprite_index = noone;
 	exit;

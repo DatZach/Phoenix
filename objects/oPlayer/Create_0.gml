@@ -9,7 +9,9 @@ fric = 0.2;
 image_speed = 0;
 image_index = 1;
 
+inventory = inventory_create();
 trainer = player_trainer_create();
+
 var mon = mon_create();
 	mon_set_seed(mon, 0, randint());
 	mon[@ k_mon.experience] = mon_get_level_experience(mon, 1);
@@ -69,6 +71,8 @@ var chimaera = mon_create();
 		abilities[@ 0] = dbAbilities[? "Pinch"];
 		abilities[@ 1] = dbAbilities[? "Sting"];
 ds_list_add(trainer[k_trainer.party], chimaera);
+
+activeMonster = trainer[@ k_trainer.trainer];
 
 camera_set_target(self);
 instance_create_depth(0, 0, -999, mHud);

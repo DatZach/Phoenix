@@ -1,6 +1,7 @@
 /// @desc Splits a string to an Array. Based on https://www.reddit.com/r/gamemaker/comments/3zxota/splitting_strings/cyq4uk6/?st=j4pxq01v&sh=74f1c6c2
 /// @param string The string to split into an array
 /// @param splitter The string to split on in the array, pass empty string to split all characters
+/// @returns array
 /// @author Tane Piper <piper.tane@gmail.com>
 /// @licence MIT
 

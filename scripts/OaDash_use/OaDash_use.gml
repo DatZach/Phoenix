@@ -4,7 +4,7 @@
 oPlayer.spd = 1200;
 
 with (oPartyMember) {
-	if (monster == mHud.selectedMonster) {
+	if (monster == oPlayer.activeMonster) {
 		x = oPlayer.x;
 		y = oPlayer.y;
 	}
