@@ -1,3 +1,4 @@
+if (is_paused()) exit;
 if (in_battle()) exit;
 
 // Clamp velocities

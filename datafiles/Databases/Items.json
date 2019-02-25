@@ -1,14 +1,14 @@
 {
 	"Acorn": {
 		"imageIndex": 1,
-		"type": "Overworld|Battle",
+		"type": "Overworld",
 		"width": 1,
 		"height": 1,
 		"maxStock": 10
 	},
 	"Bandage": {
 		"imageIndex": 2,
-		"type": "Overworld|Battle",
+		"type": "Overworld",
 		"width": 1,
 		"height": 1,
 		"maxStock": 25

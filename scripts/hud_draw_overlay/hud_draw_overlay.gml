@@ -1,6 +1,7 @@
 /// @func hud_draw_overlay()
 /// Draws the Overworld Overlay
 
+draw_set_font(fPauseMenuContent);
 LINE_HEIGHT = string_height("W");
 var PORTRAIT_SIZE = 32;
 var HEALTH_WIDTH = 240;
@@ -76,9 +77,26 @@ var dbMonster = global.dbMonsters[| class];
 
 var oaKey = dbMonster[@ k_db_mon.overworld_ability];
 if (oaKey != undefined) {
+	draw_set_color(c_white);
 	draw_text_outline(
 		xx, yy,
 		concat("[", input_get_name(global.k_action), "] ", oaKey),
+		1, c_black, 4
+	);
+}
+
+// Equipped Item
+xx = PADDING + PORTRAIT_SIZE + PADDING + 1 + HEALTH_WIDTH + PADDING;
+yy = PADDING + PADDING;
+
+var equippedItem = equip_get_item();
+if (equippedItem != noone) {
+	var itemMeta = global.dbItems[? equippedItem[@ k_item.key]];
+	draw_sprite(sPortraitItem, itemMeta[@ k_db_item.img_index], xx - 8, yy + 8);
+	draw_set_color(c_white);
+	draw_text_outline(
+		xx + 16, yy,
+		concat("[", input_get_name(global.k_back), "] Use ", itemMeta[@ k_db_item.key]),
 		1, c_black, 4
 	);
 }

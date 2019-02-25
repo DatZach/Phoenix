@@ -1,3 +1,5 @@
+if (is_paused()) exit;
+
 // Input
 moveLeft = input_check(global.k_left) && !input_check(global.k_right);
 moveRight = input_check(global.k_right) && !input_check(global.k_left);

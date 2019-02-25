@@ -1,10 +1,10 @@
 /// @func hud_draw_pause_menu();
 /// Draws the Pause Menu
 
-left = PADDING;
-top = PADDING;
-right = GUI_WIDTH - PADDING;
-bottom = GUI_HEIGHT - PADDING;
+left = PADDING*2;
+top = PADDING + 52;
+right = GUI_WIDTH - PADDING*2;
+bottom = GUI_HEIGHT - PADDING*2;
 
 intensity = lerp(intensity, targetIntensity, 0.25);
 
@@ -12,8 +12,6 @@ intensity = lerp(intensity, targetIntensity, 0.25);
 draw_set_color(c_black);
 draw_set_alpha(intensity);
 draw_rectangle(0, 0, GUI_WIDTH, GUI_HEIGHT, false);
-
-//FxInitializeDesaturatedBlur();
 
 draw_set_alpha(intensity * 2);
 
@@ -31,28 +29,28 @@ draw_sprite(sPauseMenuIcons, 0, xx, top);
 xx += sPauseMenuIcons_Width + 4;
 draw_text(xx, top + sPauseMenuIcons_Height / 2 + 2, "Inventory");
 xx += string_width("Inventory");
-xx += 8;
+xx += 24;
 headerWidths[1] = xx;
 
 draw_sprite(sPauseMenuIcons, 1, xx, top);
 xx += sPauseMenuIcons_Width + 4;
-draw_text_outline(xx, top + sPauseMenuIcons_Height / 2 + 2, "Party", 2, c_black, 4);
+draw_text(xx, top + sPauseMenuIcons_Height / 2 + 2, "Party");
 xx += string_width("Party");
-xx += 8;
+xx += 24;
 headerWidths[2] = xx;
 
 draw_sprite(sPauseMenuIcons, 2, xx, top);
 xx += sPauseMenuIcons_Width + 4;
-draw_text_outline(xx, top + sPauseMenuIcons_Height / 2 + 2, "Map", 2, c_black, 4);
+draw_text(xx, top + sPauseMenuIcons_Height / 2 + 2, "Map");
 xx += string_width("Map");
-xx += 8;
+xx += 24;
 headerWidths[3] = xx;
 
 draw_sprite(sPauseMenuIcons, 3, xx, top);
 xx += sPauseMenuIcons_Width + 8;
-draw_text_outline(xx, top + sPauseMenuIcons_Height / 2 + 2, "Options", 2, c_black, 4);
+draw_text(xx, top + sPauseMenuIcons_Height / 2 + 2, "Options");
 xx += string_width("Options");
-xx += 8;
+xx += 24;
 headerWidths[4] = xx;
 
 draw_set_valign(fa_top);
@@ -62,7 +60,7 @@ draw_set_color(c_white);
 var itemListHeaderLineY = top + sPauseMenuIcons_Height + 4;
 draw_line_width(left, itemListHeaderLineY, right, itemListHeaderLineY, 2);
 draw_set_color(c_select);
-draw_line_width(headerWidths[menuTab], itemListHeaderLineY, headerWidths[menuTab + 1] - 8, itemListHeaderLineY, 2);
+draw_line_width(headerWidths[menuTab] - 8, itemListHeaderLineY, headerWidths[menuTab + 1] - 20, itemListHeaderLineY, 2);
 draw_set_color(c_white);
 
 switch(menuTab) {

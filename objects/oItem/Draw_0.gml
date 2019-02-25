@@ -1,3 +1,5 @@
+draw_sprite(sShadow16, 0, x, y + 8);
+
 var item = global.dbItems[? itemKey];
 draw_sprite_ext(
     sprite_index, item[@ k_db_item.img_index],
