@@ -4,10 +4,10 @@
     "mvc": "1.1",
     "name": "562c376a-a3cf-466b-b2af-a329ea8370df",
     "children": [
-        "eea1a8a5-c42e-4765-9139-b214caaecc97"
+        "d623d3bc-48f1-44d4-9064-a5b8bc5212f4"
     ],
     "filterType": "GMObject",
-    "folderName": "Colliders",
+    "folderName": "Control",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

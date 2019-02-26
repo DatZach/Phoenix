@@ -20,6 +20,11 @@ enum PauseMenuTab {
 intensity = 0; targetIntensity = 0;
 pauseMenuActive = false;
 menuTab = PauseMenuTab.Inventory;
+
+// Toasts
+toasts = ds_list_create();
+
+// Inventory
 itemIndex = 0;
 windowOffset = 0;
 
