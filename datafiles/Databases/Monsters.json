@@ -356,4 +356,60 @@
 		}
 	},
 	"overworldAbility": null
+}, {
+	"name": "BeeHive",
+	"stats": {
+		"hp": 1,
+		"strength": 0,
+		"protection": 0,
+		"speed": 100,
+		"accuracy": 100,
+		"critical": 0,
+		"dodge": 0,
+		"bleedResist": 200,
+		"poisonResist": 200,
+		"stunResist": 200,
+		"moveResist": 200,
+		"deathBlowResist": 0
+	},
+	"abilities": {
+		"Spawn": {
+			"rankMask": 15,
+			"targetMask": 15,
+			"sub": [{
+				"type": "Spawn",
+				"monster": "Bee"
+			}]
+		}
+	},
+	"overworldAbility": null
+}, {
+	"name": "Bee",
+	"stats": {
+		"hp": 5,
+		"strength": 3,
+		"protection": 2,
+		"speed": 100,
+		"accuracy": 75,
+		"critical": 5,
+		"dodge": 3,
+		"bleedResist": 100,
+		"poisonResist": 20,
+		"stunResist": 20,
+		"moveResist": 20,
+		"deathBlowResist": 67
+	},
+	"abilities": {
+		"Sting": {
+			"rankMask": 15,
+			"targetMask": 15,
+			"sub": [{
+				"type": "Damage",
+				"accuracy": 85,
+				"damageModifier": 1,
+				"criticalModifier": 0
+			}]
+		}
+	},
+	"overworldAbility": null
 }]

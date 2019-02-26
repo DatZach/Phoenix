@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_CAPTURE 4
 
 enum CaptureAbilitySub {
-	sizeof = ABILITY_SUB_SIZEOF
+	sizeof = AbilitySub.sizeof
 }
 
 var value = array_create(CaptureAbilitySub.sizeof);

@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_ADD_STATUS 6
 
 enum AddStatusAbilitySub {
-	StatusEffect = ABILITY_SUB_SIZEOF,//AbilitySub.size, // TODO Find a way to uncomment this
+	StatusEffect = AbilitySub.sizeof,
 	Accuracy,
 	Turns,
 	Extended,

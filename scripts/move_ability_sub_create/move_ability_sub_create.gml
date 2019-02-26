@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_MOVE 5
 
 enum MoveAbilitySub {
-	Distance = ABILITY_SUB_SIZEOF, //AbilitySub.size, // TODO Find a way to uncomment this
+	Distance = AbilitySub.sizeof,
 	sizeof
 }
 

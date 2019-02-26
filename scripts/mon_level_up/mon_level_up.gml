@@ -2,6 +2,10 @@
 /// Levels up a Monster
 /// @param monster Monster
 
+// TODO mon_set_level(mon, level);
+// var mod = (mon[@ k_mon.seed] & $1000) == 0 ? 1 : 1.25;
+// iv_stat[stat] = mod * level;
+
 var mon = argument0;
 
 mon[@ k_mon.level] += 1;
@@ -15,5 +19,3 @@ stats[@ k_stats.accuracy] += (mon[@ k_mon.seed] & $200) == 0 ? 1 : 1.25;		// Dex
 stats[@ k_stats.dodge] += (mon[@ k_mon.seed] & $100) == 0 ? 1 : 1.25;			// Reflexive
 
 // TODO Prompt unlocking abilities
-
-trace(mon_get_name(mon), " leveled up to ", mon[@ k_mon.level]);

@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_FLEE 3
 
 enum FleeAbilitySub {
-	sizeof = ABILITY_SUB_SIZEOF
+	sizeof = AbilitySub.sizeof
 }
 
 var value = array_create(FleeAbilitySub.sizeof);

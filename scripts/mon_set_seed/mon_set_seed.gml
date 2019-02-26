@@ -8,7 +8,7 @@ var mon = argument0;
 var class = argument1;
 var seed = argument2;
 
-mon[@ k_mon.class] = class;
+mon[@ k_mon.class] = class; // TODO Set class in another function...
 mon[@ k_mon.seed] = seed;
 
 var dbMonster = global.dbMonsters[| class];

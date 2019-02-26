@@ -35,6 +35,12 @@ switch(type) {
 			sub[@ AddStatusAbilitySub.Extended] = json;
 		return sub;
 	}
+	
+	case "Spawn": {
+		var sub = spawn_ability_sub_create();
+		sub[@ SpawnAbilitySub.Monster] = ds_map_default_value(json, "monster", sub[@ SpawnAbilitySub.Monster]);
+		return sub;
+	}
 		
 	case "Move":
 	case "Skip":

@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_HEAL 2
 
 enum HealAbilitySub {
-	Magnitude = ABILITY_SUB_SIZEOF,//AbilitySub.size, // TODO Find a way to uncomment this
+	Magnitude = AbilitySub.sizeof,
 	sizeof
 }
 

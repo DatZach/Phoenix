@@ -19,5 +19,12 @@
 		"width": 1,
 		"height": 1,
 		"maxStock": 5
+	},
+	"Flower": {
+		"imageIndex": 4,
+		"type": "Overworld",
+		"width": 1,
+		"height": 1,
+		"maxStock": 20
 	}
 }

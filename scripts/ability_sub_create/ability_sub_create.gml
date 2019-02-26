@@ -14,6 +14,4 @@ enum AbilitySub {
 	sizeof
 }
 
-#macro ABILITY_SUB_SIZEOF 5
-
 error(true, "Cannot create abstract class AbilitySub");

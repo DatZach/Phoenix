@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_DAMAGE 1
 
 enum DamageAbilitySub {
-	Accuracy = ABILITY_SUB_SIZEOF,//AbilitySub.size, // TODO Find a way to uncomment this
+	Accuracy = AbilitySub.sizeof,
 	DamageModifier,
 	CriticalModifier,
 	sizeof
