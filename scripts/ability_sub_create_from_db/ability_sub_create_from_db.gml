@@ -38,7 +38,7 @@ switch(type) {
 	
 	case "Spawn": {
 		var sub = spawn_ability_sub_create();
-		sub[@ SpawnAbilitySub.Monster] = ds_map_default_value(json, "monster", sub[@ SpawnAbilitySub.Monster]);
+		sub[@ SpawnAbilitySub.MonsterKey] = ds_map_default_value(json, "monsterKey", sub[@ SpawnAbilitySub.MonsterKey]);
 		return sub;
 	}
 		

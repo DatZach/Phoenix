@@ -41,7 +41,7 @@ var ai = 0;
 for (var abilityKey = ds_map_find_first(dbAbilities); !is_undefined(abilityKey) && ai < 4; abilityKey = ds_map_find_next(dbAbilities, abilityKey)) {
 	var ability = dbAbilities[? abilityKey];
 	var dependencies = ability[@ Ability.Dependencies];
-	if (!ds_exists(dependencies, ds_type_list) || ds_list_size(dependencies) > 0)
+	if (ds_exists(dependencies, ds_type_list) && ds_list_size(dependencies) > 0)
 		continue;
 	
 	abilities[@ ai++] = ability;

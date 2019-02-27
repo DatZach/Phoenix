@@ -5,7 +5,7 @@
 #macro ABILITY_SUB_SPAWN 7
 
 enum SpawnAbilitySub {
-	Monster = AbilitySub.sizeof,				// string MonDB Key
+	MonsterKey = AbilitySub.sizeof,				// string MonDB Key
 	sizeof
 }
 
@@ -15,5 +15,5 @@ var value = array_create(FleeAbilitySub.sizeof);
 	value[@ AbilitySub.FN_DrawDescription] = SpawnAbilitySub_draw_description;
 	value[@ AbilitySub.FN_DrawTargetDescription] = noone;
 	
-	value[@ SpawnAbilitySub.Monster] = noone;
+	value[@ SpawnAbilitySub.MonsterKey] = noone;
 return value;

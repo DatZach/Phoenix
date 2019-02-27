@@ -317,46 +317,6 @@
 	},
 	"overworldAbility": null
 }, {
-	"name": "Crusaider",
-	"stats": {
-		"hp": 20,
-		"strength": 7,
-		"protection": 8,
-		"speed": 6,
-		"accuracy": 60,
-		"critical": 5,
-		"dodge": 3,
-		"bleedResist": 30,
-		"poisonResist": 100,
-		"stunResist": 80,
-		"moveResist": 10,
-		"deathBlowResist": 67
-	},
-	"abilities": {
-		"Smite": {
-			"rankMask": 3,
-			"targetMask": 3,
-			"sub": [{
-				"type": "Damage",
-				"accuracy": 85,
-				"damageModifier": 1,
-				"criticalModifier": 0
-			}, {
-				"type": "AddStatus",
-				"statusEffect": "Stun",
-				"accuracy": 100,
-				"turns": 1
-			}, {
-				"type": "AddStatus",
-				"statusEffect": "Bleed",
-				"accuracy": 100,
-				"turns": 2,
-				"damage": 2
-			}]
-		}
-	},
-	"overworldAbility": null
-}, {
 	"name": "BeeHive",
 	"stats": {
 		"hp": 1,
@@ -378,7 +338,7 @@
 			"targetMask": 15,
 			"sub": [{
 				"type": "Spawn",
-				"monster": "Bee"
+				"monsterKey": "Bee"
 			}]
 		}
 	},
