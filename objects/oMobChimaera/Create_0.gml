@@ -12,6 +12,9 @@ monster = mon_create();
 mon_initialize(monster, "Chimaera", 1);
 
 // Variables
-target = noone;
+//target = noone;
+path = path_add();
+pathIndex = 0;
+grid = noone;
 
 alarm[0] = 1;

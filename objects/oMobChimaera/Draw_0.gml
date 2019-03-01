@@ -1,4 +1,3 @@
 /// @desc 
 draw_self();
-draw_set_color(c_black);
-draw_text(x, y, string(target));
+draw_path(path, 0, 0, true);
